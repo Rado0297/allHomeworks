@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js-console.css" rel="stylesheet"/>
+	<style>
+		a{color:white;}
+	</style>
+</head>
+<body> 
+	<div id="js-console">
+		<label for="url">Enter a url adress in format "http://www.alabala.bg/ala/bala"! </label>
+		<input id="url" type="text" /></br>
+		<a href="#" onclick="parseURL()">Parse the URL to JSON object and print it!</a>
+	</div>
+	<script src="js-console.js"></script>
+	<script>
+		function parseURL(){
+			var url = jsConsole.readString("#url");
+			jsConsole.writeLine(url);
+			jsConsole.writeLine("------------------------------------");
+			var protokol = url.substring(0,url.indexOf(":"));
+			var server = url.substring(url.indexOf(":") + 3, url.indexOf("/", url.indexOf(":") + 3));
+			var resource = url.substr(url.indexOf("/", url.indexOf(":") + 3) + 1);
+			var URLJSON = { "Protokol": protokol, "Server": server, "Resource": resource };
+			jsConsole.writeLine("Protokol :"+ URLJSON.Protokol);
+			jsConsole.writeLine("Server :" + URLJSON.Server);
+			jsConsole.writeLine("Resource :" + URLJSON.Resource);
+		}
+	</script>
+</body>
+</html>

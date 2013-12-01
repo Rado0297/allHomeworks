@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Display - table</title>
+	<style>
+		.table {
+			display:table;
+		}
+		.table-row{
+			display:table-row;
+		}
+		.table-cell{
+			display:table-cell;
+			border:1px solid black;
+			width:170px;
+			font-weight:bold;
+			text-align:right;
+		}
+		.table-cell2{
+			display:table-cell;
+			border:1px solid black;
+			width:400px;
+		}
+		.input{
+			width:380px;
+			margin:3px;
+		}
+		.input1{
+			width:350px;
+			margin:3px;
+			height:50px;
+		}
+		.state{font-weight:bold;}
+		#input{margin:3px;}
+		#footer{
+			width:572px;
+			border:1px solid black;
+			background:lightblue;
+		}
+		#month,#day{width:15px;}
+		#year{width:50px;}
+		#input,#state{width:100px;}
+		#city{
+			width:100px;
+			margin:3px;
+		}
+		#phone{
+			width:40px;
+			margin:3px;
+		}
+		#phone2{
+			width:60px;
+			margin:3px;
+		}
+		#phone3{
+			width:100px;
+			margin:3px;
+		}
+	</style>
+</head>
+<body>						  
+	<div class="table">
+		<div class="table-row">
+			<div class="table-cell">
+				Last Name
+			</div>
+			<div class="table-cell2">
+				<input type="text" class="input"/>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell">
+				First Name
+			</div>
+			<div class="table-cell2">
+				<input type="text" class="input"/>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell">
+				Address
+			</div>
+			<div class="table-cell2">
+				<input type="text" class="input1"/>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell">
+				City
+			</div>
+			<div class="table-cell2">
+				<input type="text" id="city"/>
+				<label class="state">State</label>
+				<input type="text" id="state"/>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell">
+				ZIP/Postal Code
+			</div>
+			<div class="table-cell2">
+				<input type="text" id="input"/>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell">
+				Country
+			</div>
+			<div class="table-cell2">
+				<select>
+					<option value="Value 1" selected="selected">Bulgaria</option>
+					<option value="Value 2">Canada</option>
+					<option value="Value 3">Finland</option>
+					<option value="Value 4">Germany</option>
+					<option value="Value 5">United Kingdom</option>
+					<option value="Value 6">United States of Amerika</option>
+					<option value="Value 7">Other</option>
+				</select>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell">
+				Phone (country code,area code,number)
+			</div>
+			<div class="table-cell2">
+				<label>(+</label>
+				<input type="text" id="phone"/>
+				<label>)</label>
+				<input type="text" id="phone2"/>
+				<label>-</label>
+				<input type="text" id="phone3"/>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell">
+				E-mail
+			</div>
+			<div class="table-cell2">
+				<input type="email" class="input"/>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell">
+				Birth date
+			</div>
+			<div class="table-cell2">
+				<label>Month</label>
+				<input type="text" id="month"/>
+				<label>Day</label>
+				<input type="text" id="day"/>
+				<label>Year 4(digit)</label>
+				<input type="text" id="year"/>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell">
+				Gender
+			</div>
+			<div class="table-cell2">
+				<select>
+					<option value="Value 1" selected="selected">Male</option>
+					<option value="Value 2">Female</option>
+				</select>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell">
+				Starting date
+			</div>
+			<div class="table-cell2">
+				<input type="radio">
+				<label>Spring 2006</label>
+				<input type="radio">
+				<label>Summer 2006</label>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell">
+				Comments/Questions
+			</div>
+			<div class="table-cell2">
+				<input type="text" class="input1"/>
+			</div>
+		</div>
+	</div>
+<footer id="footer">
+	<center>
+		<button type="submit">Submit</button>
+		<button type="reset">Clear This Form</button>
+	</center>
+</footer>
+</body>
+</html>

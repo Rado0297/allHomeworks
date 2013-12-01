@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body .js-console {
+			margin: 0;
+			padding: 5px 10px;
+			background-color: black;
+			width: 800px;
+			height: 500px;
+			font-family: Consolas;
+			font-size: 18px;
+			color: white;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			word-break: break-all;
+		}
+	</style>
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="js-console.js"></script>
+    <script>
+        var text = "We are living in an yellow submarine. In the sky there are no clouds. So we are drinking all the day. We will move out of it in 5 days.";
+        var wordToSearch = " in ";
+        var isCaseSensitive = false;
+        CountOccurenceWord(text, wordToSearch);
+        CountOccurenceWord(text, wordToSearch, true);
+        function CountOccurenceWord(text, wordToSearch, isCaseSensitive) {
+            isCaseSensitive = isCaseSensitive || false;
+            var countSearchedWord = 0;
+            if (isCaseSensitive === false) {
+                var strArr = text.split(wordToSearch); 
+                for (var str in strArr) {
+                    countSearchedWord++;
+                }
+                jsConsole.writeLine("The count of word '" + wordToSearch + "' (case-insensitive search)  is: " + countSearchedWord)
+            }
+            else {
+                var index = text.indexOf(wordToSearch);
+                while (index >= 0) {
+                    countSearchedWord++;
+                    index = text.indexOf(wordToSearch, index+1);
+                }
+                jsConsole.writeLine("The count of word '" + wordToSearch + "' (case-sensitive search)  is: " + countSearchedWord)
+            }
+        }
+    </script>
+</body>
+</html>

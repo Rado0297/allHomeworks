@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="todostyles.css">
+</head>
+<body>
+	<div id="todo-list-component">
+		<h1>TODO LIST</h1>
+		<form id="create-todo">
+			<textarea name="item" id="input" placeholder="Type thing that you need" required=""></textarea>
+			<button type="submit" id="submit-item">Add</button>
+		</form>
+		<div>
+			<button id="delete-item">Delete</button>
+			<button id="hide-item">Hide</button>
+			<button id="show-item">Show All</button>
+		</div>
+		<ul id="todo-list"></ul>
+	</div>
+	<script src="todo.js">
+	</script>
+</body>
+</html>

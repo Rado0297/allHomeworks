@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		a {
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<label for="tb-first">Enter first number: </label>
+	<input type="text" id="tb-first"/>
+    </br>                                                                     
+	<label for="tb-second">Enter second number: </label>
+	<input type="text" id="tb-second"/>
+    </br>
+	<label for="tb-third">Enter third number: </label>
+	<input type="text" id="tb-third"/>
+    </br>
+	<label for="tb-forth">Enter forth number: </label>
+	<input type="text" id="tb-forth"/>
+    </br>
+	<label for="tb-fifth">Enter fifth number: </label>
+	<input type="text" id="tb-fifth"/>
+    </br>
+	<a href="#" onclick="checkThis()">Which is the biggest ???</a>
+	<div id="console">
+	</div>
+	<script src="js-console.js">          
+	</script>                  
+	<script>
+		function checkThis(){
+			var arr = new Array(5);
+				arr[0] = jsConsole.readFloat("#tb-first");
+				arr[1] = jsConsole.readFloat("#tb-second");
+				arr[2] = jsConsole.readFloat("#tb-third");
+				arr[3] = jsConsole.readFloat("#tb-forth");
+				arr[4] = jsConsole.readFloat("#tb-fifth");
+			var Max = arr[0];
+			var i;
+			if (isNaN(arr[0]) || isNaN(arr[1]) || isNaN(arr[2]) || isNaN(arr[3]) || isNaN(arr[4])){
+				jsConsole.writeLine("All variables must be numbers");
+			}
+			else{                            
+				for (i = 0; i < arr.length; i++){
+					if (Max < arr[i]){
+						Max = arr[i];
+					}
+				}
+				jsConsole.writeLine("Greatest number is: " + Max);
+			}
+		}                                                                                        
+	</script>                           
+</body>
+</html>

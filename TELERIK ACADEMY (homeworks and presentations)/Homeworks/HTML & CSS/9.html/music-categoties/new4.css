@@ -1,0 +1,45 @@
+body {
+	margin: 15px;
+    }
+h1{
+	margin: 0;
+	margin-bottom: 15px;
+	font-size: 13pt;
+}
+.all-categories {
+	padding: 15px;
+	margin-bottom: 15px;
+	width: 480px;
+	background: #eee;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.category {
+	overflow: hidden; 
+	padding: 15px;
+	margin-bottom: 30px; 
+	border: 1px solid #989898;
+	background: #fff;
+	font: 14px/1.2 Verdana, sans-serif;
+}
+.img{
+	float: left;
+	margin-right: 15px;
+	border: 1px solid #9A9592;
+}
+p{ margin: 0; }
+.actions { text-align: right; }
+.button {
+	display: inline-block;
+	margin-top: 15px;
+	padding: 0 10px 0 25px;
+	color: #fff;
+	text-decoration: none;
+	line-height: 1.5em;
+	border-top: 2px solid #E38382;
+	border-right: 2px solid #650000;
+	border-bottom: 2px solid #650000;
+	border-left: 2px solid red;
+	background: red;
+	box-shadow: inset 20px 0 0 darkred;
+}

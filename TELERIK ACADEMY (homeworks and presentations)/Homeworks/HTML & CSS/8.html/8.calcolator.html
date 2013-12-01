@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <style>
+        ul, li, button, input {
+            margin: 0;
+            padding: 0;
+        }
+        body, button, input {
+            color: #333;
+            font: 12px/1.2 Segoe UI, sans-serif;
+        }
+        label { display: block; }
+        label, button:not(:disabled) { cursor: pointer; }
+        input[type = "radio"] { vertical-align: top; }
+        .unstyled { list-style: none; }
+        .inline { overflow: hidden; } 
+        .inline li {
+            float: left;
+            list-style: none;
+        }
+        .shortcutted{ text-decoration: underline; }
+        .code { font-family: Consolas, monospace; }
+        .muted { color: #666; }
+        .input-block { width: 100%; }
+        .input-big { font-size: 24px; }
+        .input-transparent {
+            outline: 0;
+            border: none;
+            background: none;
+        }
+        .row { margin-left: -5px; }
+        .row::after {
+            display: table;
+            clear: both;
+            content: " ";
+        }
+        [class ^= "span"], [class *= " span"] {
+            float: left;
+            margin-left: 5px;
+        }
+        .span1      { width:  35px; }
+        .btn-loud	{ width:  35px; }
+        .span7      { width: 275px; }
+        .span8      { width: 315px; }
+        .calculator { width: 395px; }
+        .calculator {
+			border-radius:5px;
+            margin: 0 auto;
+            padding: 0 10px 5px;
+            border: 1px solid #999;
+            background: rgb(246,248,249);
+			background: -moz-linear-gradient(top, rgba(246,248,249,1) 0%, rgba(229,235,238,1) 50%, rgba(215,222,227,1) 51%, rgba(245,247,249,1) 100%); 
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,248,249,1)), color-stop(50%,rgba(229,235,238,1)), color-stop(51%,rgba(215,222,227,1)), color-stop(100%,rgba(245,247,249,1))); 
+			background: -webkit-linear-gradient(top, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); 
+			background: -o-linear-gradient(top, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); 
+			background: -ms-linear-gradient(top, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); 
+			background: linear-gradient(to bottom, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); 
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 );
+		}
+
+        .calculator .unstyled { padding: 3px 0 0; }
+        .calculator .unstyled li + li { margin-top: 6px; }
+        .calculator .row3 { height: 79px; }
+        .calculator .box, .calculator .btn {
+            margin-bottom: 5px;
+            border: 1px solid #727F8D;
+            border-radius: 3px;
+            color: #1C3759;
+        }
+        .calculator .box { padding: 5px; }
+        .calculator .box-inset,
+        .calculator .btn:not(:hover):not(:disabled):not(.btn-muted) { box-shadow: inset 0 0 0 1px #fff; }
+        .calculator .main-menu {
+            margin: 0 -10px 10px;
+            padding: 1px 5px 2px;
+            border-bottom: 1px solid #B6BCCC;
+			background: rgb(246,248,249); 
+			background: -moz-linear-gradient(top, rgba(246,248,249,1) 0%, rgba(229,235,238,1) 50%, rgba(215,222,227,1) 51%, rgba(245,247,249,1) 100%); 
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,248,249,1)), color-stop(50%,rgba(229,235,238,1)), color-stop(51%,rgba(215,222,227,1)), color-stop(100%,rgba(245,247,249,1))); 
+			background: -webkit-linear-gradient(top, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); 
+			background: -o-linear-gradient(top, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); 
+			background: -ms-linear-gradient(top, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); 
+			background: linear-gradient(to bottom, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); 
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 ); 
+		}
+        .calculator .main-menu li + li { margin-left: 10px; }
+        .calculator .display {
+            padding: 15px 5px 5px;
+            background: -webkit-linear-gradient(#E6EFFB, #FFFFFF);
+            background:    -moz-linear-gradient(#E6EFFB, #FFFFFF);
+            background:      -o-linear-gradient(#E6EFFB, #FFFFFF);
+            background:         linear-gradient(#E6EFFB, #FFFFFF);
+        }
+        .calculator .display input { text-align: right; }
+
+        .calculator .binary-representation { font-size: 14px; }
+        .calculator .binary-representation li { width: 33px; }
+        .calculator .binary-representation li + li { margin-left: 17px; }
+        .calculator .binary-index li:first-child { width: 183px; }
+        .calculator .binary-index li:last-child {
+            width: 131px;
+            text-align: right;
+        }
+        .calculator .btn {
+         
+		background: rgb(246,248,249); 
+		background: -moz-linear-gradient(top, rgba(246,248,249,1) 0%, rgba(229,235,238,1) 50%, rgba(215,222,227,1) 51%, rgba(245,247,249,1) 100%); 
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,248,249,1)), color-stop(50%,rgba(229,235,238,1)), color-stop(51%,rgba(215,222,227,1)), color-stop(100%,rgba(245,247,249,1))); 
+		background: -webkit-linear-gradient(top, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); 
+		background: -o-linear-gradient(top, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); 
+		background: -ms-linear-gradient(top, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); 
+		background: linear-gradient(to bottom, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); 
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 ); 
+		  
+            line-height: 25px; 
+        }
+        .calculator .btn-loud {
+			background: rgb(255,255,255); 
+			background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%); 
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(47%,rgba(246,246,246,1)), color-stop(100%,rgba(237,237,237,1))); 
+			background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); 
+			background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); 
+			background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); 
+			background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); 
+			
+            font-size: 15px;
+        }
+        .calculator .btn:hover,
+        .calculator .btn:focus {
+            border-color: #F5D50F;
+            background: rgb(252,234,187); 
+			background: -moz-linear-gradient(top,  rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%); 
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,234,187,1)), color-stop(50%,rgba(252,205,77,1)), color-stop(51%,rgba(248,181,0,1)), color-stop(100%,rgba(251,223,147,1)));
+			background: -webkit-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); 
+			background: -o-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); 
+			background: -ms-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); 
+			background: linear-gradient(to bottom,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); 
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 ); 
+
+        }
+        .calculator .btn:not(:disabled):active { top: 1px; }
+        .calculator .btn:disabled {
+            border-color: #B4C2D1;
+            background: #D9E4F1;
+        }
+        .calculator .btn.row2 { height: 59px; }
+        .calculator .btn strong { font-size: 22px; }
+		#zero{
+			background: rgb(255,255,255); 
+			background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%); 
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(47%,rgba(246,246,246,1)), color-stop(100%,rgba(237,237,237,1))); 
+			background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); 
+			background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); 
+			background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); 
+			background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); 
+			width:75px;
+            font-size: 15px;
+		}
+    </style>
+</head>
+<body>
+    <section class="calculator">
+        <ul class="main-menu inline">
+            <li><span class="shortcutted">V</span>iew</li>
+            <li><span class="shortcutted">E</span>dit</li>
+            <li><span class="shortcutted">H</span>elp</li>
+        </ul>
+        <form class="display box">
+            <input type="text" class="input-big input-block input-transparent code" value="8854455" />
+        </form>
+        <div class="binary-representation box box-inset code">
+            <ul class="inline">
+                <li>0000</li><li>0000</li><li>0000</li><li>0000</li><li>0000</li><li>0000</li><li>0000</li><li>0000</li>
+            </ul>
+            <ul class="inline binary-index muted">
+                <li>63</li>
+				<li>47</li>
+				<li>32</li>
+            </ul>
+            <ul class="inline">
+                <li>0000</li><li>0000</li><li>1000</li><li>0111</li><li>0001</li><li>1011</li><li>1011</li><li>0111</li>
+            </ul>
+            <ul class="inline binary-index muted">
+                <li>31</li>
+				<li>15</li>
+				<li>0</li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="span2">
+                <form class="row3 box">
+                    <ul class="unstyled">
+                        <li><label><input type="radio" value="hex" /> Hex</label></li>
+                        <li><label><input type="radio" value="dec" checked /> Dec</label></li>
+                        <li><label><input type="radio" value="oct" /> Oct</label></li>
+                        <li><label><input type="radio" value="bin" /> Bin</label></li>
+                    </ul>
+                </form>
+                <form class="row3 box">
+                    <ul class="unstyled">
+                        <li><label><input type="radio" value="qword" checked /> Qword</label></li>
+                        <li><label><input type="radio" value="dword" /> Dword</label></li>
+                        <li><label><input type="radio" value="word" /> Word</label></li>
+                        <li><label><input type="radio" name="wordSize" value="byte" /> Byte</label></li>
+                    </ul>
+                </form>
+            </div>
+            <form class="span8">
+                <div class="row">
+                    <button class="span1 btn btn-muted"><-</button>
+                    <button class="span1 btn">Mod</button>
+                    <button class="span1 btn" disabled>A</button>
+                    <button class="span1 btn btn-muted">MC</button>
+                    <button class="span1 btn btn-muted">MR</button>
+                    <button class="span1 btn btn-muted">MS</button>
+                    <button class="span1 btn btn-muted">M+</button>
+                    <button class="span1 btn btn-muted">M-</button>
+                </div>
+                <div class="row">
+                    <button class="span1 btn">(</button>
+                    <button class="span1 btn">)</button>
+                    <button class="span1 btn" disabled>B</button>
+                    <button class="span1 btn"><</button>
+                    <button class="span1 btn">CE</button>
+                    <button class="span1 btn">C</button>
+                    <button class="span1 btn">±</button>
+                    <button class="span1 btn" disabled>v</button>
+                </div>
+                <div class="row">
+                    <button class="span1 btn">RoL</button>
+                    <button class="span1 btn">RoR</button>
+                    <button class="span1 btn" disabled>C</button>
+                    <button class="span1 btn btn-loud">7</button>
+                    <button class="span1 btn btn-loud">8</button>
+                    <button class="span1 btn btn-loud">9</button>
+                    <button class="span1 btn">/</button>
+                    <button class="span1 btn" disabled>%</button>
+                </div>
+                <div class="row">
+                    <button class="span1 btn">Or</button>
+                    <button class="span1 btn">Xor</button>
+                    <button class="span1 btn" disabled>D</button>
+                    <button class="span1 btn btn-loud">4</button>
+                    <button class="span1 btn btn-loud">5</button>
+                    <button class="span1 btn btn-loud">6</button>
+                    <button class="span1 btn">*</button>
+                    <button class="span1 btn" disabled>1/x</button>
+                </div>
+                <div class="row">
+                    <div class="span7">
+                        <div class="row">
+                            <button class="span1 btn">Lsh</button>
+                            <button class="span1 btn">Rsh</button>
+                            <button class="span1 btn" disabled>E</button>
+                            <button class="span1 btn btn-loud">1</button>
+                            <button class="span1 btn btn-loud">2</button>
+                            <button class="span1 btn btn-loud">3</button>
+                            <button class="span1 btn">-</button>
+                        </div>
+                        <div class="row">
+                            <button class="span1 btn">Not</button>
+                            <button class="span1 btn">And</button>
+                            <button class="span1 btn" disabled>F</button>
+                            <button class="span2 btn btn-loud" id="zero">0</button>
+                            <button class="span1 btn" disabled>.</button>
+                            <button class="span1 btn">+</button>
+                        </div>
+                    </div>
+                    <button class="span1 row2 btn"><strong>=</strong></button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

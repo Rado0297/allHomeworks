@@ -1,0 +1,37 @@
+ <!-- 8.  Write an expression that calculates trapezoid's area by given sides a and b and height h-->
+  
+   <html>
+    <head>
+    <title>Zad 8</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+		var numberSa; 
+		var numberIa; 
+		var numberSb; 
+		var numberIb;
+		var numberSh; 
+		var numberIh; 		
+		var result; 
+		//въвеждане на число a
+		numberSa = window.prompt( "Въведи число a" );
+		//преобразуване на въведеното в число
+		numberIa = parseInt( numberSa );
+		
+		//въвеждане на число b
+		numberSb = window.prompt( "Въведи число b" );
+		//преобразуване на въведеното в число
+		numberIb = parseInt( numberSb );
+		
+		//въвеждане на число h
+		numberSh = window.prompt( "Въведи число h" );
+		//преобразуване на въведеното в число
+		numberIh = parseInt( numberSh );
+		
+		//намиране на лицето на трапеца
+		result = ((numberIa+numberIb)*numberIh)/2
+		
+		document.writeln( "площа на трапеца е: " +result);
+	</script>
+    </head>
+	<body></body>
+    </html>

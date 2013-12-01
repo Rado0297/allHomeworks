@@ -1,0 +1,24 @@
+body{
+	text-align: center;
+	background:black;
+	color:white;
+}	
+#todo-list-component{
+	display: inline-block;
+	text-align: left;
+}
+#todo-list{
+	list-style: none;
+}
+.hidden{
+	display: none;
+}
+#delete-item,#hide-item,#show-item,#submit-item{
+	color:white;
+	background:black;
+}
+#input{
+	width:221px;
+	background:black;
+	color:white;
+}

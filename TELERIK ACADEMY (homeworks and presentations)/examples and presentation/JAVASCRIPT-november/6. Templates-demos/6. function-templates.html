@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<script src="Scripts/class.js"></script>
+	<script src="Scripts/mustache.js"></script>
+</head>
+<body>
+
+	<div id="content"></div>
+	<script>
+		var person = {
+			fname: "Nikolay",
+			lname: "Kostov",
+			fullname: function () { return this.fname + " " + this.lname; },
+			render: function () {
+				return function (text, render) {
+					return "<strong>" + render(text) + "</strong>";
+				}
+			}
+		};
+
+		var template = "{{#render}} {{fullname}} {{/render}}";
+
+		var output = Mustache.render(template, person);
+
+		var content = document.getElementById("content");
+		content.innerHTML = output;
+	</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<html>
+<head>
+	<title>Reg. form</title>
+	<style>
+	label{
+		display:table-cell;
+		width:170px;
+		font-weight:bold;
+		text-align:right;
+	}
+	#footer{
+		width:621px;
+		border:1px solid black;
+		background:lightblue;
+	}
+	</style>
+</head>
+<body>
+	<table border="1" >
+		<form method="get" action="apply-now.php" >
+			<tr>
+				<td><label>First Name</label></td>
+				<td colspan="3"><input type="text" placeholder="Svetlin"/></td>
+			</tr>
+			<tr>
+				<td><label for="lname">Last Name</label></td>
+				<td colspan="3"><input type="text" placeholder="Nakov"/></td>
+			</tr>
+			<tr height="40">
+				<td><label for="address">Address</label></td>
+				<td colspan="3"><textarea placeholder="17 Hristo Botev Str, floor 3, apt 15" cols="30" rows="3"></textarea></td>
+			</tr>
+			<tr>
+				<td><label for="city">City</label></td>
+				<td><input type="text" placeholder="Sofia" /></td>
+				<td>State</td>
+				<td><input type="text" size="6">
+			</tr>
+			<tr>
+				<td><label for="zip-postal-code">Zip/Postal code</label></td>
+				<td colspan="3"><input type="text" name="zip-postal-code" id="zip-postal-code" placeholder="9462"></td>
+			</tr>
+			<tr>
+				<td><label for="country">Country</label></td>
+				<td colspan="3">
+					<select name="country" id="country">
+						<option value="Value 1" selected="selected">Bulgaria</option>
+						<option value="Value 2">Canada</option>
+						<option value="Value 3">Finland</option>
+						<option value="Value 4">Germany</option>
+						<option value="Value 5">United Kingdom</option>
+						<option value="Value 6">United States of Amerika</option>
+						<option value="Value 7">Other</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Phone(country code,<br>area code,number)</label></td>
+				<td colspan="3" >(+<input type="text" placeholder="359" size="6" required="true" pattern="\+[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}\-[0-9]{2}">)
+				<input type="text" placeholder="88" size="6"> - 
+				<input type="text" placeholder="8888888" size="8">
+			</tr>
+			<tr>
+				<td><label for="emailInput">E-mail</label></td><td colspan="3">
+				<input type="text" required="true" pattern="[a-zA-Z0-9_]{3,}@[a-zA-Z0-9_]{3,}.[a-zA-Z0-9_]{2,4}" placeholder="nqkakuv@email.com"/>
+			</tr>
+			<tr>
+				<td><label for="birthdate">Birth date</label></td>
+				<td colspan="3">
+					Month<input id="month" type="text" placeholder="05" size="1"/>
+					Day<input id="d" type="text" placeholder="14" size="1">
+					Year(4 digit)<input id="year" type="text" placeholder="1990" size="2">
+				</td>
+			</tr>
+			<tr>
+				<td><label for="gender">Gender</label></td>
+				<td colspan="3">
+					<select name="gender" id="gender">
+						<option value="f">Female</option>
+						<option value="m" selected="selected">Male</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="std">Starting date</label></td>
+				<td>
+					<input name="ss" type="radio" id="spring" value="spring" />
+					<label for="spring">Spring 2013 </label>
+				</td>
+				<td>
+					<input name="ss" type="radio" id="summer" value="summer" />
+					<label for="summer">Summer 2013 </label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="com-qu">Comments/Questions</label>
+				</td>
+				<td colspan="3">
+					<textarea placeholder="Please send me more information about the lodging" cols="30" rows="4"></textarea>
+				</td>
+			</tr>
+			
+        </form>
+    </table>
+	<footer id="footer">
+		<center>
+			<button type="submit">Submit</button>
+			<button type="reset">Clear This Form</button>
+		</center>
+	</footer>
+</body>
+</html>

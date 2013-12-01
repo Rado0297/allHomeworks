@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="..//jquery-1.9.1.min.js"></script>
+</head>
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li class="special">Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+  <div id="result"></div>
+  <script type="text/javascript">
+    function printResult(text){
+      $("#result").append(text);
+    }
+
+    var specialItem = $(".special");    
+    printResult(specialItem.text());    
+    printResult(specialItem.next().text());
+    printResult(specialItem.prev().text());
+
+    printResult(specialItem.nextSibling);
+
+
+  </script>
+</body>
+</html>

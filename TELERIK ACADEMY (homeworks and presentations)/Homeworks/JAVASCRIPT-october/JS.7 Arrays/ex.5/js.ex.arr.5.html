@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body .js-console {
+			margin: 0;
+			padding: 5px 10px;
+			background-color: black;
+			width: 800px;
+			height: 500px;
+			font-family: Consolas;
+			font-size: 18px;
+			color: white;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			word-break: break-all;
+		}
+	</style>
+</head>
+<body>
+    <span>Enter an array of numbers, sepatared by "," !</span>
+	<input type="text" id="tb-number">
+	<a href="#" id="btn-check-prime" onclick="sortTheArray()">Sort the Array</a>
+	<div id="js-console" class="js-console">
+	</div>
+	<script src="js-console.js">
+	</script>
+	<script>
+		function sortTheArray() {
+		    var arrayString = jsConsole.readString("#tb-number");
+			var arrayInt = arrayString.split(",");
+			for(var i in arrayInt){
+				arrayInt[i] = parseInt(arrayInt[i],10);
+			}
+			var currentSmallestElement = arrayInt[0];
+			for(var i = 0;i < arrayInt.length;i++){
+				currentSmallestElement = arrayInt[i];
+				var tempIndex = i + 1;
+				var indedexOftheSmallest = 0;
+				var enteredInIfTheSecondLoop = false;
+				while (tempIndex<arrayInt.length){
+					if(currentSmallestElement>arrayInt[tempIndex]){
+						currentSmallestElement = arrayInt[tempIndex];
+						indedexOftheSmallest = tempIndex;
+						tempIndex++;
+						enteredInIfTheSecondLoop = true;
+					}
+					else{
+						tempIndex++;
+					}
+				}
+				if(enteredInIfTheSecondLoop){
+					var tempVar = arrayInt[i];
+					arrayInt[i] = currentSmallestElement;
+					arrayInt[indedexOftheSmallest] = tempVar; 
+				}
+			}
+			if(arrayInt.length==1){
+				jsConsole.write("{" + arrayInt + "}");
+			}
+			else{
+				for (var i = 0; i < arrayInt.length; i++) {
+					if(i == 0){
+						jsConsole.write("{" + arrayInt[i] + ",");
+					}
+					else if(i < arrayInt.length-1){
+						jsConsole.write(arrayInt[i] + ",");
+					}	
+					else{
+						jsConsole.write(arrayInt[i] + "}");
+						jsConsole.writeLine();
+					}
+				}
+			}
+			jsConsole.writeLine();
+		}
+	</script>
+</body>
+</html>

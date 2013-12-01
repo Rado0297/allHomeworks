@@ -1,0 +1,26 @@
+<!--2. Write a boolean expression that checks for given integer if it can be divided (without remainder) by 7 and 5 in the same time.
+ -->
+ <html>
+ <head>
+ <title>Zad 2</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+		var numberS; 
+		var numberI;
+		var bol = new Boolean(); 
+		
+		//въвеждане на число
+		numberS = window.prompt( "Въведи число" );
+		//преобразуване на въведеното в число
+		numberI = parseInt( numberS );
+		bol = (numberI % 5 % 7 == 0);
+		    if (bol){
+				document.writeln( "числото се дели и на 5 и на 7" );
+		
+			} else {
+				document.writeln( "числото не се дели" );
+			}
+    </script>
+ </head>
+ <body></body>
+ </html>

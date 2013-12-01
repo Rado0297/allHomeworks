@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="js-console.css" rel="stylesheet" />
+	<style>
+		a{
+			color:white;
+		}
+	</style>
+</head>
+<body>							  
+	<div id="js-console">
+	<label for="string">Write a text to reverse it! </label>
+	<input id="string" type="text" class="js-console-input">
+	<a href="#" onclick="reverseText()">Reverse</a>
+	</div>
+	<script src="js-console.js"></script>
+	<script>
+	function reverseText() {
+		    var str = jsConsole.readString("#string");
+		    var stringBuilder = buildStringBuilder();
+		    for (var i = str.length; i >= 0; i--) {
+		        stringBuilder.append(str[i]);
+		    }
+		    jsConsole.writeLine(stringBuilder);
+
+		}
+		function buildStringBuilder() {
+		    return {
+		        strs: [],
+		        len: 0,
+		        append: function (str) {
+		            this.strs[this.len++] = str;
+		            return this;
+		        },
+		        toString: function () {
+		            return this.strs.join("");
+		        }
+		    };
+		}
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+	div{
+        width:340px;
+        border:6px solid black;
+        border-radius:5px;
+		background:yellowgreen;
+        padding: 0px 0px 10px 10px;
+	}
+	input,textarea{
+		border: 1px solid black;
+		border-radius: 5px;
+		padding: 5px;
+		margin: 10px;
+	}
+	textarea{
+		width: 300px;
+	}
+	#output{
+		min-height:160px;
+	}
+	a{
+		color: black;
+		border: 1px solid black;
+		padding: 5px 15px;
+		text-decoration: none;
+		display: inline-block;
+		margin: 15px 0;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+</style>
+<script>
+	window.onload = function(){
+		document.getElementById("enter").onclick = function(){
+			var arr1 = [window, navigator, document];        
+			for(var i = 0; i<3; i++){
+				var outTxt = "";
+				var arr;
+				for(var property in arr1[i]){
+					outTxt += property+" ";
+				}
+				arr = outTxt.split(" ");
+				arr.sort();        
+				outTxt = "Min: "+arr[1]+";\nMax: "+arr[arr.length-1]+";";
+				var id = "output" + (i+1);
+				document.getElementById(id).innerHTML = outTxt;
+			}
+		}
+		document.getElementById("check").onclick = function() {
+			if(document.getElementById("check").checked){
+				document.getElementById("task").style.display = "block";
+			}
+			else{
+				document.getElementById("task").style.display = "none";
+			}
+		}
+		document.getElementById("task").style.display = "none";
+	}
+</script>
+</head>
+<body>
+<div>
+<textarea id="output1" type="text" placeholder="window min and max properties" disabled></textarea><br>
+<textarea id="output2" placeholder="navigator min and max properties" disabled></textarea><br>
+<textarea id="output3" placeholder="document min and max properties" disabled></textarea><br>
+<input id="enter" type="submit" value="EXECUTE">
+</div>
+</body>
+</html>

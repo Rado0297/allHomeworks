@@ -1,0 +1,40 @@
+<!-- 6. Write an expression that checks if given print (x,  y) is within a circle K(O, 5).
+-->
+<html>
+<head>
+<title>Zad 6</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+		var numberSX; 
+		var numberIX; 
+		var numberSY; 
+		var numberIY; 
+		var radius = 5;
+		
+		//въвеждане на число  X
+		numberSX = window.prompt( "Въведи число X" );
+		//преобразуване на въведеното в число
+		numberIX = parseInt( numberSX );
+		
+		//въвеждане на число  Y
+		numberSY = window.prompt( "Въведи число Y" );
+		//преобразуване на въведеното в число
+		numberIY = parseInt( numberSY );
+		
+        if (((numberIX * numberIX) + (numberIY * numberIY)) < radius * radius)
+        {
+            document.writeln("точката е в окръжността K(0,5)");
+        }
+        else
+        {
+            document.writeln("точката е извън окръжността K(0,5)");
+        }
+
+         
+        
+		
+		
+    </script>
+</head>
+<body></body>
+</html>

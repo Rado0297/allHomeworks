@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		a {
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<label for="tb-first">Width: </label>
+	<input type="text" id="width" />
+	<br />
+	<label for="tb-second">Height: </label>
+	<input type="text" id="height" />
+	<br />
+	<a href="#" onclick="onCheckNumbersButtonClick()">Calculate</a>
+	<div id="console">
+	</div>
+	<script src="js-console.js">	  
+	</script>
+	<script>
+		function onCheckNumbersButtonClick() {
+			var width = jsConsole.readFloat("#width");
+			var height = jsConsole.readFloat("#height");
+			jsConsole.writeLine("The rectangular area is  " + width * height);
+		}
+	</script>
+</body>
+</html>

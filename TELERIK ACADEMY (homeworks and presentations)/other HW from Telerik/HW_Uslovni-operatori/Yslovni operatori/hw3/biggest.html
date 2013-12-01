@@ -1,0 +1,83 @@
+<html>
+	<head> 
+	<style>
+		body{
+		background-color:#EBF4FA;
+		font-size:25px;
+		color:black;
+		}
+		input[type=text]
+				{	
+                border: 3px solid black;
+                padding: 5px 15px;
+                background-color:white ;
+                color: black; 
+                margin-bottom: 5px;
+				border-style:groove;
+				}
+		input[type=submit]
+				{	
+                border: 3px solid black;
+                padding: 5px 15px;
+                background-color:white ;
+                color: black; 
+                margin-bottom: 5px;
+				border-style:groove;
+				}
+	
+	
+	</style>
+	</head> 
+	<body> 
+		Type the first number: <input type="text" name="number1" id="num1" /><br />
+		Type the second number: <input type="text" name="number2" id="num2" /><br/>
+		Type the third number <input type="text" name="number3" id="num3" /><br/> 
+		Submit: <input type="submit" name="submit" value="submit" onclick="javascript:getBiggest();return false;" />
+
+				<script type="text/javascript" langage="javascript"> 
+			 function getBiggest() { 
+			 var a = parseInt(document.getElementById("num1").value);
+			 var b =parseInt(document.getElementById("num2").value);
+			 var c = parseInt(document.getElementById("num3").value);
+
+			 if((a>b)&&(a>c)) 
+			 { 
+			 alert(a+" is the highest number"); 
+			 } 
+			 else
+			if((b>a)&&(b>c)) 
+			{
+			 alert(b+ " is the highest number");
+			 }
+			 else if((c>a)&&(c>b)) 
+			 {
+			 alert(c+ " is the highest number"); 
+			 }
+			 else { 
+			 alert("One of them is not an int");
+			} 
+			}
+				</script>
+	</body> 
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

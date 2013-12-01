@@ -1,0 +1,258 @@
+
+<html>
+	<head>
+
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+
+		<style type="text/css">
+
+				body {
+
+					background-color: #3EA99F;
+
+					font-family: Comic Sans MS;
+
+					font-size: 20px;
+
+				}
+				
+				input[type=button]
+				{	
+                border: 3px solid black;
+                padding: 5px 15px;
+                background-color:#008080;
+                color: black; 
+                margin-bottom: 5px;
+				border-style:groove;
+				}
+					
+				input[type=text]
+				{	
+                border: 3px solid black;
+                padding: 5px 15px;
+                background-color:#008080;
+                color: black; 
+                margin-bottom: 5px;
+				border-style:groove;
+				}
+
+				 #header {
+
+					height: 30px;
+
+					-webkit-border-radius: 3px;
+
+					-moz-border-radius: 3px;
+
+					border-radius: 3px;
+
+					margin-bottom: 7px;
+
+				}
+
+			  
+
+				.title {
+
+					font-size: 20pt;
+
+					padding-left: 7px;
+
+					padding-top: 7px;
+
+				}
+
+			  
+
+				#solver-box {
+
+					border:none;
+
+					padding-left: 10px;
+
+					padding-bottom: 10px;
+
+				}
+
+				 
+
+				#equation {
+
+					background: url(equation.gif) no-repeat;
+
+					width: 179px;
+
+					height: 37px;
+
+					margin: auto;
+
+					margin-top: 7px;
+
+					margin-bottom: 7px;
+
+				}
+
+				 #info {
+						display: none; 
+						color: red;
+						margin-top: 5px;
+				}
+				
+				#eq		{
+						font-size:20px;
+						text-align:center;
+						}
+				
+				
+		</style>
+
+	</head>
+
+	<body>
+
+			  <div>
+
+				<div id="header" class="title">Quadratic Equation Solver</div>
+
+				<div id="solver-box">
+
+				<div id="equation"></div>
+
+			<form action="#" method="post" name="solver" onsubmit="return false">
+
+				<table width="100%">
+
+				<tr id="eq">
+				 
+				<td colspan="3">
+				 ax<sup>2</sup>+bx+c=0 <br/>
+				 <br/>
+				Enter the coefficients "a", "b" and "c" of your quadratic equation</td>
+
+				</tr>
+					
+				<tr>
+
+				<td>a = <input type="text" name="a" size="10" value="1" /></td>
+
+				<td>b = <input type="text" name="b" size="10" /></td>
+
+				<td>c = <input type="text" name="c" size="10"/></td>
+
+				</tr>
+
+				<tr>
+
+				<td align="center" colspan="3"><input type="button" value="Solve" onclick="solve();"  /></td>
+
+				</tr>
+
+				</table>
+
+				<table>
+
+				<tr>
+
+				<td>X <sub>1</sub> : </td>
+
+				<td><input type="text" name="sol1" size="20" /></td>
+
+				</tr>
+
+				<tr>
+
+				<td>X <sub>2</sub> : </td>
+
+				<td><input type="text" name="sol2" size="20" /></td>
+
+				</tr>
+
+				<tr>
+
+				<td>D : </td>
+
+				<td><input type="text" name="disc" size="20"></td>
+
+				</tr>
+
+				<table>
+
+			</form>
+
+			<div id="info"></div>
+
+			</div>
+
+			</div>
+
+			<script type="text/javascript">
+
+				function solve() {
+
+					a = parseFloat(document.solver.a.value);
+
+					b = parseFloat(document.solver.b.value);
+
+				   c = parseFloat(document.solver.c.value);
+
+					 
+
+					if (a == 0) {
+
+						info = "Equation is not quadratic";
+
+			   info_disp = "block";
+
+			}
+
+			else {
+
+				discriminant = b*b - 4*a*c;
+
+				if (discriminant == 0) {
+
+				  solution1 = -b / (2*a);
+
+					solution2 = "NA";
+
+					info = "This equation has only one solution";
+
+					info_disp = "block";
+
+				}
+
+				else {
+
+					solution1 = (-b + Math.sqrt(discriminant))/(2*a);
+
+					solution2 = (-b - Math.sqrt(discriminant))/(2*a);
+
+					info = "";
+
+					info_disp = "none";
+
+				}
+
+				 
+
+			}
+
+			document.getElementById("info").style.display = info_disp;
+
+			document.getElementById("info").innerHTML = info;
+
+			document.solver.sol1.value = solution1;
+
+			document.solver.sol2.value = solution2;
+
+			document.solver.disc.value = discriminant;
+
+			}
+		</script>
+
+
+
+	</body>
+
+</html>

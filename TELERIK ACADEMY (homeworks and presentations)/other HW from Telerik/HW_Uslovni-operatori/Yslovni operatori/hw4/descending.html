@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<style>
+		
+		input[type=text]
+				{	
+                border: 3px solid black;
+                padding: 5px 15px;
+                background-color:white ;
+                color: black; 
+                margin-bottom: 5px;
+				border-style:groove;
+				}
+		input[type=button]
+				{	
+                border: 3px solid black;
+                padding: 5px 15px;
+                background-color:white ;
+                color: black; 
+                margin-bottom: 5px;
+				border-style:groove;
+				}
+		body	{
+				background-color:#3EA99F;
+				font-size:25px;
+				font-family:Comic Sans MS;
+				}
+		
+		</style>
+
+	</head>
+
+
+
+
+	<body>
+
+
+      Firts Number:  <input type="text" id="fr" />
+      Second Number:  <input type="text" id="sd" />
+      Third Number:  <input type="text" id="td" />
+        <input type="button" onclick="Click()" value="Check" />
+	
+	
+	<script src="scripts/js-console.js"></script>     
+	
+	<script>
+
+        function Click() {
+            var first = parseInt(document.getElementById("fr").value);
+            var second = parseInt(document.getElementById("sd").value);
+            var third = parseInt(document.getElementById("td").value);
+            var big;
+            var bigger;
+            var biggest;
+
+            if ((first > second) && ( first > third )) {
+                biggest = first;
+                if (second > third) {
+                    bigger = second;
+                    big = third;
+                }
+                else {
+                    bigger = third;
+                    if (bigger > second) {
+                        big = second;
+                    }
+                }
+              
+                alert("The biggest is:" + biggest + ",then:" + bigger + ",the smallest is:" + big );
+            }
+
+            if ((second > first) && (second > third)) {
+                biggest = second;
+                if (first > third) {
+                    bigger = first;
+                    big = third;
+                }
+                else {
+                    bigger = third;
+                    if (bigger > first) {
+                        big = first;
+                    }
+                }
+
+                alert("The biggest is:" + biggest + ",the:" + bigger + ",the smallest is:" + big);
+            }
+
+
+            if ((third > first) && (third > second)) {
+                biggest = third;
+                if (first > second) {
+                    bigger = first;
+                    big = second;
+                }
+                else {
+                    bigger = second;
+                    if (bigger > first) {
+                        big = first;
+                    }
+                }
+
+                alert("The biggest is:" + biggest + ",then:" + bigger + ",the smallest is:" + big);
+            }
+
+        }
+
+		</script>
+	</body>
+</html>

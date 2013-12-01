@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HomeWork</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/drop_down_menu.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
+		<script src="js/script.js"></script>
+		 <!--[if IE]> 
+		 <link rel="stylesheet" type="text/css" href="css/ie_style.css" />
+		 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		 <![endif]--> 
+	</head>
+	<body>
+
+			<div id="wrapper_body">
+			<header>
+				<h3 class="header_text">Calculator&nbsp;</h3>
+				<div id="global_button">
+					<div class="minimize"></div><div class="close"></div>
+				</div>
+			</header>
+				<div id="inner_wrapper">
+					<div id="menu_global">
+						<ul class="main">	
+							<li><a id="View" href="#">View</a>
+								<ul class="sub">
+									<li><a href="#" class="first"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border first"></div><div class="link second">Standart</div><div class="right_sub last">Alt+1</div></a></li>
+									<li><a href="#"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border"></div><div class="link">Scientific</div><div class="right_sub">Alt+1</div></a></li>
+									<li><a href="#"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border"><div class="blue_box"></div><div class="blue_box_inner"></div></div><div class="link">Programer</div><div class="right_sub">Alt+2</div></a></li>
+									<li class="border_menu"><a href="#"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border"></div><div class="link">Statistic</div><div class="right_sub">Alt+3</div></a></li>
+									<li><a href="#"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border"></div><div class="link hide">History</div><div class="right_sub">Alt+4</div></a></li>
+									<li class="border_menu"><a href="#"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border"></div><div class="link">Digit grouping</div><div class="right_sub">Ctrl+H</div></a></li>
+									<li><a href="#"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border"><div class="blue_box"></div><div class="blue_box_inner"></div></div><div class="link">Basic</div><div class="right_sub">Ctrl+F4</div></a></li>
+									<li><a href="#"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border"></div><div class="link">Unit conversion</div><div class="right_sub">Ctrl+U</div></a></li>
+									<li><a href="#"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border"></div><div class="link">Date calculating</div><div class="right_sub">Ctrl+E</div></a></li>
+									<li><a href="#"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border"></div><div class="link">Worksheets</div><div class="right_sub"><span>&nbsp;&nbsp;&raquo;</span></div></a>
+										<ul class="sub">
+											<li><a href="#" class="first"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border first"></div><div class="link second">Mortage</div><div class="right_sub last"></div></a></li>
+											<li><a href="#"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border"></div><div class="link">Vehicle lease</div><div class="right_sub"></div></a></li>
+											<li><a href="#"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border"></div><div class="link">Fuel economy (mpg)</div><div class="right_sub"></div></a></li>
+											<li><a href="#"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border"></div><div class="link">Fuel economy (L/100km)</div><div class="right_sub"></div></a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a id="edit" href="#">Edit</a>
+								<ul class="sub">
+									<li><a href="#" class="first"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border first"></div><div class="link second">Copy</div><div class="right_sub last">Ctrl+C</div></a></li>
+									<li><a href="#"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border"></div><div class="link">Pastle</div><div class="right_sub">Ctrl+V</div></a></li>
+								</ul>
+							</li>
+							<li><a id="help" href="#">Help</a>
+								<ul class="sub">
+									<li><a href="#" class="first"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border first"></div><div class="link second">View Help</div><div class="right_sub last">F1</div></a></li>
+									<li><a href="#"><div class="hover_menu_border"></div><div class="hover_menu"></div><div class="sub_left_border"></div><div class="link">About Calculator</div><div class="right_sub">Alt+1</div></a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div id="calc_body">
+						<div id="calc_result">
+							<input type="text" class="result" name="result" id="total_result" maxlength="28" value="0" />
+						</div>
+						<div id="calc_numeral">
+							<div  id="calc_numeral_inner">
+								<ul class="numerals">
+									<li><a href="#" onclick="someEvent" class="btnhov first" id="numeral_btn1"><span id="numeral_btn_1">0000</span></a></li>
+									<li><a href="#" onclick="someEvent" class="btnhov" id="numeral_btn2"><span id="numeral_btn_2">0000</span></a></li>
+									<li><a href="#" onclick="someEvent" class="btnhov" id="numeral_btn3"><span id="numeral_btn_3">0000</span></a></li>
+									<li><a href="#" onclick="someEvent" class="btnhov" id="numeral_btn4"><span id="numeral_btn_4">0000</span></a></li>
+									<li><a href="#" onclick="someEvent" class="btnhov" id="numeral_btn5"><span id="numeral_btn_5">0000</span></a></li>
+									<li><a href="#" onclick="someEvent" class="btnhov" id="numeral_btn6"><span id="numeral_btn_6">0000</span></a></li>
+									<li><a href="#" onclick="someEvent" class="btnhov" id="numeral_btn7"><span id="numeral_btn_7">0000</span></a></li>
+									<li><a href="#" onclick="someEvent" class="btnhov" id="numeral_btn8"><span id="numeral_btn_8">0000</span></a></li>
+								</ul>
+								<ul class="numerals">
+									<li class="num_d_1"><a href="#" onclick="someEvent" class="btnhov first sub" id="numeral_btn9"><span id="numeral_btn_9">63</span></a></li>
+									<li class="num_d_2"><a href="#" onclick="someEvent" class="btnhov sub" id="numeral_btn10"><span id="numeral_btn_10">47</span></a></li>
+									<li class="num_d_3"><a href="#" onclick="someEvent" class="btnhov last sub" id="numeral_btn11"><span id="numeral_btn_11" class="last_num">32</span></a></li>
+								</ul>
+								<ul class="numerals">
+									<li><a href="#" onclick="someEvent" class="btnhov first" id="numeral_btn12"><span id="numeral_btn_12">0000</span></a></li>
+									<li><a href="#" onclick="someEvent" class="btnhov" id="numeral_btn13"><span id="numeral_btn_13">0000</span></a></li>
+									<li><a href="#" onclick="someEvent" class="btnhov" id="numeral_btn14"><span id="numeral_btn_14">0000</span></a></li>
+									<li><a href="#" onclick="someEvent" class="btnhov" id="numeral_btn15"><span id="numeral_btn_15">0000</span></a></li>
+									<li><a href="#" onclick="someEvent" class="btnhov" id="numeral_btn16"><span id="numeral_btn_16">0000</span></a></li>
+									<li><a href="#" onclick="someEvent" class="btnhov" id="numeral_btn17"><span id="numeral_btn_17">0000</span></a></li>
+									<li><a href="#" onclick="someEvent" class="btnhov" id="numeral_btn18"><span id="numeral_btn_18">0000</span></a></li>
+									<li><a href="#" onclick="someEvent" class="btnhov" id="numeral_btn19"><span id="numeral_btn_19">0000</span></a></li>
+								</ul>
+								<ul class="numerals">
+									<li class="num_d_1"><a href="#" onclick="someEvent" class="btnhov first sub" id="numeral_btn20"><span id="numeral_btn_20">31</span></a></li>
+									<li class="num_d_2"><a href="#" onclick="someEvent" class="btnhov sub" id="numeral_btn21"><span id="numeral_btn_21">15</span></a></li>
+									<li class="num_d_3"><a href="#" onclick="someEvent" class="btnhov last sub" id="numeral_btn22"><span id="numeral_btn_22">0</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<form action="#" name="calc" id="calcForm">
+							<table class="wrap_buttons">
+								<tr>
+									<td rowspan="3" class="radio_option">
+										<div class="radio_div">
+											<table class="option_table">
+												<tr>
+													<td class="td_radio"><input type="radio" onclick="someEvent" name="first_option" value="hex" id="hex" /><label for="hex"><span class="td_text">Hex</span></label></td>
+												</tr>
+												<tr>
+													<td class="td_radio"><input type="radio" onclick="someEvent" name="first_option" value="dec" id="dec" checked="checked"  /><label for="dec"><span class="td_text">Dec</span></label></td>
+												</tr>
+												<tr>
+													<td class="td_radio"><input type="radio" onclick="someEvent" name="first_option" value="oct" id="oct" /><label for="oct"><span class="td_text">Oct</span></label></td>
+												</tr>
+												<tr>
+													<td class="td_radio"><input type="radio" onclick="someEvent" name="first_option" value="bin" id="bin" /><label for="bin"><span class="td_text">Bin</span></label></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+									<td><div class="calc_button"></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_1">Mod</a></div></td>
+									<td><div class="calc_button neutral">A</div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_3" id="button_2">MC</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_3" id="button_3">MR</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_3" id="button_4">MS</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_3" id="button_5">M+</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_3" id="button_6">M-</a></div></td>
+								</tr>
+								<tr>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_7">&#40;</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_8">&#41;</a></div></td>
+									<td><div class="calc_button neutral">B</div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_9">&#8592;</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_10">CE</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_11">C</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_12">&plusmn;</a></div></td>
+									<td><div class="calc_button neutral left">&#8730;</div></td>
+								</tr>
+								<tr>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_13">RoL</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_14">RoR</a></div></td>
+									<td><div class="calc_button neutral">C</div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_2" id="button_15">7</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_2" id="button_16">8</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_2" id="button_17">9</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_18">/</a></div></td>
+									<td><div class="calc_button neutral left">%</div></td>
+								</tr>
+								
+								<tr>
+									<td rowspan="3" class="radio_option">
+										<div class="radio_div">
+											<table class="option_table">
+													<tr>
+														<td class="td_radio"><input type="radio" onclick="someEvent" name="second_option" value="qword" id="qword" checked="checked" /><label for="qword"><span class="td_text">Qword</span></label></td>
+													</tr>
+													<tr>
+														<td class="td_radio"><input type="radio" onclick="someEvent" name="second_option" value="dword" id="dword" /><label for="dword"><span class="td_text">Dword</span></label></td>
+													</tr>
+													<tr>
+														<td class="td_radio"><input type="radio" onclick="someEvent" name="second_option" value="word" id="word" /><label for="word"><span class="td_text">Word</span></label></td>
+													</tr>
+													<tr>
+														<td class="td_radio"><input type="radio" onclick="someEvent" name="second_option" value="byte" id="byte" /><label for="byte"><span class="td_text">Byte</span></label></td>
+													</tr>
+												</table>
+										</div>
+									</td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_19">Or</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_20">Xor</a></div></td>
+									<td><div class="calc_button neutral">D</div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_2" id="button_21">4</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_2" id="button_22">5</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_2" id="button_23">6</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_24">*</a></div></td>
+									<td><div class="calc_button neutral left">1/x</div></td>
+								</tr>
+								<tr>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_25">Lsh</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_26">Rsh</a></div></td>
+									<td><div class="calc_button neutral">E</div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_2" id="button_27">1</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_2" id="button_28">2</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_2" id="button_29">3</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_30">-</a></div></td>
+									<td rowspan="2"><div class="calc_button inner_border_equal equal"><a href="#" onclick="someEvent" class="calc_button_equal" id="button_31">=</a></div></td>
+								</tr>
+									<tr>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_32">Not</a></div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_33">And</a></div></td>
+									<td><div class="calc_button neutral">F</div></td>
+									<td colspan="2"><div class="calc_button inner_border_zero zero"><a href="#" onclick="someEvent" class="calc_button_zero" id="button_34">0</a></div></td>
+									<td><div class="calc_button neutral">,</div></td>
+									<td><div class="calc_button inner_border"><a href="#" onclick="someEvent" class="calc_botton_over_1" id="button_35">+</a></div></td>
+								</tr>
+								
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

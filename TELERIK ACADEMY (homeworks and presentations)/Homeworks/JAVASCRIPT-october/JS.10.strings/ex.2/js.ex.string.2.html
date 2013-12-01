@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link href="js-console.css" rel="stylesheet" />
+</head>
+<body>   
+        <label for="expression">Write an expression and check for correctly put brakets</label>
+        <input id="expression" type="text" class="js-console-input" />
+        <a href="#" class="js-console-btn" onclick="printResult()">Check</a>
+        <div id="js-console"></div>
+        <script src="js-console.js"></script>
+        <script>
+            function printResult() {
+                var expr = jsConsole.readString("#expression");
+                var leftBraketsCount = checkBrakets(expr, "(");
+                var rightBraketsCount = checkBrakets(expr, ")");
+                if (leftBraketsCount===rightBraketsCount) {
+                    jsConsole.writeLine("The brakets count is all right: "+ leftBraketsCount);
+                }
+                else {
+                    jsConsole.writeLine("The brakets counts is wrong!There are "+ leftBraketsCount+" left brakets and "+rightBraketsCount + " right!");
+                }
+            }
+            function checkBrakets(expr,braket)
+            {
+                var count = 0;
+                for (var i = 0; i <expr.length; i++) {
+                    if (expr[i]==braket) {
+                        count++;
+                    }
+                }
+                return count;
+            }
+        </script>
+</body>
+</html>

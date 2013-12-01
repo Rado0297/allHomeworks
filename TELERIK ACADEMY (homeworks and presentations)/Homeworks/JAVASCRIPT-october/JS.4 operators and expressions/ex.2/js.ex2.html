@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Division</title>
+	<style>
+		a{
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<label>Enter a number: </label>
+	<input type="text" id="tb-number" />
+	<a href="#" onclick="onEvenOddButtonClick()">Divide</a>
+	<div id="console">
+	</div>
+	<script src="js-console.js">	  
+	</script>
+	<script>
+		function onEvenOddButtonClick() {
+			var number = jsConsole.readFloat("#tb-number");
+			if (number%7==0 && number%5==0){
+				jsConsole.writeLine("The number " + number + " divide to 7 and 5 at the same time!")
+			}
+			else {
+				jsConsole.writeLine("The number " + number + " don't divide to 7 and 5 at the same time!")
+			}
+		}
+	</script>
+</body>
+</html>

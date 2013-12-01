@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<style>
+		body{
+		background-color:#3EA99F;
+		font-size:25px;
+		font-family:Comic Sans Ms;
+		color:black;
+		}
+		input[type=text]
+				{	
+                border: 3px solid black;
+                padding: 5px 15px;
+                background-color:white ;
+                color: black; 
+                margin-bottom: 5px;
+				border-style:groove;
+				}
+		input[type=submit]
+				{	
+                border: 3px solid black;
+                padding: 5px 15px;
+                background-color:white ;
+                color: black; 
+                margin-bottom: 5px;
+				border-style:groove;
+				}
+
+
+		</style>
+	</head>
+
+	<body>
+
+	
+	Type the first number: <input type="text" name="number1" id="num1" /><br />
+		Type the second number: <input type="text" name="number2" id="num2" /><br/>
+		Type the third number: <input type="text" name="number3" id="num3" /><br/> 
+		Type the fourth number: <input type="text" name="number4" id="num4" /><br/> 
+		Type the fifth number: <input type="text" name="number5" id="num5" /><br/> 
+		 <input type="submit" name="submit" value="submit" onclick="javascript:getBiggest();return false;" />
+		
+		<script>
+			function getBiggest ()
+			{
+			 var a = parseInt(document.getElementById("num1").value);
+			 var b =parseInt(document.getElementById("num2").value);
+			 var c = parseInt(document.getElementById("num3").value);
+			 var d = parseInt(document.getElementById("num4").value);
+			 var e = parseInt(document.getElementById("num5").value);
+
+			 if((a>b)&&(a>c) && (a>d) && (a>e)  ) 
+			 { 
+			 alert(a+" is the greates variable"); 
+			 } 
+			 else
+			if((b>a)&&(b>c) && (b>d) && (b>e) ) 
+			{
+			 alert(b+ " is the greatest variable");
+			 }
+			 else if((c>a)&&(c>b) && (c>d) && (c>e)     ) 
+			 {
+			 alert(c+ " is the greatest variable"); 
+			 }
+			 else if ( (d>a) && (d>b) && (d>c) && (d>e)  )
+			 { 
+			 alert(d+ "is the greatest variable");
+			} 
+			else if ( (e>a) && (e>b) && (e>c) && (e>d) )
+			{
+			alert(d+ "is the greatest variable");
+			}
+		}
+
+
+
+
+
+		</script>
+
+	</body>
+</html>

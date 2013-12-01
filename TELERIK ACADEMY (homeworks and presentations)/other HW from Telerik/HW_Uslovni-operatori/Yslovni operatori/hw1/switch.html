@@ -1,0 +1,74 @@
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style>
+		body
+		{
+		font-family:Comic Sans MS;
+		font-size:30px;
+		background-color:#4E8975;
+		color:#8A4E62;
+		}
+		input[type=button]
+						{	
+						border: 3px solid black;
+						padding: 5px 15px;
+						background-color:white ;
+						color: black; 
+						margin-bottom: 5px;
+						border-style:groove;}
+						
+		input[type=text]
+						{	
+						border: 3px solid black;
+						padding: 5px 15px;
+						background-color:white ;
+						color: black; 
+						margin-bottom: 5px;
+						border-style:groove;}
+		</style>
+ 
+	</head>
+ 
+	<body>
+		<div>
+		<input type="text" id="first"/>
+		<input type="text" id="second"/>
+		<button type="button" onClick="Change()">Change their values</button>
+		<h1 id="h1"></h1>
+		<h1 id="h2"></h1>
+		<h1 id="h3"></h1>
+		</div>
+
+		<script type="text/javascript">
+ 
+		function Change()
+		{
+		var f=parseInt(document.getElementById("first").value);
+		var s=parseInt(document.getElementById("second").value);
+ 
+	
+		var g;
+ 
+	
+	 if(f > s) {
+	     g=f;    
+		 f=s; 
+		 s=g;  
+		
+		
+		h1.innerHTML="The value of the first is  " + "" + f;
+		h2.innerHTML="The value of the second is " + "" + s; 
+		 }
+		 
+	else if (s > f){
+		h1.innerHTML="The first one is not bigger than the second one";
+		h2.innerHTML="";
+	}
+}
+	
+	
+	</script>
+</body>
+</html>

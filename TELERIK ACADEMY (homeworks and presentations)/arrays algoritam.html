@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+	<script>
+		var arr=[2,5,1,2,6,6,6,6,2];
+		var count=1;
+		var countNow=1;
+		var num=0;
+		for(i=0;i<arr.length;i++){
+			if(countNow>count){
+				count=countNow;
+				num=arr[i-1];
+			}
+			countNow=1;
+			while(arr[i]==arr[i+1]){
+				i++;
+				countNow++;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<link type="text/css" rel="stylesheet" href = "tagCloudStyle.css" />                
+</head>
+<body>
+	<h1>Create a tag cloud:</h1>
+	<form action="#" method="get">        
+		<label for = "tags" ><h2>Enter Here Your Tag Cloud</h2> </label>
+		<ul>                                                                           
+			<li>You can use  "Font Size Min (5 - 20)" and "Font Size Max (25 - 60)" to change font size</li>
+		</ul>
+		<textarea  id = "tags" cols = "50" rows = "10">"cms", "javascript", "js","ASP.NET MVC", ".net", ".net", "css", '"wordpress", "xaml", "js", "http", "web","asp.net", "asp.net MVC", "ASP.NET MVC","wp", "javascript", "js", "cms", "html","javascript", "http", "http", "CMS"
+		</textarea>
+		<fieldset id = "rightField">
+			<label for = "fontSizeMin" >Font Size Min (5 - 20)</label>
+			<input id = "fontSizeMin" name = "fontSizeMin" type = "range" min = "5" max = "20" step = "1" value = "17"/>                                
+			<label for = "fontSizeMax" >Font Size Max (25 - 60)</label>
+			<input id = "fontSizeMax" type = "range" min = "25" max = "60" value = "42" step = "1" />
+		</fieldset>
+		<a href = "#" onclick = "generateTagCloudStart()">Generate Tag Cloud</a>  
+	</form>
+	<div id="tagCloudContainer"></div>                                
+	<script src="tagCloudScript.js">                       
+	</script>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    <script>
+        var tags = get.ElementsById("tag-input");
+		
+        
+    </script>
+</body>
+</html>

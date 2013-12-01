@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		a {
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<label for="tb-first">Side A: </label>
+	<input type="text" id="a" />
+	</br>
+	<label for="tb-first">Side B: </label>
+	<input type="text" id="b" />
+	<br />
+	<label for="tb-second">Height: </label>
+	<input type="text" id="height" />
+	<br />
+	<a href="#" onclick="onClickCalculate()">Calculate</a>
+	<div id="console">
+	</div>
+	<script src="js-console.js">	  
+	</script>
+	<script>
+		function onClickCalculate() {
+			var a = jsConsole.readFloat("#a");
+			var b = jsConsole.readFloat("#b");
+			var height = jsConsole.readFloat("#height");
+			jsConsole.writeLine("The rectangular area is  " + 1/2*(a + b)*height );
+		}
+	</script>
+</body>
+</html>

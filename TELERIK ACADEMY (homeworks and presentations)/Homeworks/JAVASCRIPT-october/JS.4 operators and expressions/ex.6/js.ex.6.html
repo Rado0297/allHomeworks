@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		a {
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<label for="tb-first">Enter X: </label>
+	<input type="text" id="tb-first"/>
+    </br>                                                                     
+	<label for="tb-second">Enter Y: </label>
+	<input type="text" id="tb-second"/>
+    </br>	
+	<a href="#" onclick="checkThis()">Is point in circle K(0,5)</a>
+	<div id="console">
+	</div>
+	<script src="js-console.js">          
+	</script>                  
+	<script>
+		function checkThis() {
+			var X = jsConsole.readFloat("#tb-first");
+			var Y = jsConsole.readFloat("#tb-second");
+			var radius = 5;
+			if ((X * X + Y * Y) < radius * radius){
+				jsConsole.writeLine("Point (" + X + "," + Y +") is within circle K(0,5)");
+			}
+			else{
+				jsConsole.writeLine("Point (" + X + "," + Y +") is outside circle K(0,5)");
+			}
+		}                                                                                        
+	</script>                          
+</body>
+</html>

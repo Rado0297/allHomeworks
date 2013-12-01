@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function twoArraysComparison(arrOne, arrTwo){
+			var arrOneLength = arrOne.length,
+			arrTwoLength = arrTwo.length,
+			areArraysEqual = true; 
+			if (arrOneLength == arrTwoLength) { 
+				for (var i = 0; i < arrOneLength; i++) {
+					if (arrOne[i] !== arrTwo[i]) {
+						areArraysEqual = false;
+						break;
+					}
+				}
+			}
+			else {
+				areArraysEqual = false;
+			}
+			document.write("<p>Is array [" + arrOne + "] equal to array [" +arrTwo+ "] ? // " + areArraysEqual  + "</p>")
+		}
+		//here you enter your arrays that you will compare!!!
+		twoArraysComparison(["Y", "B", "S", "S"], ["Y", "B", "S", "S"]);//arr1 = ["Y", "B", "S", "S"] and arr2 = ["Y", "B", "S", "S"]
+		twoArraysComparison(["1", "9", "9", "7"], ["Y", "B", "S", "S"]);//arr1 = ["1", "9", "9", "7"] and arr2 = ["Y", "B", "S", "S"]
+		twoArraysComparison(["w", "b", "l", "s"], ["Y", "B", "S", "S"]);//arr1 = ["w", "b", "l", "s"] and arr2 = ["Y", "B", "S", "S"]
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body .js-console {
+			margin: 0;
+			padding: 5px 10px;
+			background-color: black;
+			width: 800px;
+			height: 500px;
+			font-family: Consolas;
+			font-size: 18px;
+			color: white;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			word-break: break-all;
+		}
+	</style>
+</head>
+<body>
+    <span>Enter an array of numbers, sepatared by "," !</span>
+	<input type="text" id="tb-number">
+    <br>
+    <span>Enter the element from the array which index you need to find!</span>
+	<input type="text" id="index"></br>
+	<a href="#" id="btn-check-prime" onclick="findTheElement()">Find the element by the index</a>
+	<div id="js-console" class="js-console">
+	</div>
+	<script src="js-console.js">	  
+	</script>
+<script>
+	    function findTheElement(){
+	        var arrayString = jsConsole.readString("#tb-number");
+	        var element = jsConsole.readInteger("#index");
+		    var arrayInt = arrayString.split(',');
+		    for (var i in arrayInt){
+		        arrayInt[i] = parseInt(arrayInt[i], 10);
+		    }
+		    arrayInt = arrayInt.sort(function (a, b) { return a - b })
+		    var start = 0;
+		    var middle = Math.floor(arrayInt.length / 2);
+		    var end = arrayInt.length - 1;
+		    var index = 0;
+		    while (true) {
+		        if(element<arrayInt[middle])
+		        {
+		            end = middle;
+		            middle = Math.floor((start + end) / 2);
+		        }
+		        else if (element > arrayInt[middle]) {
+		            start = middle;
+		            middle = Math.floor((start + end) / 2);
+		        }
+		        else
+		        {
+		            jsConsole.writeLine("The index of the element  " + element + " would be " + middle+ " if the array was sorted!" );
+		            break;
+		        }
+		        if (start==end) {
+		            jsConsole.writeLine("The index of the element " + element + " would be " + start+ " if the array was sorted!" );
+		            break;
+		        }
+		       else if (element==arrayInt[start]) {
+		           jsConsole.writeLine("The index of the element " + element + " would be " + start+ " if the array was sorted!" );
+		           break;
+		       }
+		       else if (element == arrayInt[end]) {
+		           jsConsole.writeLine("The index of the element " + element + " would be " + end+ " if the array was sorted!" );
+		           break;
+		       }
+		    }
+			jsConsole.writeLine();
+		}
+	</script>
+</body>
+</html>

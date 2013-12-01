@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="js-console.css" rel="stylesheet" />
+	<style>
+		a{
+			color:white;
+		}
+		a:hover{
+			background-color:yellowgreen;
+			color:black;
+		}
+	</style>
+</head>
+<body>
+    <div id="js-console">
+		<label for="tb-numbers">Enter string which white space you want to replace: </label>
+		<input id="tb-numbers" type="text" />
+		<a href="#" onclick="whiteSpaceReplaceInString()">Replace</a>
+	</div>
+    <script src="js-console.js"></script>
+    <script>
+		function whiteSpaceReplaceInString(){
+			var sometext = jsConsole.readString("#tb-numbers");
+			jsConsole.writeLine("Before:");
+			jsConsole.writeLine(sometext);
+			jsConsole.writeLine("-----------------------------------------");
+			var textToReplace = "&amp;nbsp;";  
+			jsConsole.writeLine("After:"); 
+			jsConsole.writeLine(replaceWhiteSpace(sometext, textToReplace)); 
+			function replaceWhiteSpace(sometext, textToReplace) {
+				var splittedText = sometext.split(' ');
+				var result = splittedText.join(textToReplace);
+				return result;
+			}
+		}
+    </script>
+</body>
+</html>

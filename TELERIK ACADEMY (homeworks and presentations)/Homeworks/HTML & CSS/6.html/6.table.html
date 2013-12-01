@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.wrapper{
+			width:200px;
+			height:100px;
+		}
+		.letter{
+			text-align:center;
+		}
+		.another-letter{text-align:right;}
+	</style>
+</head>
+<body>
+     <div>
+        <table border="1" class="wrapper">
+            <tr>
+				<td colspan="3">Title goes here</td>
+                <td class="letter">A</td>
+                <td class="another-letter">B</td>
+            </tr>                  
+			<tr>
+                <td rowspan="3">C</td>
+                    <td class="letter">D</td>
+                    <td class="letter">E</td>
+                    <td class="letter">F</td>
+                    <td class="another-letter">G</td>
+            </tr>
+            <tr>
+                <td class="letter">H</td>
+                <td colspan="2" class="letter">I</td>
+                <td rowspan="2" class="another-letter">J</td>
+            </tr>
+            <tr>
+                <td class="letter">K</td>
+                <td class="letter">L</td>
+                <td class="letter">M</td>
+            </tr>
+            <tr>
+                <td class="another-letter">N</td>
+                <td colspan="4" class="letter">O</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

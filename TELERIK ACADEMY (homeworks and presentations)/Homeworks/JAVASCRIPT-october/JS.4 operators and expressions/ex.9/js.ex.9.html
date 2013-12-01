@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		a {
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<label for="tb-first">Enter X: </label>
+	<input type="text" id="tb-first"/>
+    </br>                                                                     
+	<label for="tb-second">Enter Y: </label>
+	<input type="text" id="tb-second"/>
+    </br>	
+	<a href="#" onclick="checkThis()">Check the point</a>
+	<div id="console">
+	</div>
+	<script src="js-console.js">          
+	</script>                  
+	<script>
+		function checkThis() {
+			var X = jsConsole.readFloat("#tb-first");
+			var Y = jsConsole.readFloat("#tb-second");
+			var Xx = 1;
+			var Yy = 1;
+			var radius = 3;
+			var L1 = -1;
+			var L2 = 1;
+			var width = 6;
+			var height = 2;
+			var InCircle = false;
+			var InRec = false;
+			var XR = L1 + width;        
+			var YR = L2 - height;  
+			if((X-Xx)*(X-Xx)+(Y-Yy)*(Y-Yy)<radius*radius){
+				InCircle=true;
+			}
+			else{
+				InCircle=false;
+			}
+			if((X > L1 && X < XR) && (Y > YR && Y < L2)){
+				InRec = true;
+			}
+			else{
+				InRec = false;
+			}
+			jsConsole.writeLine(InCircle.toString() + InRec.toString());
+			if (InCircle == true && InRec == false){
+				jsConsole.writeLine("Point (" + X + "," + Y +") is within circle K((" + Xx +","+ Yy +")," + radius + ") and out of rectangle R(top=" + L1 + ", left=" + L2 + ", width=" + width + ", height={" + height + ").");
+			}
+            else{
+				jsConsole.writeLine("Point (" + X + "," + Y +") is within circle K((" + Xx +","+ Yy +")," + radius + ") and out of rectangle R(top=" + L1 + ", left=" + L2 + ", width=" + width + ", height={" + height + ") is NOT correct.");
+			}    
+		}
+	</script>                          
+</body>
+</html>

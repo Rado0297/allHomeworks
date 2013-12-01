@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.colored{
+			padding: 5px;
+			margin: 5px;
+			display: inline-block;
+		}
+		#wrapper{
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+		<input id="input" type="text" placeholder="Input a number"/>
+		<input type="button" value="Generate divs" onclick="onGenerateDivClick()"/>
+		<div id="wrapper">
+			<script>
+				function onGenerateDivClick(){
+					var value = document.getElementById("input").value;
+					var contentDiv = document.getElementById("wrapper");
+				//Array,which contains the positions of the elements
+					var positionArray = 
+						[
+							"absolute",
+							"relative",
+							"fixed",
+							"static",
+							"inherit"
+						];
+				//Array,which contains the width properties of the border attribute
+					var borderWidth = 
+						[
+							"thin",
+							"medium",
+							"thick",
+							"solid",
+							"length",
+							"inherit;"
+						];
+					for (var i = 0; i < value; i++) {
+						var div = document.createElement("div");
+						div.className = "colored";
+					//set random Width and height
+						div.style.width = generateRandomNumber(20, 100) + "px";
+						div.style.height = generateRandomNumber(20, 100) + "px";
+					//set random border size and color
+						div.style.border = generateRandomNumber(1, 20) + "px " + borderWidth[generateRandomNumber(0, 5)]  + 
+							" rgb(" + generateRandomNumber(1, 255) +
+							"," + generateRandomNumber(1, 255) +
+							"," + generateRandomNumber(1, 255) +
+							")";
+					//set random border radius
+						div.style.borderRadius = generateRandomNumber(1, 25) + "px";
+					//set random Background colour
+						div.style.backgroundColor = "rgb(" + generateRandomNumber(1, 255) +
+													"," + generateRandomNumber(1, 255) +
+													"," + generateRandomNumber(1, 255) +
+													")";
+					//set random Position
+						div.style.position = positionArray[generateRandomNumber(0, 4)]
+					//set random font colour TO DO
+						div.style.color = "rgb(" + generateRandomNumber(1, 255) +
+											"," + generateRandomNumber(1, 255) +
+											"," + generateRandomNumber(1, 255) +
+											")";
+					//Add Div text
+						div.innerHTML += "<strong>div</strong>"
+						contentDiv.appendChild(div);
+					};
+			}
+				// Random function that generates number in the range (from, to)
+					function generateRandomNumber(from, to){
+						return Math.floor(Math.random()* to + from) ;
+					}
+			</script>
+        </div>
+</body>
+</html>

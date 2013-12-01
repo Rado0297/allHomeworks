@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+		.js-console {
+			margin: 0;		
+		}
+		body .js-console {
+			margin: 0;
+			padding: 5px 10px;
+			background-color: black;
+			width: 800px;
+			height: 500px;
+			font-family: Consolas;
+			font-size: 18px;
+			color: white;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			word-break: break-all;
+		}
+	</style>
+</head>
+<body>
+	<input id="tb-numbers" type="text" class="js-console-input" />
+    <button onclick="print()">Print</button>
+    <div id="js-console"></div>
+	<script src="js-console.js"></script>                   
+	<script>  
+		jsConsole.writeLine("Enter number between -1000 and 1000");
+		function print(){
+				var num = jsConsole.readFloat("#tb-numbers");
+				var digit1 = num%10;
+				var digit2 = ((num%100)-digit1)/10;
+				var digit3 = ((num%1000)-(digit2*10)-digit1)/100;
+			if(num<100 && num>0){
+				jsConsole.writeLine(num + "->" + digit1 + "" + digit2);
+			}
+			if(num>100 && num<1000){
+				jsConsole.writeLine(num + "->" + digit1 + "" + digit2 + "" + digit3);
+			}
+			if(num>(-1000) && num<(-100)){
+				jsConsole.writeLine(num + "->" + digit1*(-1) + "" + digit2*(-1) + "" + digit3*(-1));
+			}
+			if(num<0 && num>(-100)){
+				jsConsole.writeLine(num + "->" + digit1*(-1) + "" + digit2*(-1));
+			}
+		}
+	</script>
+</body>
+</html>

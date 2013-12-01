@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		a{
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<label for="tb-first">Number: </label>
+	<input type="text" id="tb-first"/>               
+	<a href="#" onclick="onClickCheck()">Check the number</a>
+	<div id="console">
+	</div>
+	<script src="js-console.js">          
+	</script>                  
+	<script>                                                                                                                 
+		function onClickCheck() {
+			var number = jsConsole.readInteger("#tb-first");
+			var isPrime = true;
+			if (number < 2){
+				jsConsole.writeLine("Numbers smaller than 2 is not prime numbers.");
+				isPrime = false;
+			}
+			else{
+				for (var i = 2; i < number; i++){
+					if (number % i == 0){
+						isPrime = false;
+					}
+				}
+			}
+			if( isPrime == true && number <= 100){
+				jsConsole.writeLine("Number " + number + " is prime number.");
+			}
+			else{
+				jsConsole.writeLine("Number " + number + " is NOT prime number.", number);
+			}
+		}
+	</script>                          
+</body>
+</html>

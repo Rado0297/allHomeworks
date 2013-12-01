@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body,h1,h2,dl,dt,dd,ul,li,p{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background:#F1F1F1;
+            font:12px/1.2 Verdana,sans-serif;
+        }
+        h1,h2,p{margin-bottom:10px;}
+        h2{
+            padding:3px;
+            background:#808080;
+            color:white;
+            font-size:100%;
+        }
+        a{color:#961917;}
+        .row{
+            overflow:hidden;
+            margin-left:-10px;
+        }
+        [class ^="span"],[class *="span"]{
+            float:left;
+            margin-left:10px;
+        }
+        .span1{width:150px;}
+        .span3{width:450px;}
+        .container{
+            margin:10px auto;
+            padding:0 10px;
+            width:770px;
+            border:1px solid #000;
+        }
+        .pull-left {
+            float:left;
+            margin-right:10px;
+        }
+        .search input[type = "search"] { width: 90px; }
+        #home-icon{
+            display:inline-block;
+            width:19px;
+            height:20px;
+        }
+		img{margin-right:6px;}
+        .icon-home { background: url(images/icon-home.png); }
+
+        /* LISTS */
+        .unstyled { list-style: none; }
+        .inline li { display: inline-block; }
+        .styled dt{font-weight:bold;}
+        .styled dd a{color:black;}
+        .styled a{text-decoration:none;}
+        .styled a:hover{color:green;}
+        .pag a{
+            display:block;
+            padding:3px;
+            width:100px;
+            border:1px solid #2A2A2A;
+            color:#0F0F0F;
+            text-align:center;
+            text-decoration:none;
+        }
+        .pag li {position:relative;}
+        .prev::after{
+            left:3px;
+			position:absolute;
+            top:3px;
+            content:"<";
+        }
+        .next::after{
+            right: 3px;
+			position:absolute;
+            top:3px;
+            content:">";
+        }
+        .cont {
+            margin-bottom: 2px;
+            padding: 2px;
+            border: 1px solid #8A8A8A;
+            background: #fff;
+        }
+        .cont h2{margin:-2px -2px 0 -2px;}
+
+        /* SITE */
+        .nav, .aside{padding-top:10px;}
+        .nav .styled{margin-bottom:10px;}
+        .content {
+            margin-top:10px;
+            padding:10px;
+			height:533px;
+            border:1px solid gray;
+            background:white;
+        }
+        .aside{text-align:center;}
+        .aside h2{
+            margin-bottom:2px;
+            text-transform:uppercase;
+        }
+    </style>
+</head>
+<body class="container">
+    <div class="row">
+        <nav class="span1 nav">
+            <h1><i class="icon-home"><img src="Home-icon.png" id="home-icon"></i>Home</h1>
+            <dl class="styled">
+                <dt><a href="">CSS Basic</a></dt>
+                <dd><a href="">CSS Introduction</a></dd>
+                <dd><a href="">CSS Syntax</a></dd>
+                <dd><a href="">CSS How To</a></dd>
+                <dd><a href="">CSS Background</a></dd>
+                <dd><a href="">CSS Text</a></dd>
+                <dd><a href="">CSS Font</a></dd>
+                <dd><a href="">CSS Border</a></dd>
+                <dd><a href="">CSS Outline</a></dd>
+                <dd><a href="">CSS Margin</a></dd>
+                <dd><a href="">CSS Padding</a></dd>
+                <dd><a href="">CSS List</a></dd>
+                <dd><a href="">CSS Table</a></dd>
+            </dl>
+            <dl class="styled">
+                <dt><a href="">CSS Advanced</a></dt>
+                <dd><a href="">CSS Dimension</a></dd>
+                <dd><a href="">CSS Classification</a></dd>
+                <dd><a href="">CSS Positioning</a></dd>
+                <dd><a href="">CSS Pseudo-class</a></dd>
+                <dd><a href="">CSS Pseudo-element</a></dd>
+                <dd><a href="">CSS Image Gallery</a></dd>
+                <dd><a href="">CSS Image Opacity</a></dd>
+                <dd><a href="">CSS Media Types</a></dd>
+                <dd><a href="">CSS Don't</a></dd>
+                <dd><a href="">CSS Summary</a></dd>
+            </dl>
+            <dl class="styled">
+                <dt><a href="">CSS Examples</a></dt>
+                <dd><a href="">CSS Examples</a></dd>
+            </dl>
+            <dl class="styled">
+                <dt><a href="">References</a></dt>
+                <dd><a href="">CSS2 Reference</a></dd>
+                <dd><a href="">CSS2 Print</a></dd>
+                <dd><a href="">CSS2 Aural</a></dd>
+                <dd><a href="">CSS Units</a></dd>
+                <dd><a href="">CSS Colors</a></dd>
+                <dd><a href="">CSS Colorvalues</a></dd>
+                <dd><a href="">CSS Colornames</a></dd>
+            </dl>
+            <dl class="styled">
+                <dt><a href="">CSS Quiz</a></dt>
+                <dd><a href="">CSS Quiz</a></dd>
+                <dd><a href="">CSS Exam</a></dd>
+            </dl>
+        </nav>
+        <article class="span3">
+            <div class="content">
+                <h1>CSS Tutorial</h1>
+                <nav class="pag inline">
+                    <ul>
+                        <li class="prev"><a href="">Previous</a></li>
+                        <li class="next"><a href="">Next</a></li>
+                    </ul>
+                </nav>
+                <hr>
+                <section>
+                    <h2>CSS Tutorial</h2>
+                    <img src="css.jpg" alt="CSS Logo" class="pull-left" width="95" height="84" />
+                    <p><strong>Save a lot of work with CSS!</strong></p>
+                    <p><strong>In our tutorial you will learn how to use CSS to control the style and layout of multiple Web pages all at once.</strong></p>
+                    <p><a href="">Start learning CSS!</a></p>
+                </section>
+                <section>
+                    <h2>CSS Examples</h2>
+                    <p>Learn by 70 examples! With our editor, you can edit CSS, and click on a test button to view the result</p>
+                    <p><a href="">Try-It-Yourself!</a></p>
+                </section>
+                <section>
+                    <h2>CSS Reference</h2>
+                    <p>At W3Schools you will find a complete CSS2 reference, listing properties, units of measurements, colors, and more.</p>
+                    <p><a href="">CSS2 Reference</a></p>
+                </section>
+                <section>
+                    <h2>CSS Quiz Test</h2>
+                    <p>Test your skills at W3Schools!</p>
+                    <p><a href="">Start CSS Quiz!</a></p>
+                </section>
+                <hr>
+                <nav class="pag inline">
+                    <ul>
+                        <li class="prev"><a href="">Previous</a></li>
+                        <li class="next"><a href="">Next</a></li>
+                    </ul>
+                </nav>
+                <hr>
+            </div>
+        </article>
+        <aside class="span1 aside">
+            <section class="cont">
+                <form class="search">
+                    <h2>Site Search</h2>
+                    <input type="search" />
+                    <input type="submit" value="..." />
+                </form>
+                <ul class="unstyled">
+                    <li><a href="">About W3Schools</a></li>
+                    <li><a href="">W3Schools Forum</a></li>
+                </ul>
+            </section>
+            <section>
+                <ul class="unstyled cont">
+                    <li>
+                        <a href="">
+                            <img src="CSS.png" width="102" height="31" /> Dynamic button image generation
+                        </a>
+                    </li>
+                </ul>
+                <h2>Web Hosting</h2>
+
+                <ul class="unstyled">
+                    <li class="cont">
+                        <ul class="unstyled">
+                            <li><a href="">$15 Domin Name Registration</a></li>
+                            <li><a href="">Save $20 / year!</a></li>
+                        </ul>
+                    </li>
+                    <li class="cont">
+                        <ul class="unstyled">
+                            <li><a href="">UK Domain Names</a></li>
+                            <li><a href="">UK Web Hosting</a></li>
+                            <li><a href="">Alojamiento Web</a></li>
+                        </ul>
+                    </li>
+                    <li class="cont">
+                        <ul class="unstyled">
+                            <li><a href="">Buy UK Domain Names</a></li>
+                            <li><a href="">Register Domain Names</a></li>
+                        </ul>
+                    </li>
+                    <li class="cont">
+                        <ul class="unstyled">
+                            <li><a href="">Cheap Domain Names</a></li>
+                            <li><a href="">Cheap Web Hosting</a></li>
+                        </ul>
+                    </li>
+                    <li class="cont"><a href="">Best Web Hosting</a></li>
+                    <li class="cont"><a href="">Domain Name</a></li>
+                    <li class="cont"><a href="">Registration</a></li>
+                    <li class="cont"><a href="">PHP MySQL Hosting</a></li>
+                    <li class="cont"><a href="">Top 10 Web Hosting</a></li>
+                    <li class="cont"><a href="">Web Hosting Providers</a></li>
+                    <li class="cont"><a href="">Web Hosting Company</a></li>
+                    <li class="cont"><a href="">Web Hosting Reviews</a></li>
+                    <li class="cont"><a href="">UK Web Hosting</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+</body>
+</html>

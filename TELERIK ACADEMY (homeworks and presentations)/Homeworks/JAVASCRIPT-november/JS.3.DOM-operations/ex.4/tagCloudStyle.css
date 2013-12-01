@@ -1,0 +1,66 @@
+html,body,a,label,form,input,fieldset,h2,p,div{
+        padding:0px;
+        margin:0;
+}
+html > body{
+        width:960px;
+        margin:0 auto;
+        
+}
+        body:after{
+                display:block;
+                content:"";
+                height:0px;
+                clear:both;
+        }
+        h1,h2{
+                text-align:center;
+        }                                
+                a{
+                        display:block;
+                        background:skyblue;                
+                        padding: 10px 15px;
+                        margin : 10px auto;
+                        text-decoration:none;
+                        border-radius:5px;                        
+                        text-align:center;
+                }
+                a:hover{
+                        -moz-box-shadow: 2px -2px 3px #888888; /* Old Firefox */
+                        box-shadow: 2px -2px 15px #888888;
+                        
+                }
+                a:active
+                {
+                        background-color:skyblue
+                        -moz-box-shadow: none; /* Old Firefox */
+                        box-shadow: none;
+                        color:inherit;
+                }
+                
+#tagCloudContainer{
+        width:30%;
+}
+
+#rightField{
+        float:right;
+        display:block;
+        width:50%;
+		
+}
+
+        #rightField label{
+                display:inline-block;
+                width:40%;
+        }
+        
+        #rightField input{
+                display:inline-block;
+                width:35%;
+        }
+        
+form a{
+        display:block;        
+        margin:0 auto;
+        width:10%;
+}

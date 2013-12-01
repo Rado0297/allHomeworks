@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		a{
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		body .js-console {
+			margin: 0;
+			padding: 5px 10px;
+			background-color: black;
+			width: 800px;
+			height: 500px;
+			font-family: Consolas;
+			font-size: 18px;
+			color: white;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			word-break: break-all;
+		}
+	</style>
+</head>
+<body>  
+    <label for="tb-array">Space separated integers: </label>
+	<input type="text" id="tb-array" />
+    <label for="tb-number">Number: </label>
+	<input type="text" id="tb-number" />
+	<a href="#" onclick="onCountButtonClick()">Find number of occurences.</a>
+    <a href="#" onclick="onTestButtonClick()">Automatic test (enter number only)</a>
+	<div id="js-console">
+	</div>
+	<script src="js-console.js">	  
+	</script>
+	<script>  
+		function countOccur(array, number) {
+	        if ((typeof (array) === "object") && (typeof (number) === "number")) {
+	            var count = 0;
+	            for (var num = 0; num < array.length; num++) {
+	                if (parseInt(array[num]) === number) count++;
+	            }
+	            return count;
+	        }
+	    }
+	    function testGenerator(number) {
+	        var arraySize = Math.floor((Math.random() * 48) + 2); // 2 to 50
+	        var occurances = Math.floor((Math.random() * arraySize / 2) + 1); // 1 to arraySize/2 + 1
+	        var arr = new Array(arraySize);
+	        var currentIndex;
+	        for (var i = 0; i < arraySize; i++) {
+	            do{
+	                currentIndex = Math.floor((Math.random() * Math.abs(number) * 2) + 1);
+	            }
+				while (currentIndex == number){
+					arr[i] = currentIndex;
+				}
+	        }
+	        var indicesSoFar = new Array(occurances);
+			for (var i = 0; i < occurances; i++){
+				do{
+	                randomIndex = Math.floor((Math.random() * arraySize) - 1); 
+	                if (randomIndex < 0) randomIndex = 0; 
+	            } while (indicesSoFar.indexOf(randomIndex) != -1)
+	            indicesSoFar[i] = randomIndex; 
+	            arr[randomIndex] = number; 
+	        }
+	        var functionCounted = countOccur(arr, number);
+	        jsConsole.writeLine("Number: " + number);
+	        jsConsole.writeLine("Generated test array: ");
+	        for (var i = 0; i < arraySize; i++) {
+	            jsConsole.write(arr[i] + " ");
+	        }
+	        jsConsole.writeLine();
+	        var correct = (occurances == functionCounted) ? true : false;
+	        jsConsole.writeLine("Expected: " + occurances + "; Actual: " + functionCounted + "; Correct: " + correct);
+	        jsConsole.writeLine();
+	    }
+	    function onCountButtonClick() {
+	        number = jsConsole.readInteger("#tb-number");
+	        array = jsConsole.readArray("#tb-array", " ");
+	        jsConsole.writeLine(countOccur(array, number));
+	    }
+	    function onTestButtonClick() {
+	        number = jsConsole.readInteger("#tb-number");
+	        array = jsConsole.readArray("#tb-array", " ");
+	        testGenerator(number);
+	    }
+	</script>
+</body>
+</html>

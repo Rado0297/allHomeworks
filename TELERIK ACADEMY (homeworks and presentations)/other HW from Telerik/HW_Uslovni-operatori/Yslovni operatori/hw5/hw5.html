@@ -1,0 +1,66 @@
+<html>
+	<head>
+	<style>
+		body
+		{
+		background-color:#3EA99F;
+		font-size:25px;
+		font-family:Comic Sans Ms;
+		color:black;
+		}
+		a	{
+			text-decoration:none;
+			font-size:20px;
+			color:black;
+			text-align:right;
+			}
+	</style>
+
+	</head>
+
+	<body>
+		<label for="tb-day">Type the digit right here: </label>
+	<input type="text" id="tb-digit" />
+	
+	<a href="#" onclick="onDayButtonClick()">Check the digit</a>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>
+	<script>
+		function onDayButtonClick() {
+			var dayIndex = jsConsole.readInteger("#tb-digit");
+
+			var digit;
+			switch (dayIndex) {
+				case 0: digit = "Zero"; break;
+				case 1: digit = "One"; break;
+				case 2: digit = "Two"; break;
+				case 3: digit = "Three"; break;
+				case 4: digit = "Four"; break;
+				case 5: digit = "Five"; break;
+				case 6: digit = "Six"; break;
+				case 7: digit = "Seven"; break;
+				case 8: digit = "Eight"; break;
+				case 9: digit = "Nine"; break;
+				
+				default:
+					digit = "Invalid digit"; break;
+			}
+			jsConsole.writeLine(digit);
+		}
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!--4. Write an expression that checks for given integer if its third digit (right-to-left) is 7. E. g. 1732  true.
+ -->
+ <html>
+<head>
+<title>Zad 4</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+		var numberS; 
+		var numberI; 
+		var result; 
+		//въвеждане на число  
+		numberS = window.prompt( "Въведи число" );
+		//преобразуване на въведеното в число
+		numberI = parseInt( numberS );
+		
+		result = parseInt(numberI / 100);
+		//сравняване на третото число от дясно на ляво дали е 7		
+		if(result % 10 == 7)
+        {
+            document.writeln("третото число от дясно на ляво е 7");
+        }
+        else
+        {
+            document.writeln("третото число от дясно на ляво не е 7");
+        }
+		
+		
+    </script>
+</head>
+<body></body>
+</html>

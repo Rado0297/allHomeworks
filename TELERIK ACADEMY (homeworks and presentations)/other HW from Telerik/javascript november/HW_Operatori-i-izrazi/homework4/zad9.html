@@ -1,0 +1,66 @@
+ <!-- 9. Write an expression that checks for given point (x, y) if it is within the circle K( (1,1), 3) and out of the rectangle R(top=1, left=-1, width=6, height=2).
+ -->
+  
+   <html>
+    <head>
+    <title>Zad 9</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+		var numberSX; 
+		var numberIX; 
+		var numberSY; 
+		var numberIY; 
+		var radius = 3;
+		var Xc = 1;
+        var Yc = 1;
+		var InCircle = false;
+        var InRec = false;
+		var XL = -1;
+        var YL = 1;
+        var width = 6;
+        var height = 3;
+        var XR = XL + width;
+        var YR = YL - height; 
+		
+		//въвеждане на число  X
+		numberSX = window.prompt( "Въведи число X" );
+		//преобразуване на въведеното в число
+		numberIX = parseInt( numberSX );
+		
+		//въвеждане на число  Y
+		numberSY = window.prompt( "Въведи число Y" );
+		//преобразуване на въведеното в число
+		numberIY = parseInt( numberSY );
+		
+		//проверка дали точката попада в окръжността
+        if ((((numberIX - Xc) * (numberIX - Xc)) + ((numberIY - Yc) * (numberIY - Yc))) < radius * radius)
+        {
+            InCircle = true;
+        }
+        else
+        {
+            InCircle = false;
+        }
+		//проверка дали точката попада в правоъгалника
+		if ((numberIX > XL && numberIX < XR) && (numberIY < YL && numberIY > YR))
+		{
+			InRec = true;
+		}
+		else
+		{
+			InRec = false;
+		}
+		
+		if (InCircle == true && InRec == false)
+		{
+			document.writeln("Point is within circle K and out of rectangle R");
+		}
+		else
+		{
+			document.writeln("Point is within circle K and out of rectangle R is NOT correct.");
+        }
+		
+    </script>
+    </head>
+	<body></body>
+    </html>

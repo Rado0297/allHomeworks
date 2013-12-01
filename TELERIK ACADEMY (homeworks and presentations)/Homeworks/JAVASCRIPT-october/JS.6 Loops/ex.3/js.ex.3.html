@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<style>
+		div{
+			width:340px;
+	        border:6px solid black;
+	        border-radius:5px;
+			background:yellowgreen;
+	        padding: 0px 0px 10px 10px;
+		}
+		input,textarea{
+			border: 1px solid black;
+			border-radius: 5px;
+			padding: 5px;
+			margin: 10px;
+		}
+		textarea{
+			width: 300px;
+		}
+		#output{
+			min-height:160px;
+		}
+		a{
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+<div>
+<textarea id="input1" placeholder="Enter some numbers separated by spaces."></textarea><br>
+<textarea id="output" placeholder="output" disabled=""></textarea><br>
+<input id="enter" type="submit" value="EXECUTE">
+</div>
+	<script>
+		window.onload = function(){
+			document.getElementById("enter").onclick = function(){	
+				var input = document.getElementById("input1").value;
+				var arr = input.split(" ");
+				arr.sort(function(a,b){return a - b});	
+				var outTxt = "Min:"+arr[0]+"; Max:"+arr[arr.length-1]+";";
+				if((isNaN(parseInt(arr[arr.length-1])) && isNaN(parseFloat(arr[arr.length-1]))) || (isNaN(parseInt(arr[0])) && isNaN(parseFloat(arr[0])))){
+					outTxt = "Invalid input!";
+				}
+				document.getElementById("output").innerHTML = outTxt;
+			}
+			document.getElementById("check").onclick = function(){
+				if(document.getElementById("check").checked){
+				document.getElementById("task").style.display = "block";
+				}
+				else{
+					document.getElementById("task").style.display = "none";
+				}
+			}
+			document.getElementById("task").style.display = "none";
+		}
+	</script>
+</body>
+</html>

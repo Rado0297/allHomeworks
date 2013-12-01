@@ -1,0 +1,27 @@
+ <!-- 1. Write an expression that checks if given integer is odd or even. -->
+  
+   <html>
+    <head>
+    <title>Zad 1</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+		var numberS; 
+		var numberI; 
+		var result; 
+		//въвеждане на число
+		numberS = window.prompt( "Въведи число за проверка (четно/нечетно)" );
+		//преобразуване на въведеното в число
+		numberI = parseInt( numberS );
+		//деление на 2
+		result = numberI / 2;
+		//когато числото е четно
+		    if ( result % 2 == 0) {
+				document.writeln( "числото е четно" );
+		//когато числото е нечетно
+			} else {
+				document.writeln( "числото е нечетно" );
+			}
+    </script>
+    </head>
+	<body></body>
+    </html>

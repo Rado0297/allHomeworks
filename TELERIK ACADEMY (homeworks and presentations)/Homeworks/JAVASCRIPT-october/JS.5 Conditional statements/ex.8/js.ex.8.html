@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body .js-console {
+			margin: 0;
+			padding: 5px 10px;
+			background-color: black;
+			width: 800px;
+			height: 500px;
+			font-family: Consolas;
+			font-size: 18px;
+			color: white;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			word-break: break-all;
+		}	
+	</style>
+</head>
+<body>
+	<label for="tb-first">Enter a number: </label>
+	<input type="text" id="tb-first">	
+	<a href="#" onclick="onFindBiggerButtonClick()">Translate number</a>
+	<div id="console" class="js-console">
+	</div>
+	<script src="js-console.js">	  
+	</script>		  
+	<script>
+	    function returnTextnumber(number){
+	        var str = "";
+	        switch (number) {
+	            case 1: str = "one"; break;
+	            case 2: str = "two"; break;
+	            case 3: str = "three"; break;
+	            case 4: str = "four"; break;
+	            case 5: str = "five"; break;
+	            case 6: str = "six"; break;
+	            case 7: str = "seven"; break;
+	            case 8: str = "eight"; break;
+	            case 9: str = "nine"; break;
+	            case 10: str = "ten"; break;
+	        }
+	        return str;
+	    }
+		function onFindBiggerButtonClick() {
+		    var number = jsConsole.readInteger("#tb-first");
+		    var ones = 0;
+		    var tens = 0;
+		    var hundreds = 0;
+		    if (isNaN(number))
+			{
+			    jsConsole.writeLine("not a number");
+			}
+		    else if (number > 999)
+		    {
+		        jsConsole.writeLine("you must enter number < 1000");
+		    }
+		    else
+		    {
+                ones = number % 10;
+                tens = parseInt(number / 10) % 10;
+                hundreds = parseInt(number / 100) % 10;
+                jsConsole.write("English name of digit is:   ");
+                if (number == 0)
+                {
+                    jsConsole.write("zero");
+                }
+                if (hundreds != 0)
+                {
+                    jsConsole.write(returnTextnumber(hundreds) + " hundred ");
+                }
+                if (tens != 0)
+                {
+                    if (tens == 1)
+                    {
+						if(hundreds != 0)
+						{
+							jsConsole.write("and ");
+						}
+                        switch (ones)
+                        {
+                            case 0: jsConsole.write("ten"); break;
+                            case 1: jsConsole.write("eleven"); break;
+                            case 2: jsConsole.write("twelve"); break;
+                            case 3: jsConsole.write("thirteen"); break;
+                            case 5: jsConsole.write("fifteen"); break;
+                            case 8: jsConsole.write("eighteen"); break;
+                            default: jsConsole.write(returnTextnumber(ones) + "teen"); break;
+                        }
+                    }
+                    else if (tens == 2)
+                    {
+                        jsConsole.write("twenty ");
+                    }
+                    else if (tens == 3)
+                    {
+                        jsConsole.write("thirty ");
+                    }
+					else if (tens == 5)
+                    {
+                        jsConsole.write("fifty ");
+                    }
+					else if (tens == 8)
+                    {
+                        jsConsole.write("eighty ");
+                    }
+                    else
+                        jsConsole.write(returnTextnumber(tens) + "ty ");
+                }
+                if (ones != 0 && tens != 1)
+                {
+					if(hundreds != 0 && tens == 0)
+						{
+							jsConsole.write("and ");
+						}
+                    jsConsole.write(returnTextnumber(ones));
+                }
+                jsConsole.writeLine("");
+			}
+		}											
+	</script>
+</body>
+</html>

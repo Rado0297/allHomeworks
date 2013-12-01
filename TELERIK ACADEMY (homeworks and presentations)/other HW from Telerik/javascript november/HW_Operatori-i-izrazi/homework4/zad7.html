@@ -1,0 +1,50 @@
+<!-- 7. Write an expression that checks if given positive integer number n (n ≤ 100) is prime. E.g. 37 is prime.
+ -->
+ 
+ <html>
+    <head>
+    <title>Zad 7</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+		var numberS; 
+		var numberI; 
+		var result; 
+		//въвеждане на число
+		numberS = window.prompt( "Въведи число" );
+		//преобразуване на въведеното в число
+		numberI = parseInt( numberS );
+		
+		var isPrime = true;
+		
+		//проверка дали числото не е по-малко от 2
+		if (numberI < 2)
+        {
+            document.writeln("Numbers smaller than 2 is not prime numbers.");
+            isPrime = false;
+        }
+		else
+        {
+            for (var i = 2; i < numberI; i++)
+            {
+                if (numberI % i == 0)
+                {
+                    isPrime = false;
+                }
+            }
+        }
+		
+		if( isPrime == true)
+        {
+            document.writeln("Number " + numberI + " is prime number.");
+        }
+        else
+        {
+            document.writeln("Number " + numberI + " is NOT prime number.");
+        }                    
+                 		
+			
+			
+    </script>
+	</head>
+	<body></body>
+</html>

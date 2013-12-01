@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Sublists</title>
+    <style>
+        .list {
+            overflow: hidden;
+            margin: 0.5em;
+            max-height: 1em;
+        }
+        .list:hover { max-height:10em; }
+
+        .list dd {
+            margin-left: 1em;
+            color: #888;
+        }
+
+        .list a {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+        }
+        .list a:hover { text-decoration: underline; }
+    </style>
+</head>
+
+<body>
+    <dl class="list">
+        <dt><a href="#">List item</a></dt>
+        <dd>Sublist item</dd>
+        <dd>Sublist item</dd>
+        <dd>Sublist item</dd>
+        <dd>Sublist item</dd>
+    </dl>
+    <dl class="list">
+        <dt><a href="#">List item</a></dt>
+        <dd>Sublist item</dd>
+        <dd>Sublist item</dd>
+        <dd>Sublist item</dd>
+    </dl>
+    <dl class="list">
+        <dt><a href="#">List item</a></dt>
+        <dd>Sublist item</dd>
+        <dd>Sublist item</dd>
+    </dl>
+    <dl class="list">
+        <dt><a href="#">List item</a></dt>
+        <dd>Sublist item</dd>
+    </dl>
+</body>
+</html>

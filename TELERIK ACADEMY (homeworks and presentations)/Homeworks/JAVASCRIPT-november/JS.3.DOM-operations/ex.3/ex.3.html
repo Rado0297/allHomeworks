@@ -1,0 +1,36 @@
+<DOCTYPE html>
+<html>
+<head>
+	<style>
+		#input-text{
+			height:100px;
+			width:600px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Select colors to apply them to the sample text</h1>
+	<fieldset>
+		<textarea id="input-text">Hello World</textarea>
+	</fieldset>
+	<fieldset>
+		<input type="color" id="text-color">Font Color</input>
+		<input type="color" id="bg-color">Background Color</input>
+	</fieldset>
+	<script>
+	//to get black background first you must select other color and then black
+		(function () {'use strict';
+		function addEventListener(selector, eventName, listener) {
+			document.querySelector(selector).addEventListener(eventName, listener, false);
+		}
+		var textEl = document.querySelector('#input-text');
+		addEventListener('#text-color', 'change', function (event) {
+		textEl.style.color = event.target.value;
+		});
+		addEventListener('#bg-color', 'change', function (event) {
+		textEl.style.backgroundColor = event.target.value;
+		});
+		})();
+	</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿/*css*/
+/*reset*/
+* {
+padding: 0;
+margin: 0;
+}
+
+section {
+width: 665px;
+height: 300px;
+background-color: #3a3a3a;
+margin: 1.5em 5%;
+border-radius: 5px;
+}
+
+header {
+height: 70px;
+background-image: url("http://devevolution.com/wp-content/uploads/2013/01/3_3pc.png");
+background-repeat: no-repeat;
+background-position:  10px  10px;;
+box-shadow: inset 0 0 10px 0 #272727;
+border-radius: 5px;
+}
+
+form {
+width: 590px;
+height: 30px;
+color: #fff;
+font-family:   Georgia, "Times New Roman", serif;
+font-size: 20px;
+font-weight: bold;
+float: right;
+margin-top: 20px;
+margin-right: 10px;
+}
+
+form input[type="text"] , form input[type="email"] {
+height: 20px;
+margin-right: 15px;
+border-radius: 1px;
+padding-left: 5px;
+}
+
+form input[type="submit"] {
+background: url("http://devevolution.com/wp-content/uploads/2013/01/btn.png")  no-repeat;
+width: 56px;
+height: 28px;
+float: right;
+color: #fff;
+border: none;
+margin-right: 10px;
+}
+
+article {
+width: 640px;
+padding: 10px 10px 15px 10px;
+}
+
+h2 {
+color: #fad719;
+font-family: "Times New Roman", serif;
+font-size: 30px;
+font-weight: normal;
+margin-bottom: 10px;
+}
+
+article span {
+color: #fff;
+}
+
+p {
+color: #a5a5a5;
+font-size: 13px;
+font-family: Verdana, Helvetica, sans serif;
+line-height: 20px;
+}

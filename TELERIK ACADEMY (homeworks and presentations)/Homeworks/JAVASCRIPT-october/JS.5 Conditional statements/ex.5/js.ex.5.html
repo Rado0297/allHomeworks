@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		a {
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<label for="tb-first">Enter a number: </label>
+	<input type="text" id="tb-first"/>
+    </br>
+	<a href="#" onclick="checkThis()">Check number name on English</a>
+	<div id="console">
+	</div>
+	<script src="js-console.js">          
+	</script>                  
+	<script>
+		function checkThis() {
+			var first = jsConsole.readFloat("#tb-first");
+			if (isNaN(first)){
+				jsConsole.writeLine("not a number");
+			}
+			else{
+				jsConsole.writeLine("English name of digit is: ");
+				switch (first){
+					case 1: jsConsole.writeLine("One"); break;
+					case 2: jsConsole.writeLine("Two"); break;
+					case 3: jsConsole.writeLine("Three"); break;
+					case 4: jsConsole.writeLine("Four"); break;
+					case 5: jsConsole.writeLine("Five"); break;
+					case 6: jsConsole.writeLine("Six"); break;
+					case 7: jsConsole.writeLine("Seven"); break;
+					case 8: jsConsole.writeLine("Eight"); break;
+					case 9: jsConsole.writeLine("Nine"); break;
+					case 10: jsConsole.writeLine("Ten"); break;
+					case 11: jsConsole.writeLine("Eleven"); break;
+					default: jsConsole.writeLine("Display only digits between 1 and 11"); break;
+				} 
+			}            
+		}  
+	</script>                          
+</body>
+</html>

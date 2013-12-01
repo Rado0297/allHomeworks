@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="js-console.css" rel="stylesheet" />
+	<style>
+		a{
+			color:white;
+		}
+		a:hover{
+			background-color:yellowgreen;
+			color:black;
+		}
+	</style>
+</head>
+<body>                                                          
+
+	<div id="js-console">
+		<label for="tb-numbers">Enter string which white space you want to replace: </label>
+		<input id="tb-numbers" type="text" />
+		<a href="#" onclick="convertToURL()">Replace</a>
+	</div>
+	<script src="js-console.js"></script>
+	<script>
+		function convertToURL(){
+			var text = jsConsole.readString("#tb-numbers");
+			var index=text.indexOf("<a");
+			while (index>-1){
+				text = text.replace("<a", "[URL");
+                text = text.replace("</a>", "[/URL]");
+				index = text.indexOf("<a",index+1);
+			}
+            jsConsole.writeLine(text);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		a {
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<label for="tb-first">Number: </label>
+		<input type="text" id="tb-first"/>
+		<a href="#" onclick="onFindBiggerButtonClick()">Is third digit 7</a>
+	</div>
+	<div id="console">
+	</div>
+	<script src="js-console.js">   
+	</script>                  
+	<script>   
+		function onFindBiggerButtonClick() {
+			var first = jsConsole.readFloat("#tb-first");
+			var buffer = parseInt(first / 100)
+			if(buffer % 10 == 7){
+				jsConsole.writeLine("Third digit of number: " + first + " is 7");
+			}
+			else{
+				jsConsole.writeLine("Third digit of number: " + first + " is NOT 7");
+			}
+		}                                                                                        
+	</script>                          
+</body>
+</html>

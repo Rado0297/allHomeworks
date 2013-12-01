@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		a {
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<label for="tb-first">Enter first number: </label>
+	<input type="text" id="tb-first"/>
+    </br>                                                                     
+	<label for="tb-second">Enter second number: </label>
+	<input type="text" id="tb-second"/>
+    </br>
+	<label for="tb-second">Enter third number: </label>
+	<input type="text" id="tb-third"/>
+    </br>
+	<a href="#" onclick="checkThis()">Check sign</a>
+	<div id="console">
+	</div>
+	<script src="js-console.js">          
+	</script>                  
+	<script>
+		function checkThis() {
+			var first	= jsConsole.readFloat("#tb-first");
+			var second = jsConsole.readFloat("#tb-second");
+			var third = jsConsole.readFloat("#tb-third");
+			var countNegativNumbers = 0;
+			if (first < 0){
+				countNegativNumbers++;
+			}
+			if (second < 0){
+				countNegativNumbers++;
+			}
+			if (third < 0){
+				countNegativNumbers++;
+			}
+			if (countNegativNumbers % 2 == 0){
+				jsConsole.writeLine("The sign is " + "+");
+			}
+			else{
+				jsConsole.writeLine("The sign is " + "-");
+			}
+		}                                                                                        
+	</script>                          
+</body>
+</html>

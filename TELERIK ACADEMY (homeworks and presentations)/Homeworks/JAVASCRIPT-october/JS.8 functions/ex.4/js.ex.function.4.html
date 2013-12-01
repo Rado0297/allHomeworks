@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+		body .js-console {
+			margin: 0;
+			padding: 5px 10px;
+			background-color: black;
+			width: 800px;
+			height: 500px;
+			font-family: Consolas;
+			font-size: 18px;
+			color: white;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			word-break: break-all;
+		}
+	</style>
+</head>
+<body>
+    <div id="js-console"></div>
+	<div id="Div1"></div>
+	<div id="Div2"></div>
+	<div id="Div3"></div>
+	<div id="Div4"></div>
+	<div id="Div5"></div>
+	<script src="js-console.js"></script>                   
+	<script>  
+		countDivs()
+		function countDivs(){
+			var count = document.getElementsByTagName("div").length;
+			jsConsole.writeLine("The number of divs in your page is " + count);
+		}
+	</script>
+</body>
+</html>

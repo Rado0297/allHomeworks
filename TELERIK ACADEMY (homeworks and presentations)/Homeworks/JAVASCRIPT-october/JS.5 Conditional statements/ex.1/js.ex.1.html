@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		a {
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<label for="tb-first">Enter first number: </label>
+	<input type="text" id="tb-first"/>
+    </br>                                                                     
+	<label for="tb-second">Enter second number: </label>
+	<input type="text" id="tb-second"/>
+    </br>	
+	<a href="#" onclick="checkThis()">Check value</a>
+	<div id="console">
+	</div>
+	<script src="js-console.js">          
+	</script>                  
+	<script>
+		function checkThis() {
+			var Max	= jsConsole.readFloat("#tb-first");
+			var Min = jsConsole.readFloat("#tb-second");
+			var x;
+			if (Max > Min){
+				x = Max;
+				Max = Min;
+				Min = x;
+			}
+			jsConsole.writeLine("Max = " + Min);
+		}                                                                                        
+	</script>                          
+</body>
+</html>

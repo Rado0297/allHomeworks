@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<style>
+		a {
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<label for="tb-number">Enter a number: </label>
+	<input type="text" id="tb-number"/>	
+	<a href="#" onclick="onButtonClick()">Third bit is</a>
+	<div id="console">
+	</div>
+	<script src="js-console.js">          
+	</script>                  
+	<script>                                    
+		function onButtonClick(){
+			var Number = jsConsole.readInteger("#tb-number");
+			var p = 3;
+            var mask = 1 << p;
+            var result = Number & mask;
+            var bit = result >> p;
+            jsConsole.writeLine("Third bit of number " + Number.toString(2) + " is: " + bit);
+		}                                                                                        
+        </script>                          
+</body>
+</html>

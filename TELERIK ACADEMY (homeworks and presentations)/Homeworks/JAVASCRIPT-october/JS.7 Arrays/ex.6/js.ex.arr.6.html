@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.js-console {
+			margin: 0;		
+		}
+		body .js-console {
+			margin: 0;
+			padding: 5px 10px;
+			background-color: black;
+			width: 800px;
+			height: 500px;
+			font-family: Consolas;
+			font-size: 18px;
+			color: white;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			word-break: break-all;
+		}
+	</style>
+</head>
+<body>
+    <span>Enter an array of numbers, sepatared by "," !</span>
+	<input type="text" id="tb-number">
+	<a href="#" id="btn-check-prime" onclick="findMostFrequent()">Find The Most frequent number</a>
+	<div id="js-console" class="js-console">
+	</div>
+	<script src="js-console.js">	  
+	</script>
+	<script>
+		function findMostFrequent(){
+			var arrayString = jsConsole.readString("#tb-number");
+			var arrayInt = arrayString.split(',');
+			for (var i in arrayInt) {
+				arrayInt[i] = parseInt(arrayInt[i], 10);
+			}
+			var count = 1;
+			var finalCount = 1;
+			var currentElement = arrayInt[0];
+			var finalElement = 0;
+			for (var i = 0; i < arrayInt.length; i++) {
+				count = 1;
+				currentElement = arrayInt[i];
+				var tempIndex = i+1;
+				while (tempIndex<arrayInt.length) {
+					if (arrayInt[tempIndex]==currentElement) {
+						count++;
+					}
+					tempIndex++;
+				}
+				if (count>finalCount) {
+					finalCount = count;
+					finalElement = currentElement;
+				}
+			}
+			if (finalCount>1) {
+				jsConsole.writeLine("The most frequent number is " + finalElement + " and it appears " + finalCount + " times!");
+			}
+			else {
+				jsConsole.writeLine("The most frequent number is " + arrayInt[0] + " and it appears 1 time!");
+			}
+		}
+	</script>
+</body>
+</html>

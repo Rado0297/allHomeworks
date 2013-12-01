@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js-console.css" rel="stylesheet">
+	<style>
+		a{
+			color:white;
+		}
+		a:hover{
+			background-color:yellowgreen;
+			color:black;
+		}
+	</style>
+</head>
+<body>
+	<div id="js-console">
+		<label for="text">Paste your text to see how many email addresses are there</label><br>
+		<label for="text">(emails must be separated by " "(whitespace) or words)</label><br>
+		<input id="txt" type="text"/><br /><br />
+		<a href="#" onclick="email()">Find the emails</a>
+		<br/><br/>
+	</div>
+	<script src="js-console.js"></script>
+	<script>
+		function email(){
+			var text = jsConsole.readString("#txt")
+			jsConsole.writeLine("My text is here:");
+			jsConsole.writeLine(text);
+			jsConsole.writeLine("------------------------------------------------------------------------");
+			var emailArr = [];
+			var index = text.indexOf("@");
+			while (index > -1) {
+				if (text[index-1]!=" " && text[index+1]!=" ") {
+					var identifier = text.substring(text.lastIndexOf(" ", index - 1), index);
+					var host = text.substring(index + 1, text.indexOf(".", index + 1));
+					var domain = text.substring(text.indexOf(".", index + 1) + 1, text.indexOf(" ", text.indexOf(".", index + 1) + 1));
+					var email = identifier + "@" + host + "." + domain;
+					emailArr.push(email);
+					index = text.indexOf("@",index+1);
+				}
+			}
+			jsConsole.writeLine("Emails,which are in this text are:");
+			for (var email in emailArr){
+				jsConsole.writeLine(emailArr[email]);
+			}
+		}
+	</script>
+</body>
+</html>

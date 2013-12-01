@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+    </div>
+    <script src="js-console.js">	
+    </script>
+    <script>
+        var str = "We are living in an yellow submarine. We don't have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.";
+		jsConsole.writeLine("The text is: [ " + str + "]");
+		var searchStr = new RegExp("in","gi");
+         jsConsole.writeLine(countOccurences(str,searchStr));
+        function countOccurences(str, searchedStr) {
+            return jsConsole.writeLine("The phrase 'in' is contained " + str.match(searchStr).length + " times.");
+        }
+		
+    </script>
+</body>
+</html>
