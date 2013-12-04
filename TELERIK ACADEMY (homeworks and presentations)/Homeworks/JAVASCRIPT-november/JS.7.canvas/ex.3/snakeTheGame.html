@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="snakeStyles.css">
+</head>
+<body onload='displayScores()'>
+        <h1>Welcome to the Snake Game</h1>
+		<p>Please enter your name when you hit a wall.</p>
+		<p>If you make new record your name will be post in Top 10 best results</p>
+        <button id='startButton'>Start Game</button>
+        <div class="gameWrapper">
+                <div id='hiScores'>
+                        The best 10 score results:
+                        <div id="top10"></div>
+                </div>
+            <canvas id='snakeGame' width='600' height='400'></canvas>
+            <div id="score"></div>
+    </div>
+    <script type="text/javascript" src='snake.js'></script>
+    <script type="text/javascript">
+            var startButton = document.getElementById('startButton');
+            startButton.addEventListener('click', function() {
+                    wormify.startGame();
+            });
+
+            function displayScores() {
+                    return wormify.updateTopScores();
+            }
+    </script>
+</body>
+</html>

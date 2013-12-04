@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-2.0.3.min.js"></script>
+</head>
+<body>
+	<h1>You can enter your colors in English(e.g. black...) and hex(e.g. #000000...)</h1>
+	<h3>hex is available in Mozila Firefox</h3>
+    <label for="color-picker">Select background color (use Chrome): </label>
+    <input type="color" id="color-picker" />
+    <script>
+        function changeBGColor() {
+            $("body").css("background-color", $("#color-picker").val());
+        }
+        $("#color-picker").on("change", changeBGColor);
+    </script>
+</body>
+</html>
