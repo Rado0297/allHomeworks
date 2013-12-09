@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="JQuery.js"></script>
+    <script src="ClasicObjectCeateAndInherit.js"></script>
+    <style>
+        table {
+            border-spacing:0;
+            border:1px solid black
+        }
+        td {
+            border:1px solid black
+        }
+        th {
+            border:1px solid black
+        }
+    </style>
+</head>
+<body>
+	<h1>By given an array of students, generate a table that represents these students</h1>
+    <h2>Each student has first name, last name and grade</h2>
+    <script>
+		var Student = Class.create({
+			init: function (fname, lname, grade) {
+				this.fname = fname;
+				this.lname = lname;
+				this.grade = grade;
+			}
+		});
+	//create table
+        function createTable(arrayOfStudents) {
+			var table = $('<table/>');
+			table.append("<tr><th>FirstName</th><th>LasteName</th><th>Grade</th></th>");
+			for (var i = 0; i < arrayOfStudents.length; i++) {
+				var row = $("<tr/>");
+				row.append("<td>" + arrayOfStudents[i].fname + "</td>");
+				row.append("<td>" + arrayOfStudents[i].lname + "</td>");
+				row.append("<td>" + arrayOfStudents[i].grade + "</td>");
+				table.append(row);
+			}
+			$("body").append(table);
+		}
+		//create array of students(content of table)
+		var pesho = new Student("Peter", "Petrov", 11);
+		var gosho = new Student("Georgi", "Georgiev", 11);
+		var ivo = new Student("Ivailo", "Ivov", 11);
+		//put out table with content
+		createTable([pesho, gosho, ivo]);
+    </script>
+</body>
+</html>

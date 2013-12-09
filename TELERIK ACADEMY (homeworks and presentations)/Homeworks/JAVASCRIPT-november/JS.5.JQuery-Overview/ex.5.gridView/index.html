@@ -1,0 +1,33 @@
+<DOCTYPE! html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-2.0.2.min.js"></script>
+	<script type="text/javascript" src="grid-view.js"></script>
+</head>
+<body>
+	<div id="grid-view-holder"></div>
+	<script type="text/javascript">
+		var schoolsGrid = controls.GridView("#grid-view-holder");
+		schoolsGrid.addHeader("First Name", "Last Name", "Product", "Quantity");
+		schoolsGrid.addRow("Doncho", "Minkov", "Caramel Latte", 10);
+		schoolsGrid.addRow("Georgi", "Georgiev", "Espresso Truffle", 10);
+		var academyRow = schoolsGrid.addRow("Nikolai", "Kostov", "Green Tea", 10);
+		
+		var academyGrid = academyRow.NestedGridView();
+		academyGrid.addHeader("First Name", "Last Name", "Product");
+		academyGrid.addRow("Pesho", "Peshev", "White Chocolate Mocha");
+		academyGrid.addRow("Mitko", "Dimitrov", "Black Tea");
+
+		schoolsGrid.addRow("Pamela", "Danson", "NesTea", 5);
+		var testRow = schoolsGrid.addRow("Ted", "Danson", "Caramel", 1);
+
+		var testGrid = testRow.NestedGridView();
+		testGrid.addHeader("Sugar", "Milk", "Honey");
+		testGrid.addRow(200, 150, 400);
+		testGrid.addRow("One bag", "Two Litres", "Jar");
+
+		schoolsGrid.render();
+	</script>
+</body>
+</html>

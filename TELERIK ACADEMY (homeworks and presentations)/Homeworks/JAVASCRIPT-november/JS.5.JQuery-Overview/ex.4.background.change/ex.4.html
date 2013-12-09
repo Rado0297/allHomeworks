@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery-2.0.3.js"></script>
+</head>
+<body>
+    <label for="color-picker">Select background color (for Firefox write name of color): </label>
+    <input type="color" id="color-picker" />
+    <script>
+        function changeBGColor() {
+            $("body").css("background-color", $("#color-picker").val());
+        }
+ 
+        $("#color-picker").on("change", changeBGColor);
+    </script>
+</body>
+</html>
