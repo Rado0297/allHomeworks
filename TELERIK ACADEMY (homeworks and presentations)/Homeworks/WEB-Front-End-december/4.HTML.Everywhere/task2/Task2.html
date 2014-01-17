@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="jQuery%201.9%20.1.js"></script>
+    <script src="modernizr-custom.js"></script>
+    <script src="js-webshim/minified/polyfiller.js"></script>
+
+    <script>
+        $.webshims.polyfill();
+    </script>
+	<link rel="stylesheet" type="text/css" href="styles/myStyles.css">
+</head>
+<body>
+	<h1>This work perfect on IE 5,7,8,9,10,11</h1>
+    <h2 id="demo">Click the button to get your coordinates:</h2>
+    <button onclick="getLocation()">Try It</button>
+    <script>
+        var x = document.getElementById("demo");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else { x.innerHTML = "Geolocation is not supported by this browser."; }
+        }
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+</body>
+</html>
