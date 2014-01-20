@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        html {
+            background-color: silver;
+        }
+        body {
+            margin: auto;
+        }
+        .form-element {
+            display: inline;
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            float: left;
+            height: 100px;
+            width: 190px;
+        }
+		#range{
+			display: inline;
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            float: left;
+            height: 100px;
+            width: 270px;
+		}
+    </style>
+	<!--styles for input type color (box with black color on web page)-->
+    <link href="styles/spectrum-color.css" rel="stylesheet" type="text/css" />
+    <!-- dependencies: jQuery + Modernizr-->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="scripts/modernizr.custom.12744.js"></script>
+    <script src="js-webshim/minified/polyfiller.js"></script>
+    <script>
+        $.webshims.debug = true;
+        $.webshims.polyfill();
+    </script>
+
+    <!-- Polyfill for color type -->
+    <script src="scripts/spectrum-color.js"></script>
+
+    <!-- Polyfill for week type -->
+    <script src="scripts/week-polyfill.min.js"></script>
+
+    <!-- Polyfill for datetime type -->
+    <script src="scripts/datetime-polyfill.js"></script>
+
+    <!-- Needed for week and datetime polyfills ui -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery.ui.all.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend></legend>
+        <div id="range">
+            <label for="range">
+                range:
+            </label>
+            <input name="range" type="range"  min="0" max="100" step="10" value="70" />
+        </div>
+        <div class="form-element">
+            <label for="number">
+                Number:
+            </label>
+            <input type="number" min="0" step="0.01" name="price" />
+        </div>
+        <div class="form-element">
+            <label for="email">
+                E-Mail + datalist:
+            </label>
+            <input type="email" list="datalist" name="email" title="email" pattern="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$" />
+        </div>
+        <div class="form-element">
+            <label for="date">
+                Date:
+            </label>
+            <input name="date" data-placeholder="year-month-day" type="date" />
+
+        </div>
+        <div class="form-element">
+            <label for="color">
+                Color:
+            </label>
+
+            <input type='color' class='basic' value='#000' />
+        </div>
+        <div class="form-element">
+            <label for="datetime">
+                Data time:
+            </label>
+            <input name="datetime" type="datetime" />
+        </div>
+        <div class="form-element">
+            <label for="month">
+                Month:
+            </label>
+            <input name="month" type="month" />
+        </div>
+        <div class="form-element">
+            <label for="search">
+                Search:
+            </label>
+            <input name="search" type="search" />
+        </div>
+        <div class="form-element">
+            <label for="tel">
+                Tel:
+            </label>
+            <input type="tel" pattern="(\+?([0-9]+))\b" title="Format +359866666666" id="tel" />
+        </div>
+        <div class="form-element">
+            <label for="time">
+                Time: 
+            </label>
+            <input name="time" type="time" id="time" />
+        </div>
+        <div class="form-element">
+            <label for="url">
+                URL: 
+            </label>
+            <input type="url" name="location" list="urls" />
+        </div>
+        <div class="form-element">
+            <label for="time">
+                Week: 
+            </label>
+            <input name="week" type="week" id="week" />
+        </div>
+    </fieldset>
+</body>
+</html>
