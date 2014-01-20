@@ -1,0 +1,4 @@
+Create a web page that contains the following input types
+range, number, email, date, color, datetime, month, search, tel, time, url, week
+And it must work on all desktop browsers (IE7+)
+Research about Webshims Lib
