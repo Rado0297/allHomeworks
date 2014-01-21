@@ -1,0 +1,13 @@
+1.Make the web page task1.html with styles 
+
+task1.css (or task1.less) to work on all 
+
+desktop browsers, including IE7
+
+­ You are not allowed to change the original 
+
+CSS(LESS) and HTML. You can only expand 
+
+it
+
+­ Use shivs, shims or polyfills
