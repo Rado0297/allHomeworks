@@ -1,0 +1,36 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>Task 2</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+        <p>
+            Here is my array [1, 1, 1, 6, 5, 16, 48, 1, 4, 6, 79, 3, 1, 7] 
+            </br>
+            Enter here elments,that i want to remove => 1
+        </p>
+        <button onclick="removeElementsFromArray()">Remove elements</button>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function removeElementsFromArray() {
+            Array.prototype.remove = function () {
+                var what, a = arguments, L = a.length, ax;
+                while (L && this.length) {
+                    what = a[--L];
+                    while ((ax = this.indexOf(what)) !== -1) {
+                        this.splice(ax, 1);
+                    }
+                }
+                return this;
+            };
+
+            var array = [1, 1, 1, 6, 5, 16, 48, 1, 4, 6, 79, 3, 1, 7];
+            array.remove(1);
+            jsConsole.writeLine("Result after removing is " + "[" + array + "]");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 1</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+        input {
+            width:50px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!--ZA DOVASHVANE !!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
+    <div id="js-console">
+        <h5>Line 1 [L1(P1(X1,y),P2(X1,y))]</h5>
+        <p>P1(X1=<input type="text" id="X1"/>,Y1=<input type="text" id="Y1"/>)   [ex.P1(X1 = -2,Y1 = 1)]</p>
+        <p>P2(X1=<input type="text" id="X2"/>,Y1=<input type="text" id="Y2"/>)   [ex.P2(X1 = 1,Y1 = 5)]</p>
+        <h5>Line 2 [L2(P1(X1,y),P2(X1,y))]</h5>
+        <p>P1(X1=<input type="text" id="X3"/>,Y1=<input type="text" id="Y3"/>)   [ex.P1(X1 = 5,Y1 = 3)]</p>
+        <p>P2(X1=<input type="text" id="X4"/>,Y1=<input type="text" id="Y4"/>)   [ex.P2(X1 = -4,Y1 = 1)]</p>
+        <h5>Line 3 [L3(P1(X1,y),P2(X1,y))]</h5>
+        <p>P1(X1=<input type="text" id="X5"/>,Y1=<input type="text" id="Y5"/>)   [ex.P1(X1 = 6,Y1 = 1)]</p>
+        <p>P2(X1=<input type="text" id="X6"/>,Y1=<input type="text" id="Y6"/>)   [ex.P2(X1 = 1,Y1 = 6)]</p>
+        <a href="#" onclick="onClick()">Give me info</a>
+        </br>
+        </br>
+        </br>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function onClick() {
+            var line1 = {
+                P1: {
+                    X1: -2,
+                    Y1: 1
+                },
+                P2: {
+                    X1: 1,
+                    Y1: 5
+                }
+            }
+
+            var line2 = {
+                P1: {
+                    X1: 5,
+                    Y1: 3
+                },
+                P2: {
+                    X1: -4,
+                    Y1: 1
+                }
+            }
+
+            var line3 = {
+                P1: {
+                    X1: 6,
+                    Y1: 1
+                },
+                P2: {
+                    X1: 1,
+                    Y1: 6
+                }
+            }
+
+            jsConsole.writeLine("The distance between the ponts is : " + calculateDistanceBetweenTwoPoints(line1.P1, line1.P2));
+            var lenghtLine1 = calculateDistanceBetweenTwoPoints(line1.P1, line1.P2)
+            var lenghtLine2 = calculateDistanceBetweenTwoPoints(line2.P1, line2.P2)
+            var lenghtLine3 = calculateDistanceBetweenTwoPoints(line3.P1, line3.P2)
+
+            jsConsole.writeLine("The three lines can form triangle => " + canFormTriangle(lenghtLine1, lenghtLine2, lenghtLine3))
+
+            function canFormTriangle(line1, line2, line3) {
+                return line1 + line2 > line3 && line2 + line3 > line1 && line3 + line1 > line2;
+            }
+
+            function calculateDistanceBetweenTwoPoints(pointOne, PointTwo) {
+                return (Math.sqrt(Math.pow(PointTwo.X1 - pointOne.X1, 2) + Math.pow(PointTwo.Y1 - pointOne.Y1, 2)));
+            }
+
+        }
+    </script>
+</body>
+</html>

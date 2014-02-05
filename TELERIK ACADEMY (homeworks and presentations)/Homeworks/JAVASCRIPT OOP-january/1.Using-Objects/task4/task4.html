@@ -1,0 +1,58 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>Task 2</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+        button {
+            margin-left:240px;
+            font-size:21px;
+            color:white;
+            background-color:black;
+        }
+    </style>
+</head>
+<body>
+    <div id="js-console">
+        <p>
+            <header>There are my two objects for checking</header></br>
+            var Student = {age: 21,firstname: "Pesho",lastname: "Peshov"}</br>
+            var Teacher = {spec: "Trainer",firstname: "Georgi",lastname: "Georgiev"}</br>
+        </p>
+        </br>
+        <button onclick="makeAction()">Push to view result of exercise</button>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function makeAction() {
+            //Make two object and their properties
+            var Student = {
+                age: 21,
+                firstname: "Pesho",
+                lastname: "Peshov"
+            }
+            var Teacher = {
+                spec: "Trainer",
+                firstname: "Georgi",
+                lastname: "Georgiev"
+            }
+            //Make function,that checks for objects' properties
+            function hasProperty(object, property) {
+                for (var i in object) {
+                    if (i == property) {
+                        return true;
+                        break;
+                    }
+                    return false;
+                }
+            }
+            
+            var studentProperty = hasProperty(Student, "age");
+            var teacherProperty = hasProperty(Teacher, "spec");
+            //Print result of checking
+            jsConsole.writeLine("Student have property age => " + studentProperty);
+            jsConsole.writeLine("Teacher have property spec => " + teacherProperty);
+        }
+    </script>
+</body>
+</html>
