@@ -1,0 +1,45 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>Task 5</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+        <p>
+            <h4>My persons are:</h4>
+            var persons = [                                                         </br>
+                            {firstname : "Gosho", lastname: "Petrov", age: 32},     </br>
+                            {firstname : "Bay", lastname: "Ivan", age: 81},         </br>
+                            {firstname : "Bay", lastname: "Pesho", age: 18}         </br>
+                          ]
+        </p>
+        </br>
+        <button onclick="makeAction()">Find youngest</button>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function makeAction() {
+            var persons = [
+                { firstname: "Gosho", lastname: "Petrov", age: 32 },
+                { firstname: "Bay", lastname: "Ivan", age: 81 },
+                { firstname: "Bay", lastname: "Pesho", age: 18 }
+            ];
+
+            function findYoungestPerson(array) {
+                var index = 0;
+                var age = array[0].age;
+
+                for (var i = 1; i < array.length; i++) {
+                    if (array[i].age < age) {
+                        age = array[i].age;
+                        index = i;
+                    }
+                }
+                jsConsole.writeLine("The youngest person " + array[index].firstname + " " + array[index].lastname);
+            }
+            findYoungestPerson(persons);
+        }
+    </script>
+</body>
+</html>
