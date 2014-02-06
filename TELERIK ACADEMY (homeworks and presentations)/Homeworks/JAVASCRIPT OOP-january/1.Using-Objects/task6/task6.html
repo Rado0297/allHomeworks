@@ -1,0 +1,62 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>Task 6</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+        <button onclick="makeAction()">Touch it to see result</button>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function makeAction() {
+            var persons = [
+                { firstname: "Gosho", lastname: "Petrov", age: 32 },
+                { firstname: "Bay", lastname: "Ivan", age: 32 },
+                { firstname: "Bay", lastname: "Pesho", age: 18 }
+            ];
+
+            function grouping(person, property) {
+                var array = new Array();
+
+                for (var i = 0; i < person.length; i++) {
+
+                    for (var j in person[i]) {
+                        if (j == property) {
+                            array.push(person[i][j]);
+                        }
+                    }
+                }
+
+                var wordsCount = {};
+
+                var word = {};
+
+                for (var i in array) {
+                    word = array[i];
+                    if (wordsCount[word]) {
+                        wordsCount[word]++;
+                    }
+                    else {
+                        wordsCount[word] = 1;
+                    }
+                }
+                return wordsCount;
+            }
+
+            var groupByAge = grouping(persons, "age");
+
+            var groupByFirstName = grouping(persons, "firstname");
+
+            for (var i in groupByAge) {
+                jsConsole.writeLine("Person,which is " + i + " years old =>" + groupByAge[i] + " pieces");
+            }
+
+            for (var i in groupByFirstName) {
+                jsConsole.writeLine("<strong>Person with firstname</strong> " + i + " <strong>=></strong> " + groupByFirstName[i] + " <strong>pieces</strong>");
+            }
+        }
+    </script>
+</body>
+</html>
