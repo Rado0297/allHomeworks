@@ -1,0 +1,98 @@
+<!DOCTYPE  html>
+<html>
+<head>
+    <title>Task 1</title>
+</head>
+<body>
+
+    <div id="Wrapper" style="height:60px;background-color:yellowgreen;">
+        <p id="paragraph"></p>
+    </div>
+
+    <div class="divs">
+        <ul>
+            <li>First li item</li>
+            <li>Second li item</li>
+            <li>Third li item</li>
+        </ul>
+    </div>
+
+    <div class="divs">
+        <ul>
+            <li>First li item</li>
+            <li>Second li item</li>
+            <li>Third li item</li>
+        </ul>
+    </div>
+        
+    <button onclick="terminate()">Touch button /result is removing li elements and create one div with black color/</button>
+    </br>
+    <a href="#" class="button">Touch button to addHandler</a>
+
+    <script>
+        var bufferElement = [];
+        var maxFragmentSize = 100;
+        var div = document.createElement("div");
+        div.style.height = "10px";
+        div.style.backgroundColor = "black";
+
+        function terminate() {
+            var domModule = module();
+            domModule.appendChild(div, "#Wrapper");
+            domModule.removeChild("ul", "li:first-of-type");
+            domModule.addHandler("a.button", 'click', function () { alert("Clicked!") });
+        }
+
+        function module() {
+            function appendChild(child, parentSelector) {
+                var parent = document.querySelectorAll(parentSelector);
+                for (var i = 0; i < parent.length; i++) {
+                    parent[i].appendChild(child);
+                }
+            }
+
+            function removeChild(parentSelector, elementForRemoving) {
+                var parent = document.querySelectorAll(parentSelector);
+
+                for (var i = 0; i < parent.length; i++) {
+                    var child = parent[i].querySelectorAll(elementForRemoving);
+                    for (var j = 0; j < child.length; j++) {
+                        parent[i].removeChild(child[j]);
+                    }
+                }
+            }
+
+            function addHandler(elementSelector, event, eventHandler) {
+                var element = document.querySelector(elementSelector);
+                element.addEventListener(event, eventHandler, true);
+            }
+
+            function addElementWithBuffer(parentSelector, tagName, attributes, innerHTML) {
+                if (!bufferElement[parentSelector]) {
+                    bufferElement[parentSelector] = document.createDocumentFragment();
+                }
+
+                var element = createElement(tagName, attributes, innerHTML);
+
+                bufferElement[parentSelector].appendChild(element);
+
+                if (bufferElement[parentSelector].childNodes.length === maxFragmentSize) {
+                    var parent = getElement(parentSelector);
+                    parent.appendChild(bufferElement[parentSelector]);
+                    bufferElement[parentSelector] = null;
+                }
+            }
+            return {
+                appendChild: appendChild,
+                removeChild: removeChild,
+                addHandler: addHandler,
+                addElementWithBuffer: addElementWithBuffer
+            }
+        }
+
+    </script>
+
+
+
+</body>
+</html>
