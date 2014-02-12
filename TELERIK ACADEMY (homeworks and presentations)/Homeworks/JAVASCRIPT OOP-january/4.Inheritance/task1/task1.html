@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1</title>
+    <script src="object-create.js"></script>
+</head>
+<body>
+    <script>
+        var School = {
+            init: function (name, town, classes) {
+                this.name = name;
+                this.town = town;
+                this.classes = classes;
+            }
+        };
+
+        var Class = {
+            init: function (name, capacityOfStudents, setOfStudents, formTeacher) {
+                this.name = name;
+                this.capacityOfStudents = capacityOfStudents;
+                this.setOfStudents = setOfStudents;
+                this.formTeacher = formTeacher;
+            }
+        };
+
+        var Person = {
+            init: function (fname, lname, age) {
+                this.fname = fname;
+                this.lname = lname;
+                this.age = age;
+
+            },
+            introduce: function () {
+                var name = this.fname + " " + this.lname;
+                var age = this.age;
+
+                return "Name:" + name + ", age:" + age;
+            }
+        };
+
+        var Student = Person.extend({
+            init: function (fname, lname, age, grade) {
+                Person.init.call(this, fname, lname, age);
+                this.grade = grade;
+            },
+            introduce: function () {
+                return Person.introduce.apply(this) + ", grade:" + this.grade;
+            }
+        });
+
+        var Teacher = Person.extend({
+            init: function (fname, lname, age, speciality) {
+                Person.init.call(this, fname, lname, age);
+                this.speciality = speciality;
+            },
+            introduce: function () {
+                return Person.introduce.apply(this) + ", speciality:" + this.speciality;
+            }
+        });
+
+        var niki = Object.create(Student);
+        niki.init("Radoslav", "Radkov", 17, 10);
+        
+        var krasi = Object.create(Student);
+        krasi.init("Krasimir", "Getov", 17, 10);
+
+        var tedo = Object.create(Student);
+        tedo.init("Teodor", "Hanev", 17, 10);
+
+        var doncho = Object.create(Teacher);
+        doncho.init("Doncho", "Minkov", 25, "Trainer");
+
+        var tenGrade = Object.create(Class);
+        tenGrade.init("tenB", 3, [niki, krasi, tedo], doncho);
+
+        var telerik = Object.create(School);
+        telerik.init("Telerik", "Sofia", [tenGrade]);
+
+        console.log(telerik.name);
+        console.log(telerik.classes[0].setOfStudents[0].introduce());
+        console.log(telerik.classes[0].setOfStudents[1].introduce());
+        console.log(telerik.classes[0].setOfStudents[2].introduce());
+
+        var repository = function () {
+            function saveInRepository(key, objeckt) {
+                localStorage.setItem(key, JSON.stringify(objeckt));
+            }
+
+            function loadFromRepositori(key) {
+                var objeckt = JSON.parse(localStorage.getItem(key));
+
+                return objeckt;
+            }
+            return {
+                saveInRepository: saveInRepository,
+                loadFromRepository: loadFromRepositori
+            }
+        }();
+
+        repository.saveInRepository("school", telerik);
+        var telerikCopy = repository.loadFromRepository("school");
+        console.log(telerikCopy.name);
+
+    </script>
+</body>
+</html>

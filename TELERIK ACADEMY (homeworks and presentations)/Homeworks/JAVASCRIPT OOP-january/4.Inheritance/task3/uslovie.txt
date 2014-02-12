@@ -1,0 +1,5 @@
+Implement a image slider control using Prototypal OOP
+The slider has a set of images and only one can be enlarged
+Each image in the image slider has a title and two urls (thumbnail url and large image url)
+When an image from the thumbnails is clicked
+The slider must have buttons for prev/next image
