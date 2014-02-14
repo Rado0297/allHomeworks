@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2</title>
+    <script src="forInherit.js"></script>
+</head>
+<body>
+    <script>
+        var Person = Class.create({
+            init: function (fname, lname, age) {
+                this.fname = fname;
+                this.lname = lname;
+                this.age = age;
+            },
+            introduce: function () {
+                return "Name:" + this.fname + " " + this.lname + ", age:" + this.age;
+            }
+        });
+
+        var Student = Class.create({
+            init: function (fname, lname, age, grade) {
+                this._super = new this._super(arguments);
+                this._super.init(fname, lname, age);
+                this.grade = grade;
+            },
+            introduce: function () {
+                return this._super.introduce() + ", grade:" + this.grade;
+            }
+        });
+
+        Student.inherit(Person);
+
+        var Teacher = Class.create({
+            init: function (fname, lname, age, speciality) {
+                this._super = new this._super(arguments);
+                this._super.init(fname, lname, age);
+                this.speciality = speciality;
+            },
+            introduce: function () {
+                return this._super.introduce() + ", speciality:" + this.speciality;
+            }
+        });
+
+        Teacher.inherit(Person);
+
+        var SchoolClass = Class.create({
+            init: function (name, capacity, setOfStudents, formTeacher) {
+                this.name = name;
+                this.capacity = capacity;
+                this.setOfStudents = setOfStudents;
+                this.formTeacher = formTeacher;
+            }
+        });
+
+        var School = Class.create({
+            init: function (name, town, classesOfStudents) {
+                this.name = name;
+                this.town = town;
+                this.classesOfStudents = classesOfStudents;
+            }
+        });
+
+        var rado = new Student("Radoslav", "Radkov", 17, 10);
+
+        var krasi = new Student("Krasimir", "Getov", 17, 10);
+
+        var tedo = new Student("Teodor", "Hanev", 17, 10);
+
+        var mrMinkov = new Teacher("Doncho", "Minkov", 25, "Trainer");
+
+        var tenGrade = new SchoolClass("tenB", 3, [rado, krasi, tedo], mrMinkov);
+        var telerik = new School("Telerik", "Sofia", [tenGrade]);
+
+        console.log(telerik.name);
+        console.log(telerik.classesOfStudents[0].setOfStudents[0].introduce());
+        console.log(telerik.classesOfStudents[0].setOfStudents[1].introduce());
+        console.log(telerik.classesOfStudents[0].setOfStudents[2].introduce());
+        console.log(telerik.classesOfStudents[0].formTeacher.introduce());
+
+        var repository = function () {
+            function saveInRepository(key, objeckt) {
+                localStorage.setItem(key, JSON.stringify(objeckt));
+            }
+
+            function loadFromRepositori(key) {
+                var objeckt = JSON.parse(localStorage.getItem(key));
+
+                return objeckt;
+            }
+            return {
+                saveInRepository: saveInRepository,
+                loadFromRepository: loadFromRepositori
+            }
+        }();
+
+        repository.saveInRepository("school", telerik);
+        var telerikCopy = repository.loadFromRepository("school");
+        console.log(telerikCopy.name);
+    </script>
+</body>
+</html>

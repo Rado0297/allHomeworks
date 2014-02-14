@@ -1,0 +1,7 @@
+Create a favorite sites bar
+The favorite sites bar should keep a set of urls and set of folders
+Folders have a title and set of urls
+Urls have a title and a url
+The favorite sites bar should have a functionality to display urls and folders
+If an url is clicked, it should be open in new tab in the browser
+Use Classical OOP with Class.create()
