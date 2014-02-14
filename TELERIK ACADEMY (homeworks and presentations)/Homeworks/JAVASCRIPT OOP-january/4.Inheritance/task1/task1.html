@@ -58,8 +58,8 @@
             }
         });
 
-        var niki = Object.create(Student);
-        niki.init("Radoslav", "Radkov", 17, 10);
+        var rado = Object.create(Student);
+        rado.init("Radoslav", "Radkov", 17, 10);
         
         var krasi = Object.create(Student);
         krasi.init("Krasimir", "Getov", 17, 10);
@@ -71,7 +71,7 @@
         doncho.init("Doncho", "Minkov", 25, "Trainer");
 
         var tenGrade = Object.create(Class);
-        tenGrade.init("tenB", 3, [niki, krasi, tedo], doncho);
+        tenGrade.init("tenB", 3, [rado, krasi, tedo], doncho);
 
         var telerik = Object.create(School);
         telerik.init("Telerik", "Sofia", [tenGrade]);
