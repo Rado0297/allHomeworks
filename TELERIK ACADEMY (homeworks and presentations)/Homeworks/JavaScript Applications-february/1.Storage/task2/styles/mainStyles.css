@@ -1,0 +1,43 @@
+﻿body {
+    background-color:silver;
+}
+/*
+#trashArea {
+    background-color:yellowgreen;
+    max-width:650px;
+    border:11px solid yellowgreen;
+    border-radius:11px;
+    margin-top:50px;
+}
+*/
+#trash {
+    height: 300px;
+    width: 200px;
+}
+
+.junk {
+    width: 30px;
+    height: 30px;
+}
+
+#scoreBoard {
+    width:300px;
+    min-height:300px;
+    border:11px solid yellowgreen;
+    border-radius:11px;
+    background-color:silver;
+    padding:10px;
+    display:inline-block;
+    position:absolute;
+    top:50px;
+    left:800px;
+    text-align:center;
+    font-size:1.2em;
+    color:black;
+}
+
+h2 {
+    position:absolute;
+    top:0px;
+    left:900px;
+}

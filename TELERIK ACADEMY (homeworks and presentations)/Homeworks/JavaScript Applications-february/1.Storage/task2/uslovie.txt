@@ -1,0 +1,17 @@
+2. Using the exercise with the bucket implement
+
+functionality for high-score board
+
+­ When the user cleans all the trash, he is asked for a 
+
+nickname and his score is saved in the local storage
+
+­ The score of the user is the time that took him to clean 
+
+the trash
+
+­ Implement a high-score board, that is visible on page 
+
+load and shows the top 5 scores 
+
+­ The 5 users that cleaned the trash fastest

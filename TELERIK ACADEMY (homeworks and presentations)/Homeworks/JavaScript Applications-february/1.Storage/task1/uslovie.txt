@@ -1,0 +1,19 @@
+1. Write a client-side based web application that 
+
+consists of a trash bucket and lots of trash items in 
+
+the browser window. 
+
+Implement the following functionality:
+
+­ Drag trash items
+
+­ Open the bucket when a trash item is being dragged 
+
+over it and close when the trash is dragged out of the 
+
+bucket, or is dropped in the bucket
+
+­ To throw a trash item into the bucket, i.e. make it 
+
+disappear from the browser window

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2</title>
+    <link href="styles/mainStyles.css" rel="stylesheet" />
+</head>
+<body ondrop="askForName()">
+        <img src="images/closed2.png" id="trash" draggable="false" ondragover="openTrash(event)" ondragleave="dragFinish()" ondrop="drop(event)" />
+        <img src="images/junk.png" class="junk" id="first" draggable="true" ondragstart="drag(event)" />
+        <img src="images/junk.png" class="junk" id="second" draggable="true" ondragstart="drag(event)" />
+        <img src="images/junk.png" class="junk" id="third" draggable="true" ondragstart="drag(event)" />
+        <img src="images/junk.png" class="junk" id="fourth" draggable="true" ondragstart="drag(event)" />
+        <img src="images/junk.png" class="junk" id="fifth" draggable="true" ondragstart="drag(event)" />
+        <img src="images/junk.png" class="junk" id="sixth" draggable="true" ondragstart="drag(event)" />
+        <img src="images/junk.png" class="junk" id="Img1" draggable="true" ondragstart="drag(event)" />
+        <img src="images/junk.png" class="junk" id="Img2" draggable="true" ondragstart="drag(event)" />
+        <img src="images/junk.png" class="junk" id="Img3" draggable="true" ondragstart="drag(event)" />
+        <img src="images/junk.png" class="junk" id="Img4" draggable="true" ondragstart="drag(event)" />
+        <img src="images/junk.png" class="junk" id="Img5" draggable="true" ondragstart="drag(event)" />  
+    <h2>Top 5 results</h2>
+    <div id="scoreBoard">
+    </div>
+    <script src="scripts/game.js"></script>
+</body>
+</html>
