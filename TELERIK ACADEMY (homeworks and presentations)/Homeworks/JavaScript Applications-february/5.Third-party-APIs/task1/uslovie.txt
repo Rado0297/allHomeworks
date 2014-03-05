@@ -1,0 +1,6 @@
+Create an “Online Map Tourism” application using Google maps
+Choose 10 capital cities from the world
+Make two buttons for “Next” and “Previous” which should iterate through the cities
+When one of the buttons is clicked, map should pan to the new location of the new city
+Each city should have Infobox with more information about it on the map
+Show lists of the cities on the page. If the user chooses a city, the map should pan directly to it
