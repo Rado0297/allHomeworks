@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="styles/snakeStyles.css" rel="stylesheet" />
+</head>
+<body onload='displayScores()'>
+    <button id='startButton'>Start Game</button>
+    <div class="gameWrapper">
+        <div id='hiScores'>
+            The best 10 score results:
+                <div id="top10"></div>
+        </div>
+        <canvas id='snakeGame' width='600' height='400'></canvas>
+        <div id="score"></div>
+    </div>
+    <script src="scripts/snake.js"></script>
+    <script>
+            var startButton = document.getElementById('startButton');
+            startButton.addEventListener('click', function() {
+                SnakeFy.startGame();
+            });
+
+            function displayScores() {
+                return SnakeFy.updateTopScores();
+            }
+    </script>
+</body>
+</html>

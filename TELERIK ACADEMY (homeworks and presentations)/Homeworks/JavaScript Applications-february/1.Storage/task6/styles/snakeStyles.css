@@ -1,0 +1,20 @@
+html,#startButton,#hiScores,#score {
+	color:black;
+	background:silver;
+}
+body {
+	text-align: center;
+	font-family: 'Segoe UI',Tahoma,Arial,Helvetica,sans-serif;
+}
+.gameWrapper {
+	width: 800px;
+	margin: 0 auto;
+}
+#snakeGame {
+	border: 2px dotted black;
+	background: yellowgreen;
+}
+#hiScores {
+	float: right;
+	width: 196px;
+}
