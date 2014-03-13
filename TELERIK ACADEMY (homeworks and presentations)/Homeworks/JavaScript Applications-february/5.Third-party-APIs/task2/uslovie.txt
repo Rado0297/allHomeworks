@@ -1,0 +1,17 @@
+﻿Combine Google+ and YouTube APIs
+
+­ If the user logins with Google+ the player should 
+
+show, otherwise it should be hidden
+
+­ When the user logs, his profile picture should be 
+
+shown
+
+­ Create custom controls for the video – pause, 
+
+stop, load by id, load playlist, next, previous, mute, 
+
+unmute, set volume, playback quality options
+
+­ Add options to share the current video on Google+
