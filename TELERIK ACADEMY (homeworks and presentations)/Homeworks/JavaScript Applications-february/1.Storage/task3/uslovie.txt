@@ -1,0 +1,2 @@
+﻿3. Create shiv/shim/polyfill to enable localStorage and sessionStorage 
+in browser that do not support them

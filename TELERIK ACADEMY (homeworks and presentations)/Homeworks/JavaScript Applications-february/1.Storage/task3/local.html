@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 3</title>
+    <!--Styles for local storage-->
+    <link href="styles/forLocalStorage.css" rel="stylesheet" />
+
+    <!--Script for local storage-->
+    <script src="scripts/localStorage.js"></script>
+    
+    <!--Script for support in older browsers-->
+    <script src="scripts/loacalAndSessionStorageSupport.js"></script>
+</head>
+<body onload="loadPairs()">
+
+    <h3>Enter key and value and save, load, remove element from local storage or clear all saved from you info from local storage</h3>
+
+    <label>Key</label>
+    <input type="text" name="tb-key" id="tb-key" value="" /> <br />
+    
+    <label>Value</label>
+    <textarea id="value-text"> </textarea><br />
+    <br />
+    
+    <button onclick="onSaveButtonClick()">Save</button>
+    
+    <button onclick="onLoadButtonClick()">Load</button>
+    
+    <button onclick="onRemoveButtonClick()">Remove</button>
+    
+    <button onclick="onClearStorageButtonClick()">Clear storage</button>
+    
+    <div id="pairs-container"></div>
+
+</body>
+</html>

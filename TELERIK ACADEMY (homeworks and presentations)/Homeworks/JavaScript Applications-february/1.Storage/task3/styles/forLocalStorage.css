@@ -1,0 +1,18 @@
+﻿#pairs-container {
+    border-radius: 15px;
+    border: 3px solid black;
+    width:300px;
+    padding:15px;
+}
+
+#pairs-container ul {
+    list-style-type:none;
+}
+
+#pairs-container ul li {
+    word-break:break-all;
+}
+
+input[type=text], textarea {
+    width:300px;
+}

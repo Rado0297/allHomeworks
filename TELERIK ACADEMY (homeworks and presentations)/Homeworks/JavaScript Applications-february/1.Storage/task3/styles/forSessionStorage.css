@@ -1,0 +1,15 @@
+﻿body {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#loads-container {
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid darkgray;
+    font-size: 64px;
+    width:150px;
+    height:80px;
+    position:relative;
+}
