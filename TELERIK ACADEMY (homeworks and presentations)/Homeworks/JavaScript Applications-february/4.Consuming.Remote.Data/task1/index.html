@@ -25,7 +25,26 @@
                     $("#http-response").html(JSON.stringify(data));
                 });
 
-                }).done();
+            }).done();
+
+
+	    /*   Q.promise(
+        function resolve(data) {
+            $.postJSON('scripts/data.js', data, function (response) {
+                // Do something with the request
+                console.log("Success");
+
+            }, 'json');
+        },
+
+        function reject(err) {
+            alert("Sometnig went wrong");
+        });
+
+
+        */
+
+
     </script>
 </body>
 </html>
