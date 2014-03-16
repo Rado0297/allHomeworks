@@ -12,20 +12,51 @@
     <p id="demo"></p>
 
 	<script>
-	    function promiseMeSomethign() {
-            var demoP = document.getElementById("demo");
-	        demoP.innerHTML = "Before Get and Post methods";
-	    };
+	    function sqrtPromise(number) {
+	        var deferred = Q.defer();
 
-	    promiseMeSomethign()
-            .then(function (v) {
-                console.log("I am PC or Server");
+	        deferred.resolve(Math.sqrt(number));
 
-                $.getJSON("scripts/data.js", function (data) {
-                    $("#http-response").html(JSON.stringify(data));
+	        return deferred.promise;
+	    }
+
+	    sqrtPromise(1)
+            .then(function (result) {
+	                $.getJSON("scripts/data.js", function (data) {
+	                    $("#http-response").html(JSON.stringify(data));
+	                });
+                    
+	                var demoP = document.getElementById("demo");
+	                demoP.innerHTML = "After Get and before Post method";
+                    
+	            }, function (error) {
+	                console.log("Something went wrong: " + error.message);
+	        })
+            .then(function (result) {
+                $.postJSON("test.html", function (data) {
+                    $(".result").html(data);
                 });
+	    }, function (error) {
+	        console.log("Something went wrong: " + error.message);
+	    });
 
-            }).done();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	    /*   Q.promise(
