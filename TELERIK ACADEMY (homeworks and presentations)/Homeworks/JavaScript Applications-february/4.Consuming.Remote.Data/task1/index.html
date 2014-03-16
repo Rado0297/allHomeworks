@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="scripts/jquery-2.0.2.js"></script>
+    <script src="scripts/q.js"></script>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <div id="http-response"></div>
+
+    <p id="demo"></p>
+
+	<script>
+	    function promiseMeSomethign() {
+            var demoP = document.getElementById("demo");
+	        demoP.innerHTML = "Before Get and Post methods";
+	    };
+
+	    promiseMeSomethign()
+            .then(function (v) {
+                console.log("I am PC or Server");
+
+                $.getJSON("scripts/data.js", function (data) {
+                    $("#http-response").html(JSON.stringify(data));
+                });
+
+                }).done();
+    </script>
+</body>
+</html>
