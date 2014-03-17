@@ -1,0 +1,1 @@
+﻿Create an application using Facebook APIs to logout of Facebook.
