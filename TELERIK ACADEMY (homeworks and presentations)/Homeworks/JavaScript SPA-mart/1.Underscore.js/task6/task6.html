@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 6</title>
+    <script src="../underscore%20lib/class.js"></script>
+    <script src="../underscore%20lib/underscore.js"></script>
+</head>
+<body>
+    <script>
+        var Book = Class.create({
+            init: function (title, genre, author) {
+                this.title = title;
+                this.genre = genre;
+                this.author = author;
+            }
+        });
+
+        var books = [
+            new Book("Harry Potter and the Philosopher's Stone", "Fantasy", "J. K. Rowling"),
+            new Book("Harry Potter and the Chamber of Secrets", "Fantasy", "J. K. Rowling"),
+            new Book("Harry Potter and the Prisoner of Azkaban", "Fantasy", "J. K. Rowling"),
+            new Book("Harry Potter and the Goblet of Fire", "Fantasy", "J. K. Rowling"),
+            new Book("Harry Potter and the Order of the Phoenix", "Fantasy", "J. K. Rowling"),
+            new Book("Harry Potter and the Half-Blood Prince", "Fantasy", "J. K. Rowling"),
+            new Book("Harry Potter and the Deathly Hallows", "Fantasy", "J. K. Rowling"),
+            new Book("The Hound of the Baskervilles", "Criminal", "Arthur Conan Doyle"),
+            new Book("Sherlock Homes advetures", "Criminal", "Arthur Conan Doyle")
+        ];
+
+        var authors = _.countBy(books, function (book) {
+            return book.author
+        });
+
+        var authorIndex = _.max(authors);
+
+        var author = _.invert(authors)[authorIndex];
+        console.log(author + " - " + authorIndex + " books");
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 5</title>
+    <script src="../underscore%20lib/class.js"></script>
+    <script src="../underscore%20lib/underscore.js"></script>
+</head>
+<body>
+    <script>
+        var Animal = Class.create({
+            init: function (species, legsNumber, name) {
+                this.species = species;
+                this.legsNumber = legsNumber;
+                this.name = name;
+            }
+        });
+
+        var animals = [
+            new Animal("Bird", 2, "Eagle"),
+            new Animal("Bird", 2, "Stork"),
+            new Animal("Mammal", 4, "Dog"),
+            new Animal("Mammal", 2, "Human"),
+            new Animal("Insect", 6, "Spider"),
+            new Animal("Insect", 100, "Centipede")
+        ];
+        
+        var sumOfLegs = _.reduce(animals, function (memory, animal) {
+            return memory + animal.legsNumber;
+        }, 0);
+
+        console.log(sumOfLegs);
+    </script>
+</body>
+</html>

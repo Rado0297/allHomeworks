@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 7</title>
+    <script src="../underscore%20lib/class.js"></script>
+    <script src="../underscore%20lib/underscore.js"></script>
+</head>
+<body>
+    <script>
+        var Human = Class.create({
+            init: function (fname, lname) {
+                this.fname = fname;
+                this.lname = lname;
+                this.fullname = fname + " " + lname
+            },
+        });
+
+        var people = [
+			new Human("Doncho", "Minkov"),
+			new Human("Georgi", "Georgiev"),
+			new Human("Nikolai", "Kostov"),
+			new Human("Svetlin", "Nakov"),
+			new Human("Ivaylo", "Kenov"),
+			new Human("Ivan", "Ivanov"),
+			new Human("Ivan", "Petrov"),
+			new Human("Ivan", "Georgiev"),
+			new Human("Ivan", "Georgiev"),
+        ];
+
+        var firstNames = _.countBy(people, function (person) {
+            return person.fname;
+        });
+        var firstNameIndex = _.max(firstNames);
+        var mostCommentFirstName = _.invert(firstNames)[firstNameIndex];
+
+        var lastNames = _.countBy(people, function (person) {
+            return person.lname;
+        });
+        var lastNameIndex = _.max(lastNames);
+        var mostCommentLastName = _.invert(lastNames)[lastNameIndex];
+
+        console.log("The most common first name is " + mostCommentFirstName + " - " + firstNameIndex + " times met");
+        console.log("The most common last name is " + mostCommentLastName + " - " + lastNameIndex + " times met");
+    </script>
+</body>
+</html>
