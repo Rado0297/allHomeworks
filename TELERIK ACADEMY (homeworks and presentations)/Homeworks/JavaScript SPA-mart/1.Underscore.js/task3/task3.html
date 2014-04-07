@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 3</title>
+    <script src="../underscore%20lib/class.js"></script>
+    <script src="../underscore%20lib/underscore.js"></script>
+</head>
+<body>
+    <script>
+        var Student = Class.create({
+            init: function (fname, lname, marks) {
+                this.fname = fname;
+                this.lname = lname;
+                this.marks = marks;
+            },
+        });
+
+        var students = [
+			new Student("Doncho", "Minkov", [6, 6, 6, 6]),
+			new Student("Joro", "Georgiev", [5, 5, 5, 6]),
+			new Student("Ivaylo", "Kenov", [6, 5, 5, 6])
+        ];
+
+        var studentsMarks = _.max(students, function (st) {
+            return eval(st.marks.join('+')) / st.marks.length;
+        });
+
+        console.log(studentsMarks.fname + " " + studentsMarks.lname);
+    </script>
+</body>
+</html>

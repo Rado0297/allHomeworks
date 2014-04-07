@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 2</title>
+    <script src="../underscore%20lib/class.js"></script>
+    <script src="../underscore%20lib/underscore.js"></script>
+</head>
+<body>
+    <script>
+        var Student = Class.create({
+            init: function (fname, lname, age) {
+                this.fname = fname;
+                this.lname = lname;
+                this.age = age;
+            },
+        });
+
+        var students = [
+			new Student("Doncho", "Minkov",24),
+			new Student("Joro", "Georgiev",21),
+			new Student("Niki", "Kostov",29),
+			new Student("Svetlin", "Nakov",30),
+			new Student("Ivaylo", "Kenov",23)
+        ];
+
+        var sortStudents = _.filter(students, function (st) {
+            return st.age >= 18 && st.age <= 24;
+        });
+
+        _.each(sortStudents, function (st) {
+            console.log(st.fname + " " + st.lname);
+        });
+
+    </script>
+</body>
+</html>
