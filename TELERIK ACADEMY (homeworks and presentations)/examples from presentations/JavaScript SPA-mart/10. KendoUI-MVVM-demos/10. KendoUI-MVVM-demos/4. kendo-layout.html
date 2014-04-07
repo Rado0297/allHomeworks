@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>KendoUI - Creating Views</title>
+</head>
+<body>
+
+<div id="root">
+</div>
+
+<script src="scripts/jquery.js"></script>
+<script src="scripts/kendo.web.min.js"></script>
+<script src="scripts/rsvp.js"></script>
+<script src="scripts/views-loader.js"></script>
+<script src="scripts/views/home/home.js"></script>
+<script src="scripts/views/about/about.js"></script>
+<script src="scripts/views/nav/nav.js"></script>
+
+<script type="text/x-kendo-template" id="nav-item-template">
+	<li>
+		<a href="\##: url #"  class="nav-item" data-view='#: url #'>#: title #</a>
+	</li>
+</script>
+
+<script type="text/x-kendo-template" id="about-item-template">
+	<li>
+		<a href="\##: url #">
+			<img src="#: img #" width="35">
+			<strong> #= title #</strong>
+		</a>
+	</li>
+</script>
+
+<script>
+(function () {
+	'use strict';
+	var layoutHTML = '<header><h1>Site header</h1><nav id="main-nav"></nav><div id="page"></div>',
+		layout = new kendo.Layout(layoutHTML),
+		navItems = [{
+			title: 'Home',
+			url: 'home',
+		}, {
+			title: 'Fancy stuff',
+			url: 'fancy-stuff'
+		}, {
+			title: 'About',
+			url: 'about'
+		}];
+
+	layout.render('#root');
+
+	//load navigation
+	views.nav.init(navItems)
+		.then(function (view) {
+			layout.showIn('#main-nav', view);
+		}, function (err) {
+			console.error(err);
+		});
+
+	//load home view
+	views.home.init()
+		.then(function (view) {
+			layout.showIn('#page', view);
+		}, function (err) {
+			console.error(err);
+		});
+
+	$('#main-nav').on('click', '.nav-item', function (ev) {
+		var viewId = ev.target.getAttribute('data-view');
+		console.log(viewId);
+		if (views[viewId]) {
+			views[viewId].init()
+				.then(function (view) {
+					console.log(view);
+					layout.showIn('#page', view);
+				}, function (err) {
+					console.error(err);
+				});
+		}
+
+		ev.preventDefault();
+		return false;
+	});
+}());
+</script>	
+</body>
+</html>

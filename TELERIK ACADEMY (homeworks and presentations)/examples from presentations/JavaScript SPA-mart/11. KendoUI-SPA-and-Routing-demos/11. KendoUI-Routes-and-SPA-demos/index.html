@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>KendoUI - Creating Views</title>
+</head>
+<body>
+
+<div id="root">
+</div>
+
+<script src="scripts/vendor/jquery.js"></script>
+<script src="scripts/vendor/kendo.web.min.js"></script>
+<script src="scripts/vendor/rsvp.js"></script>
+<script src="scripts/views-loader.js"></script>
+<script src="scripts/views/home/home.js"></script>
+<script src="scripts/views/about/about.js"></script>
+<script src="scripts/views/nav/nav.js"></script>
+
+<script type="text/x-kendo-template" id="nav-item-template">
+	<li>
+		<a href="\#/#: url #"  class="nav-item" data-view='#: url #'>#: title #</a>
+	</li>
+</script>
+
+<script type="text/x-kendo-template" id="about-item-template">
+	<li>
+		<a href="\##: url #">
+			<img src="#: img #" width="35">
+			<strong> #= title #</strong>
+		</a>
+	</li>
+</script>
+
+<script src='scripts/main.js'>
+</script>	
+<script src='scripts/app.js'>
+</script>	
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>KendoUI - Data-binding</title>
+	<style>
+		fieldset{
+			display:inline-block;
+			width:35%;
+		}
+	</style>
+</head>
+<body>
+	<fieldset>
+		<legend>One-way data-binding</legend>
+		<div id="view-one-way">
+			<span data-bind="text: make"></span>
+			<input data-bind="value: power">
+			<input type="checkbox" data-bind="checked: agreed">
+			<button id="btn-show-one-way-info">Show info</button>
+			<div id="one-way-info"></div>
+		</div>
+	</fieldset>		
+	<fieldset>
+		<legend>Two-way data-binding</legend>
+		<div id="view-two-way">
+			<span data-bind="text: make"></span>
+			<input data-bind="value: power">
+			<input type="checkbox" data-bind="checked: agreed">
+			<button id="btn-show-two-way-info">Show info</button>
+			<div id="two-way-info"></div>
+		</div>
+	</fieldset>
+	<script src="scripts/jquery.js"></script>
+	<script src="scripts/kendo.web.min.js"></script>
+	<script>
+		(function () {
+			var model = {
+				make:'Audi',
+				power: 102,
+				agreed: false
+			},
+			viewModel = kendo.observable(model);
+
+			kendo.bind($('#view-one-way'), model);
+			kendo.bind($('#view-two-way'), viewModel);
+
+			$('#btn-show-one-way-info').on('click', function(){
+				var info = '<p>' + model.make + ', ' + model.power + ', ' + model.agreed+ '</p><hr />';
+					$('#one-way-info').append(info);
+			});
+
+			$('#btn-show-two-way-info').on('click', function(){
+				var info = '<p>' + viewModel.get('make') + ', ' + viewModel.get('power') + ', ' + viewModel.get('agreed')+ '</p><hr />';
+					$('#two-way-info').append(info);
+			});
+		}());
+	</script>	
+</body>
+</html>
