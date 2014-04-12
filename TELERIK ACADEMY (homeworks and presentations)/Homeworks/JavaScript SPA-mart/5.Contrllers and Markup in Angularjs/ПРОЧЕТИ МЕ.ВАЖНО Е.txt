@@ -1,0 +1,6 @@
+﻿Обединих всички задачи в един цялостен сайт(допълвайки разните работи към демото,което И. Кенов направи)
+
+task 1:
+-make addittion of albums and band members available in new artsit form
+task 1 resolving:
+-I add two fieldsets.one is for "add members" and second is for "add albums"
