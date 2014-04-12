@@ -2,5 +2,10 @@
 
 task 1:
 -make addittion of albums and band members available in new artsit form
-task 1 resolving:
+task 1 solution:
 -I add two fieldsets.one is for "add members" and second is for "add albums"
+
+task 3:
+-implement the ng-Cloak directive
+task 3 solution:
+-just type ng-cloak in body tag and that's it
