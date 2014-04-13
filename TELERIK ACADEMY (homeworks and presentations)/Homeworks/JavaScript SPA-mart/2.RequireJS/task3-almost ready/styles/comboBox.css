@@ -1,0 +1,40 @@
+﻿body {
+    height:100px;
+    background-color:lightblue;
+}
+
+#selectWindow {
+    width: 250px;
+    height: 30px;
+    border: 1px solid black;
+    margin-left: 100px;
+    margin-top: 50px;
+    background-color:lightgreen;
+    background-image: url('../images/arrow_down.png');
+    background-position: 99% 50%;
+    background-repeat: no-repeat;
+}
+#selectWindow:hover {
+    cursor:pointer;
+}
+#content {
+    width: 250px;
+    min-height:30px;
+    max-height:300px;
+    border: 1px solid black;
+    border-top:none;
+    margin-left: 100px;
+    overflow-y:scroll;
+    display:none;
+    background-color:white;
+}
+
+.person-item {
+    margin-top:2px;
+}
+
+.person-item:hover {
+    margin-top:2px;
+    background-color:rgba(0, 148, 255,0.3);
+     cursor:pointer;
+}

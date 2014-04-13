@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/comboBox.css" rel="stylesheet" />
+    <script src="scripts/libs/require.js" data-main="scripts/app-config"></script>
+</head>
+<body id="body">
+    <h1>Select person from our "dropdown" menu</h1>
+    <div id="selectWindow"></div>
+    <div id="content"></div>
+    <script type="x-mustache-template" id="items-template">	
+        <div class="person-item" id="person-item-{{id}}">
+            <img src="{{avatarUrl}}" width="24px" height="24px" />
+            <strong class="person-name">{{name}}</strong><strong class="person-age">, Age: {{age}}</strong>
+        </div>
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿3. *Using the ComboBox from the previous task, add 
+
+the following:
+
+­ A way to attach to the expanding and collapsing 
+
+of the ComboBox (onCollapsing and onExpanding 
+
+events)
+
+­ An event onSelectionChanged event, that fires when 
+
+the selected item is changed
+
+­ The onSelectionChanged event, must pass the new 
+
+and the old selected HTML item

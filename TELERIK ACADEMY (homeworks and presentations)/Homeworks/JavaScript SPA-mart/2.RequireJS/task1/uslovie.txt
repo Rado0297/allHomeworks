@@ -1,0 +1,35 @@
+﻿1. Using the web services develop a client application
+
+with two "pages"
+
+­ On the first page show all students
+
+­ The second page shows the marks of a student
+
+­ Load the second page when a student from the first is clicked
+
+­ Separate the application in the following modules:
+
+­ HttpRequester - performs HTTP GET and HTTP POST 
+
+requests
+
+­ DataPersister - uses HttpRequester to fetch data from the 
+
+storage (the web services)
+
+1. (cont.) Using the web services develop a client 
+
+application with 2 "pages"
+
+­ Use promises for the HTTP requests
+
+­ You can use Q.js, RSVP.js or any other library
+
+­ Use RequireJS to define and use your modules
+
+­ Use mustache.js for templating the data
+
+­ Use jQuery, prototype.js or native XmlHttpRequest to 
+
+make the AJAX calls
