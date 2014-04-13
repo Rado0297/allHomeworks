@@ -1,0 +1,25 @@
+<div data-role="view" id="view-all-activities" data-layout="default" class="activities-view" data-model="app.Activities" data-init="app.Activities.init">
+    <header data-role="header">
+        <div data-role="navbar">
+            Pictures
+            <a class="nav-button nav-button-back hide-text" data-align="left" data-role="backbutton" data-click="app.Activities.logout">Log out</a>
+        </div>
+    </header>
+    <img src="views/images/1.jpg" />
+    <img src="views/images/2.jpg" />
+    <img src="views/images/3.jpg" />
+    <img src="views/images/4.jpg" />
+    <img src="views/images/5.jpg" />
+    <img src="views/images/6.jpg" />
+<script type="views/text/x-kendo-template" id="activityTemplate">
+    <div data-role="touch" data-bind="events: { tap: activitySelected }" class="cf">
+        <div class="user-avatar">
+            <img data-bind="attr:{src: User().PictureUrl}" alt="styles/images/avatar.png" />
+        </div>
+        <div class="activity-content">
+            <h2 class="person-name">${User().DisplayName}</h2>
+            <time class="time-span">${CreatedAtFormatted()}</time>
+            <a class="user-share-txt">${Text}</a>
+        </div>
+    </div>
+</script>
