@@ -1,0 +1,13 @@
+doctype html
+html(lang="en")
+	head
+		title
+			| Welcome to our site!
+	body
+		h1
+			a(href="#")
+				| Welcome to our site!
+		div#wrapper
+			ul
+				each val in ["One", "Two", "Three", "Four", "Five", "Six"]
+					li= 'Item ' + val

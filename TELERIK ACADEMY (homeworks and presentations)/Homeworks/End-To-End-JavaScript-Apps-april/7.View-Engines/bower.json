@@ -1,0 +1,20 @@
+{
+  "name": "7.View-Engines",
+  "version": "0.1.0",
+  "authors": [
+    "Rado0297 <radoslavradov@gmail.com>"
+  ],
+  "description": "homework",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./scripts/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0"
+  }
+}
