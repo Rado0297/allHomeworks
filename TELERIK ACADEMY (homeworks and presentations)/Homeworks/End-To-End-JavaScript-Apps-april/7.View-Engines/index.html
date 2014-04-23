@@ -5,25 +5,15 @@
     <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles/bootstrap-theme.css">
     <link href="styles/app.css" rel="stylesheet" />
+    <script src="lib/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#navigation").load("templates/navigation.html");
+        });
+    </script>
 </head>
 <body ng-app="siteSale" ng-cloak>
-    <div class="navbar navbar-default">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#/home">Home</a>
-        </div>
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-		    <ul class="nav navbar-nav main">
-                <li class="dropdown"><a href="#/smartphones">Smartphones</a></li>
-			    <li class="dropdown"><a href="#/tablets">Tablets</a></li>
-			    <li class="dropdown"><a href="#">Wearables</a></li>
-		    </ul>
-        </div>
-    </div>
+    <div id="navigation"></div>
 
     <div ng-view>
 

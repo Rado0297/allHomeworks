@@ -13,5 +13,8 @@ var siteSale = angular
             .when('/tablets', {
                 templateUrl: 'templates/tablets.html'
             })
+            .when('/wearables', {
+                templateUrl: 'templates/wearables.html'
+            })
             .otherwise({ redirectTo: '/home' });
     });
