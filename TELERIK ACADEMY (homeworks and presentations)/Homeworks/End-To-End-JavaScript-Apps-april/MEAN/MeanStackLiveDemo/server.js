@@ -5,7 +5,11 @@ var express = require('express'),
 
 var env = process.env.NODE_ENV || 'development';
 
+<<<<<<< HEAD
 var port = process.env.PORT || 3030;
+=======
+var port = 3030;
+>>>>>>> f14c05e9bff2b56e794a700d730ae4e66086354c
 
 var app = express();
 
@@ -29,6 +33,7 @@ app.get('/partials/:partialName', function(req, res){
 
 app.use(express.static(__dirname + '/public'));
 
+<<<<<<< HEAD
 if(env == 'development'){
     //for local database and development purpose
     mongoose.connect('mongodb://localhost/meanstackapp');
@@ -37,6 +42,9 @@ else{
     mongoose.connect('mongodb://admin:radoDeveloper0297@ds043997.mongolab.com:43997/meanstackapp');
 }
 
+=======
+mongoose.connect('mongodb://localhost/meanstackapp');
+>>>>>>> f14c05e9bff2b56e794a700d730ae4e66086354c
 var db = mongoose.connection;
 
 db.once('open', function(err){

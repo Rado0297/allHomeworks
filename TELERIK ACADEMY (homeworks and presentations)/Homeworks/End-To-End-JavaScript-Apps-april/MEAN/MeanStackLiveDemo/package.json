@@ -6,10 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+<<<<<<< HEAD
   "engines": {
       "node": "0.10.x",
       "npm": "1.4.x"
   },
+=======
+>>>>>>> f14c05e9bff2b56e794a700d730ae4e66086354c
   "author": "ME",
   "license": "MIT",
   "dependencies": {
