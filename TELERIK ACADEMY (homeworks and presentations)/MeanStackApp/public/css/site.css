@@ -1,0 +1,29 @@
+body {
+  padding-top: 80px;
+}
+.navbar-right .navbar-form input {
+  margin-right: 10px;
+}
+a.btn {
+  margin-left: 10px;
+}
+button.btn.buy {
+  margin-bottom: 10px;
+}
+.geoAndAlg {
+  color: #fff;
+}
+.geoAndAlg:hover {
+  color: #fff;
+}
+.toast-top-right {
+  top: 70px;
+}
+footer {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+footer p {
+  border-top: 1px solid #808080;
+  padding-top: 10px;
+}
