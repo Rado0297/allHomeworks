@@ -21,14 +21,34 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/main/home',
             controller: 'MainCtrl'
         })
+        //routes gor algebra part
         .when('/algebra',{
             templateUrl: '/partials/algebra/algebra',
             controller: 'PhoneListCtrl'
         })
+        //routes for geometry part
         .when('/geometry',{
             templateUrl: '/partials/geometry/geometry',
             controller: ''
         })
+        .when('/geometry/randomTr/tr-per',{
+            templateUrl: '/partials/geometry/triangular/randomTr/tr-per',
+            controller: ''
+        })
+        .when('/geometry/randomTr/tr-area',{
+            templateUrl: '/partials/geometry/triangular/randomTr/tr-area',
+            controller: ''
+        })
+        .when('/geometry/equsideTr/equTr-per',{
+            templateUrl: '/partials/geometry/triangular/equsideTr/equTr-per',
+            controller: ''
+        })
+
+        .when('/geometry/randomQuadril/ranquadrila-per',{
+            templateUrl: '/partials/geometry/quadrilaterals/randomQuadrilaterals/ranquadrila-per',
+            controller: ''
+        })
+        //for auth modules
         .when('/phones',{
             templateUrl: '/partials/phones/phones-list',
             controller: 'PhoneListCtrl'

@@ -1,19 +1,24 @@
 Features:
-    Add to geometry:
-        1)Rotation
-        2)Translation
-        3)Stereometry
-        4)Trigonometry
-        5)Functions
-        6)
-    Add to algebra:
-        1)
-        2)
-        3)
-        4)
-        5)
-        6)
-    Add to about:
-        1)Manuals for exploitation(How to use)
+    1)Add to geometry:
+        - Rotation
+        - Translation
+        - Stereometry
+        - Trigonometry
+        - Functions
+        -
 
-    Make Trigonometry like a independent page
+    2)Add to algebra:
+        -
+        -
+        -
+        -
+        -
+        -
+    3)Add to about:
+        -Manuals for exploitation(How to use)
+
+    4)Make Trigonometry like a independent page
+
+    5)Escaping of operation with numbers (10-11,10/11,10*11,10*11 for example)
+
+    6)Make controllers for function,which calculate result of tasks

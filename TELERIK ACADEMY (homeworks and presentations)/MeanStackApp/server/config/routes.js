@@ -13,6 +13,20 @@ module.exports = function(app){
         res.render('../../public/app/' + req.params.partialArea + '/' + req.params.partialName);
     });
 
+
+    //For pages,which find components of figures
+    app.get('/partials/:partialArea/:partialName/:partialName1', function(req, res){
+        res.render('../../public/app/' + req.params.partialArea + '/' + req.params.partialName + '/' + req.params.partialName1);
+    });
+
+
+
+    app.get('/partials/:partialArea/:partialName/:partialName1/:partialName2', function(req, res){
+        res.render('../../public/app/' + req.params.partialArea + '/' + req.params.partialName + '/' + req.params.partialName1 + '/' + req.params.partialName2);
+    });
+    //end of "For pages,which find components of figures"
+
+
     app.post('/login', auth.login);
     app.post('/logout', auth.logout);
 
