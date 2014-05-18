@@ -1,0 +1,29 @@
+.container
+    .well.col-md-12
+        form.form-horizontal.col-md-6
+            fieldset
+                legend Решаване на линейно уравнение <strong class="text-success">ax²+bx+c=0</strong>, </br> където x е неизвестно
+                legend Въведете:
+                .form-group
+                    label.col-md-3.control-label(for="first-number") Стойност за a
+                    .col-md-9
+                        input.form-control#num1(type="number", placeholder="Въведете число", required)
+                .form-group
+                    label.col-md-3.control-label(for="second-number") Стойност за b
+                    .col-md-9
+                        input.form-control#num2(type="number", placeholder="Въведете число", required)
+                .form-group
+                    label.col-md-3.control-label(for="third-number") Стойност за c
+                    .col-md-9
+                        input.form-control#num3(type="number", placeholder="Въведете число", required)
+
+                .form-group
+                    .pull-left
+                        button.btn.btn-primary.calc(onclick="quadraticEquCalc()") Пресметни  &nbsp X
+
+        form.form-horizontal.col-md-6.resolve
+            fieldset
+                legend Решение:
+                .form-group
+                    label.text-success
+                        p#result
