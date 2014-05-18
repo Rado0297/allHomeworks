@@ -1,0 +1,27 @@
+Features:
+    1)Add to geometry:
+        - Rotation
+        - Translation
+        - Stereometry
+        - Trigonometry
+        - Functions
+        -
+
+    2)Add to algebra:
+        -
+        -
+        -
+        -
+        -
+        -
+    3)Add to about:
+        -Manuals for exploitation(How to use)
+
+    4)Make Trigonometry like a independent page
+
+    5)Escaping of operation with numbers (10-11,10/11,10*11,10*11 for example)
+
+    6)Make controllers for function,which calculate result of tasks
+
+    7)For start functions for calculating
+        - button.btn.btn-primary.calculate(ng-click="perimenter()", ng-disabled="profileForm.$invalid")
