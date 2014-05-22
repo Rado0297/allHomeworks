@@ -1,0 +1,1 @@
+<div ng-repeat="phone in phones | filter: { featured: false } | orderBy: '-published' | limitTo: 11"><div class="row col-md-10"><div class="col-md-3">{{ phone.published | date: 'MMM d yyyy' }}</div><div class="col-md-9"><a href="#/phones/{{ phone._id }}">{{ phone.title }}</a></div></div><div class="col-md-2"><button class="btn btn-primary buy">Add to cart</button></div></div>
