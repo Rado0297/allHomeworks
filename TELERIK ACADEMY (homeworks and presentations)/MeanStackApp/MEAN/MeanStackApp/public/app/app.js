@@ -108,6 +108,18 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/geometry/quadrilaterals/rectangle/rec-per',
             controller: ''
         })
+        .when('/geometry/rectangle/rec-area',{
+            templateUrl: '/partials/geometry/quadrilaterals/rectangle/rec-area',
+            controller: ''
+        })
+        .when('/geometry/rectangle/rec-sideFromPer',{
+            templateUrl: '/partials/geometry/quadrilaterals/rectangle/rec-sideFromPer',
+            controller: ''
+        })
+        .when('/geometry/rectangle/rec-sideFromArea',{
+            templateUrl: '/partials/geometry/quadrilaterals/rectangle/rec-sideFromArea',
+            controller: ''
+        })
 //about pages
         .when('/about/howToGeometry',{
             templateUrl: '/partials/about/howToGeometry',

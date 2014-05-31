@@ -1,0 +1,27 @@
+.container
+    .well.col-md-12
+        form.form-horizontal.col-md-6
+            fieldset
+                legend Намиране на страна на правоъгълник от периметъра му
+                legend Въведете:
+                .form-group
+                    label.col-md-3.control-label(for="first-side") Страната a
+                    .col-md-9
+                        input.form-control#str-a(type="number", placeholder="Въведете дължината на страната", required)
+                .form-group
+                    label.col-md-3.control-label(for="second-side") Периметър P
+                    .col-md-9
+                        input.form-control#perimeter(type="number", placeholder="Въведете стойността на периметъра", required)
+
+                p.text-danger Въведените стойности трябва да са в еднакви мерни единици*
+
+                .form-group
+                    .pull-left
+                        button.btn.btn-primary.calc(onclick="recSideFromPer()") Пресметни страната
+
+        form.form-horizontal.col-md-6.resolve
+            fieldset
+                legend Решение:
+                .form-group
+                    label.text-success
+                        p#sideFromPer
