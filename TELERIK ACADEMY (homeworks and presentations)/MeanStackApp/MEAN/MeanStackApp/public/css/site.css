@@ -23,6 +23,9 @@ button.btn.calc.buy {
 .steps {
   font-size: 21px;
 }
+#geomStart {
+  margin-left: 65px;
+}
 footer {
   padding-left: 5%;
   padding-right: 5%;

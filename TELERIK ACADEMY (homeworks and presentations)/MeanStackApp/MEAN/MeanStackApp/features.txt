@@ -19,12 +19,12 @@ Features:
 
     4)Make Trigonometry like a independent page
 
-    5)Escaping of operation with numbers (10-11,10/11,10*11,10*11 for example)
+    5)Escaping of operation with numbers (10-11,10/11,10*11,10*11 for example) entered in inputs
 
     6)Make controllers for function,which calculate result of tasks
 
     7)For start functions for calculating
-        - button.btn.btn-primary.calculate(ng-click="perimenter()", ng-disabled="profileForm.$invalid")
+        - button.btn.btn-primary.calculate(ng-click="perimenter()")
 
     8)Add blueprints to results of geometry tasks
 
@@ -33,3 +33,5 @@ Features:
     10)Optimization of all scripts
 
     11)Use MongoDB for frequently asked questions
+
+    12)Add to favorite(only if you are logged in)

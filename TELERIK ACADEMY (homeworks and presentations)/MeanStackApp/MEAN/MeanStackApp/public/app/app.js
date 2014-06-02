@@ -120,6 +120,18 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/geometry/quadrilaterals/rectangle/rec-sideFromArea',
             controller: ''
         })
+        .when('/geometry/square/sq-per',{
+            templateUrl: '/partials/geometry/quadrilaterals/square/sq-per',
+            controller: ''
+        })
+        .when('/geometry/square/sq-area',{
+            templateUrl: '/partials/geometry/quadrilaterals/square/sq-area',
+            controller: ''
+        })
+        .when('/geometry/square/sq-sideFromPer',{
+            templateUrl: '/partials/geometry/quadrilaterals/square/sq-sideFromPer',
+            controller: ''
+        })
 //about pages
         .when('/about/howToGeometry',{
             templateUrl: '/partials/about/howToGeometry',
