@@ -132,6 +132,14 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/geometry/quadrilaterals/square/sq-sideFromPer',
             controller: ''
         })
+        .when('/geometry/square/sq-sideFromArea',{
+            templateUrl: '/partials/geometry/quadrilaterals/square/sq-sideFromArea',
+            controller: ''
+        })
+        .when('/geometry/rhombus/rh-per',{
+            templateUrl: '/partials/geometry/quadrilaterals/rhombus/rh-per',
+            controller: ''
+        })
 //about pages
         .when('/about/howToGeometry',{
             templateUrl: '/partials/about/howToGeometry',

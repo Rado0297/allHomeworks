@@ -10,8 +10,8 @@ function recSideFromPer() {
         side.innerHTML = ("<strong class='text-danger'>Страната и периметъра трябва да са числа !</strong>");
     }
     else {
-        if(P >= 2*a) {
-            if (a > 0 && P > 0) {
+        if(a > 0 && P > 0) {
+            if (P > 2*a) {
                 b = (P - 2 * a) / 2;
                 side.innerHTML = (
                     "Първо изразяваме страната 'b' от формулата за периметър на правоъгълник→</br>" + "b = (P - 2*b)/2</br>" +
@@ -19,11 +19,11 @@ function recSideFromPer() {
                     "b = (P - 2*b)/2 = (" + P + " - 2*" + a + ")/2 = " + b);
             }
             else {
-                side.innerHTML = ("<strong class='text-danger'>Страната и периметъра трябва да са положителни числа !</strong>");
+                side.innerHTML = ("<strong class='text-danger'>Периметъра трябва да е по-голям от страната умножена по 2 (P > 2*a)!</strong>");
             }
         }
         else {
-            side.innerHTML = ("<strong class='text-danger'>Периметъра трябва да е по-голям от страната умножена по 2 (P > 2*a)!</strong>");
+            side.innerHTML = ("<strong class='text-danger'>Страната и периметъра трябва да са положителни числа !</strong>");
         }
     }
 }
