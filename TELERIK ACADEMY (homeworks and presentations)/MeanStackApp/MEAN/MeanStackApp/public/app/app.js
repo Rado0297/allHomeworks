@@ -140,6 +140,18 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/geometry/quadrilaterals/rhombus/rh-per',
             controller: ''
         })
+        .when('/geometry/rhombus/rh-area',{
+            templateUrl: '/partials/geometry/quadrilaterals/rhombus/rh-area',
+            controller: ''
+        })
+        .when('/geometry/rhombus/rh-sideFromPer',{
+            templateUrl: '/partials/geometry/quadrilaterals/rhombus/rh-sideFromPer',
+            controller: ''
+        })
+        .when('/geometry/rhombus/rh-sideFromArea',{
+            templateUrl: '/partials/geometry/quadrilaterals/rhombus/rh-sideFromArea',
+            controller: ''
+        })
 //about pages
         .when('/about/howToGeometry',{
             templateUrl: '/partials/about/howToGeometry',
