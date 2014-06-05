@@ -104,6 +104,10 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/geometry/quadrilaterals/randomQuadrilaterals/ranquadrila-per',
             controller: ''
         })
+        .when('/geometry/randomQuadril/randomQuad-area',{
+            templateUrl: '/partials/geometry/quadrilaterals/randomQuadrilaterals/randomQuad-area',
+            controller: ''
+        })
         .when('/geometry/rectangle/rec-per',{
             templateUrl: '/partials/geometry/quadrilaterals/rectangle/rec-per',
             controller: ''
