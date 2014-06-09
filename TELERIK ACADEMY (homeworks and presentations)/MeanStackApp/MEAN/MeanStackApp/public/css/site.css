@@ -1,5 +1,6 @@
 body {
   padding-top: 80px;
+  background-color: #d7dcd3;
 }
 .navbar-right .navbar-form input {
   margin-right: 10px;
@@ -25,6 +26,13 @@ button.btn.calc.buy {
 }
 #geomStart {
   margin-left: 65px;
+}
+.jumbotron {
+  background-color: #fff;
+}
+hr {
+  background-color: #a9a9a9;
+  height: 1px;
 }
 footer {
   padding-left: 5%;

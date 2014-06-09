@@ -1,8 +1,17 @@
 .container
-    h3 При технически проблеми:
-    .well.col-md-6
-        form.form-horizontal
-            fieldset
-                legend Екип за поддръжка
-                legend E-mail: someEmail@example.com
-                legend Телефон: somePhoneNumber
+    .list-group.col-md-6
+        a.list-group-item.active.text-center(href='#')
+            | При технически проблеми:
+        table.table.table-striped.table-hover
+            tb
+                tr.active
+                    td
+                        h4 Радослав Радков
+                        //Длъжност:
+                        p Web Developer
+                tr.active
+                    td
+                        h4 E-mail: someEmail@example.com
+                tr.active
+                    td
+                        h4 Телефон: somePhoneNumber

@@ -35,3 +35,5 @@ Features:
     11)Use MongoDB for frequently asked questions
 
     12)Add to favorite(only if you are logged in)
+
+    13)Profile picture and require email for registration

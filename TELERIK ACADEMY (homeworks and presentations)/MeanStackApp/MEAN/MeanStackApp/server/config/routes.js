@@ -22,6 +22,10 @@ module.exports = function(app){
     app.get('/partials/:partialArea/:partialName/:partialName1/:partialName2', function(req, res){
         res.render('../../public/app/' + req.params.partialArea + '/' + req.params.partialName + '/' + req.params.partialName1 + '/' + req.params.partialName2);
     });
+
+    app.get('/partials/:partialArea/:partialName/:partialName1/:partialName2/:partialName3', function(req, res){
+        res.render('../../public/app/' + req.params.partialArea + '/' + req.params.partialName + '/' + req.params.partialName1 + '/' + req.params.partialName2 + '/' + req.params.partialName3);
+    });
     //end of "For pages,which find components of figures"
 
 

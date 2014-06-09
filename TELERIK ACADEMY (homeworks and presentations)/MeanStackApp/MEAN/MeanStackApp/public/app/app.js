@@ -156,6 +156,15 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/geometry/quadrilaterals/rhombus/rh-sideFromArea',
             controller: ''
         })
+        //Trapezoid things
+        .when('/geometry/trapezoid/trapezoid-kind',{
+            templateUrl: '/partials/geometry/quadrilaterals/trapezoid/trapezoid-kind',
+            controller: ''
+        })
+        .when('/geometry/trapezoid/equilateral-tr/equilateralTr',{
+            templateUrl: '/partials/geometry/quadrilaterals/trapezoid/equilateralTr/equilateralTr',
+            controller: ''
+        })
 //about pages
         .when('/about/howToGeometry',{
             templateUrl: '/partials/about/howToGeometry',
