@@ -40,6 +40,11 @@ app.config(function($routeProvider, $locationProvider){
             controller: 'UserListCtrl',
             resolve: routeUserChecks.adminRole
         })
+        .when('/users/:id',{
+            templateUrl: '/partials/admin/user-details',
+            controller: 'UserDetailsCtrl',
+            resolve: routeUserChecks.adminRole
+        })
 //routes gor algebra part
         .when('/algebra',{
             templateUrl: '/partials/algebra/algebra',

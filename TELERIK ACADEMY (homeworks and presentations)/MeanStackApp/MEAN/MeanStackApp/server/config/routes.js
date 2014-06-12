@@ -6,6 +6,7 @@ module.exports = function(app){
     app.post('/api/users', controllers.users.createUser);
     app.put('/api/users', auth.isAuthenticated, controllers.users.updateUser);
 
+    app.get('/api/users/:id', controllers.users.getUserById);
 
     app.get('/partials/:partialArea/:partialName', function(req, res){
         res.render('../../public/app/' + req.params.partialArea + '/' + req.params.partialName);

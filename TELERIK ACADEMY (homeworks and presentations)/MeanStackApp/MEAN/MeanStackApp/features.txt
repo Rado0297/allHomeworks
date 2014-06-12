@@ -37,3 +37,9 @@ Features:
     12)Add to favorite(only if you are logged in)
 
     13)Profile picture and require email for registration
+
+    14)Allow admin to delete users from app and mongoDb
+
+    15)Add (include/extends) for geometry.jade (like in index.jade)
+
+    16)Add rules for using a web site

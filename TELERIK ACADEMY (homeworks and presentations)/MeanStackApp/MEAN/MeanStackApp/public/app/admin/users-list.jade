@@ -1,5 +1,32 @@
 .container
-    table.table
-        tr(ng-repeat="user in users")
-            td {{ user.firstName }}
-            td {{ user.lastName }}
+    .col-md-2
+        #wrapper
+            #sidebar-wrapper
+                ul.sidebar-nav
+                    li
+                        h1 Потребители
+                    li Търси потребител/и
+                    li.something
+                        input.form-control(type="text", placeholder="Search", ng-model="search")
+                    li Сортирай
+                    li.something
+                        select.form-control(ng-model="sort")
+                            option(value=" ", ng-selected="'true'") Произволно
+                            option(value="firstName") по Име
+                            option(value="lastName") по Фамилия
+                            option(value="username") по Никнейм
+
+    .col-md-10
+        table.table
+            tr.active
+                th.col-md-3 Име
+                th.col-md-3 Фамилия
+                th.col-md-3 Никнейм
+                th.col-md-3 Действия
+            tr.active(ng-repeat="user in users | filter: search | orderBy: sort")
+                td.col-md-3 {{ user.firstName }}
+                td.col-md-3 {{ user.lastName }}
+                td.col-md-3 {{ user.username }}
+                td.col-md-3
+                    a.btn.btn-primary#detailsBtn(href="#/users/{{ user._id }}") View Details
+                    btn.btn.btn-danger Delete

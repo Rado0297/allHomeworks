@@ -44,5 +44,14 @@ module.exports = {
 
             res.send(collection);
         });
+    },
+    getUserById: function(req, res, next){
+        User.findOne({_id: req.params.id}).exec(function(err, user){
+            if(err){
+                console.log('User details could not be loaded: ' + err);
+            }
+
+            res.send(user);
+        });
     }
 }
