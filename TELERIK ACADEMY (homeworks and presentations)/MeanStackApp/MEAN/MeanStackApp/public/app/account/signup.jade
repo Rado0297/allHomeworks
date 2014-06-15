@@ -18,11 +18,15 @@
                 .form-group
                     label.col-lg-2.control-label(for='inputEmail') Email
                     .col-lg-10
-                        input#inputEmail.form-control(type='email', placeholder='Email', required)
+                        input#inputEmail.form-control(type='email', placeholder='Email', ng-model="user.email", required)
                 .form-group
                     label.col-md-2.control-label(for="password") Парола
                     .col-md-10
                         input.form-control(type="password", placeholder="Password", ng-model="user.password", required)
+                .form-group
+                    label.col-md-2.control-label(for="terms") Terms
+                    .col-md-10
+                        input.form-control#terms(type="checkbox")
                 .pull-right
                     button.btn.btn-primary(ng-click="signup(user)", ng-disabled="signUpForm.$invalid") Създай
                     a.btn.btn-danger(href="#/") Отказ

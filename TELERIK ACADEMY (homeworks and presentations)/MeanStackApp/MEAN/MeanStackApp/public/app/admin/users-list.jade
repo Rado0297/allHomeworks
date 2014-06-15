@@ -28,5 +28,5 @@
                 td.col-md-3 {{ user.lastName }}
                 td.col-md-3 {{ user.username }}
                 td.col-md-3
-                    a.btn.btn-primary#detailsBtn(href="#/users/{{ user._id }}") View Details
+                    a.btn.btn-primary#detailsBtn(href="mailto:{{ user.email }}") Send E-mail
                     btn.btn.btn-danger Delete
