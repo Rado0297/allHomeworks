@@ -9,7 +9,7 @@ module.exports = {
     },
     production: {
         rootPath: rootPath,
-        db: 'mongodb://admin:radoDeveloper0297@ds043997.mongolab.com:43997/meanstackapp',
+        db: 'mongodb://admin:<password>@ds043997.mongolab.com:43997/meanstackapp',
         port: process.env.PORT || 3030
     }
 }
