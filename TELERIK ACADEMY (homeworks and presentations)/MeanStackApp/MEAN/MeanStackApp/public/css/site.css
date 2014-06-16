@@ -45,3 +45,20 @@ footer p {
   border-top: 1px solid #808080;
   padding-top: 10px;
 }
+@media (max-width: 360px) {
+  #firstName,
+  #lastName,
+  #firstNameHeader,
+  #lastNameHeader {
+    display: none;
+  }
+  #detailsBtn {
+    display: none;
+  }
+}
+@media (max-width: 980px) {
+  #wrapper {
+    padding-left: 0;
+    display: none;
+  }
+}

@@ -19,13 +19,13 @@
     .col-md-10
         table.table
             tr.active
-                th.col-md-3 Име
-                th.col-md-3 Фамилия
+                th.col-md-3#firstNameHeader Име
+                th.col-md-3#lastNameHeader Фамилия
                 th.col-md-3 Никнейм
                 th.col-md-3 Действия
             tr.active(ng-repeat="user in users | filter: search | orderBy: sort")
-                td.col-md-3 {{ user.firstName }}
-                td.col-md-3 {{ user.lastName }}
+                td.col-md-3#firstName {{ user.firstName }}
+                td.col-md-3#lastName {{ user.lastName }}
                 td.col-md-3 {{ user.username }}
                 td.col-md-3
                     a.btn.btn-primary#detailsBtn(href="mailto:{{ user.email }}") Send E-mail
