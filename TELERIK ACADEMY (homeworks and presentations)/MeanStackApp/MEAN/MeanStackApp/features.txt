@@ -43,3 +43,5 @@ Features:
     15)Add (include/extends) for geometry.jade (like in index.jade)
 
     16)Add rules for using a web site
+
+    17)Add option for changing e-mail

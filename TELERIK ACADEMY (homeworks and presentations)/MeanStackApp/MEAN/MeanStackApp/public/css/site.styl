@@ -24,13 +24,22 @@ button.btn.calc.buy
   font-size 21px
 
 #geomStart
-  margin-left 65px
+  margin-left 15%
 
 .jumbotron
   background-color white
 
 #detailsBtn
   margin-right 30px
+
+#profileImg
+  margin-left 10px
+
+#blackBg
+  background-color #222
+
+span.userText
+  color silver
 
 hr
   background-color: darkgray;
@@ -47,11 +56,42 @@ footer
 @media (max-width:360px)
   #firstName, #lastName, #firstNameHeader, #lastNameHeader
     display none
+
   #detailsBtn
     display none
 
+  #contentAlgebraPanel, #contentGeometryPanel
+    font-size 21px
+
+  #imgAlgebra, #geomStart
+    display none
 
 @media (max-width:980px)
   #wrapper
     padding-left 0
     display none
+
+  #signup
+    margin-left 0px
+    margin-top 0px
+
+  #login, #username
+    margin-right 10px
+    margin-bottom 6px
+
+  #login
+    margin-top 6px
+
+  #geomStart
+    margin-left 20%
+
+@media (min-width:1280px)
+  #contentAlgebraPanel, #contentGeometryPanel
+    display none
+
+  #blackBg
+    margin-top -1px
+    margin-right -1px
+
+  ul#blackBg > li > a:hover
+    color black
