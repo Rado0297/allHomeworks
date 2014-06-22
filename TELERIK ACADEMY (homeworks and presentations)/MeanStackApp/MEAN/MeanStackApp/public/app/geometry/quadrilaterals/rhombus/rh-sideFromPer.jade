@@ -1,0 +1,21 @@
+.container
+    .well.col-md-12
+        form.form-horizontal.col-md-6
+            fieldset
+                legend Намиране на страна на ромб
+                legend Въведете:
+                .form-group
+                    label.col-md-3.control-label(for="first-side") Периметъра P
+                    .col-md-9
+                        input.form-control#perimeter(type="number", placeholder="Въведете стойността на периматъра", required)
+
+                .form-group
+                    .pull-left
+                        button.btn.btn-primary.calc(onclick="sideFromPerRh()") Пресметни страната
+
+        form.form-horizontal.col-md-6.resolve
+            fieldset
+                legend Решение:
+                .form-group
+                    label.text-success
+                        p#sideFromPerRh
