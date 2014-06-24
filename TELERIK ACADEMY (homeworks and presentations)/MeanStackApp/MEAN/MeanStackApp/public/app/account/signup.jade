@@ -23,10 +23,14 @@
                     label.col-md-2.control-label(for="password") Парола
                     .col-md-10
                         input.form-control(type="password", placeholder="Password", ng-model="user.password", required)
-                .form-group
-                    label.col-md-2.control-label(for="terms") Terms
-                    .col-md-10
-                        input.form-control#terms(type="checkbox")
+
+                        .checkbox
+                            input#terms(type="checkbox")
+
+                            span Съгласен/на съм с правилата за употреба.
+                            span
+                                a(href="#/terms") Прочети ги тук
+
                 .pull-right
                     button.btn.btn-primary(ng-click="signup(user)", ng-disabled="signUpForm.$invalid") Създай
                     a.btn.btn-danger(href="#/") Отказ

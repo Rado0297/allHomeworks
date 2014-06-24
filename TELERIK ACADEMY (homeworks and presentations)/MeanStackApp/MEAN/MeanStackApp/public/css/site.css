@@ -94,11 +94,13 @@ footer p {
     margin-left: 20%;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 500px) {
   #contentAlgebraPanel,
   #contentGeometryPanel {
     display: none;
   }
+}
+@media (min-width: 1280px) {
   #blackBg {
     margin-top: -1px;
     margin-right: -1px;

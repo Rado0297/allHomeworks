@@ -45,6 +45,10 @@ app.config(function($routeProvider, $locationProvider){
             controller: 'UserDetailsCtrl',
             resolve: routeUserChecks.adminRole
         })
+        .when('/terms',{
+            templateUrl: '/partials/account/terms',
+            controller: ''
+        })
 //routes gor algebra part
         .when('/algebra',{
             templateUrl: '/partials/algebra/algebra',
