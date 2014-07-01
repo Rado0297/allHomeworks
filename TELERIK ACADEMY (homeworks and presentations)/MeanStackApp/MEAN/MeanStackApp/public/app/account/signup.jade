@@ -12,6 +12,10 @@
                     .col-md-10
                         input.form-control(type="text", placeholder="Last Name", ng-model="user.lastName", required)
                 .form-group
+                    label.col-md-2.control-label(for="profilePic") Picture
+                    .col-md-10
+                        input.form-control(type="text", placeholder="Paste here URL of your profile picture", ng-model="user.profileImg")
+                .form-group
                     label.col-md-2.control-label(for="username") Никнейм
                     .col-md-10
                         input.form-control(type="text", placeholder="Username", ng-model="user.username", required)
@@ -23,7 +27,10 @@
                     label.col-md-2.control-label(for="password") Парола
                     .col-md-10
                         input.form-control(type="password", placeholder="Password", ng-model="user.password", required)
-
+                .form-group
+                    label.col-md-2.control-label(for="password") Повтори парола
+                    .col-md-10
+                        input.form-control(type="password", placeholder="Confirm Password", ng-model="user.password", required)
                         .checkbox
                             input#terms(type="checkbox")
 

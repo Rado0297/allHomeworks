@@ -21,6 +21,7 @@
     "passport": "^0.2.0",
     "cookie-parser": "^1.0.1",
     "express-session": "^1.0.4",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "morgan": "^1.1.1"
   }
 }
