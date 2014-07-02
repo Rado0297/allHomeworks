@@ -174,6 +174,11 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/geometry/quadrilaterals/trapezoid/equilateralTr/equilateralTr',
             controller: ''
         })
+//Combinatorics pages
+        .when('/combinatorics',{
+            templateUrl: '/partials/main/combinatorics',
+            controller: ''
+        })
 //about pages
         .when('/about/howToGeometry',{
             templateUrl: '/partials/about/howToGeometry',
