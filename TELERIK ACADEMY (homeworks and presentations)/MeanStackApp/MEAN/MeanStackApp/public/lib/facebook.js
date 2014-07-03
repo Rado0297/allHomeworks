@@ -5,14 +5,3 @@
     js.src = "//connect.facebook.net/bg_BG/sdk.js#xfbml=1&appId=678633458842030&version=v2.0";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-
-
-
-
-
-
-
-
-
-
-console.log("Facebook javascript is here");

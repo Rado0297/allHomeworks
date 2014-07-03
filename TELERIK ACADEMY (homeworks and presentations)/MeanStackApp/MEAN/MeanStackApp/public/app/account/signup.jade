@@ -15,6 +15,9 @@
                     label.col-md-2.control-label(for="profilePic") Picture
                     .col-md-10
                         input.form-control(type="text", placeholder="Paste here URL of your profile picture", ng-model="user.profileImg")
+                        .col-md-10
+                            | Добавянето на профилна снимка е по избор.Ако вие не добавите URL на профилната си снимка ние ви слагаме дефолтна.
+                            a(href="http://meanstackapplication.herokuapp.com/pictures/profilePic.png") Виж дефолтната снимка тук.
                 .form-group
                     label.col-md-2.control-label(for="username") Никнейм
                     .col-md-10

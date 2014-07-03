@@ -176,7 +176,15 @@ app.config(function($routeProvider, $locationProvider){
         })
 //Combinatorics pages
         .when('/combinatorics',{
-            templateUrl: '/partials/main/combinatorics',
+            templateUrl: '/partials/combinatorics/combinatorics',
+            controller: ''
+        })
+        .when('/combinatorics/permutation',{
+            templateUrl: '/partials/combinatorics/permutation/permutation',
+            controller: ''
+        })
+        .when('/combinatorics/combination',{
+            templateUrl: '/partials/combinatorics/combinations/combinations',
             controller: ''
         })
 //about pages

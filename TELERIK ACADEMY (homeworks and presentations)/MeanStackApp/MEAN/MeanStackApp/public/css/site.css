@@ -17,15 +17,15 @@ button.btn.calc.buy {
 .geoAndAlg:hover {
   color: #fff;
 }
+#geomStart {
+  margin-left: 15%;
+}
 .toast-top-right {
   top: 70px;
 }
 .resolve,
 .steps {
   font-size: 21px;
-}
-#geomStart {
-  margin-left: 15%;
 }
 .jumbotron {
   background-color: #fff;
@@ -41,6 +41,29 @@ button.btn.calc.buy {
 }
 span.userText {
   color: #c0c0c0;
+}
+#combination,
+#variation {
+  font-size: 60px;
+  width: 60px;
+}
+.k-class,
+.n-class {
+  font-size: 25px;
+}
+.inputs {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  height: 35px;
+  width: 170px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 hr {
   background-color: #a9a9a9;
