@@ -1,0 +1,47 @@
+Features:
+    1)Add to geometry:
+        - Rotation
+        - Translation
+        - Stereometry
+        - Trigonometry
+        - Functionality to everything
+        -
+
+    2)Add to algebra:
+        -
+        -
+        -
+        -
+        -
+        -
+    3)Add to about:
+        -Manuals for exploitation(How to use)
+
+    4)Make Trigonometry like a independent page
+
+    5)Escaping of operation with numbers (10-11,10/11,10*11,10*11 for example) entered in inputs
+
+    6)Make controllers for function,which calculate result of tasks
+
+    7)For start functions for calculating
+        - button.btn.btn-primary.calculate(ng-click="perimenter()")
+
+    8)Add blueprints to results of geometry tasks
+
+    9)Use includes for algebra and geometry pages
+
+    10)Optimization of all scripts
+
+    11)Use MongoDB for frequently asked questions
+
+    12)Add to favorite(only if you are logged in)
+
+    13)Profile picture and require email for registration
+
+    14)Allow admin to delete users from app and mongoDb
+
+    15)Add (include/extends) for geometry.jade (like in index.jade)
+
+    16)Add rules for using a web site
+
+    17)Add option for changing e-mail
