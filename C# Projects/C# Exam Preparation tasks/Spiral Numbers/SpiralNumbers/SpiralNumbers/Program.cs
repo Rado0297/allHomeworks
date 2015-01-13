@@ -13,7 +13,7 @@ class Program
 		int currentRow = 0;
 		int currentCol = 0;
 
-		for (int i = 1; i < N * N; i++)
+		for (int i = 1; i <= N * N; i++)
 		{
 			if (direction == "right" && (currentCol >= N || spiral [currentRow, currentCol] != 0))
 			{
