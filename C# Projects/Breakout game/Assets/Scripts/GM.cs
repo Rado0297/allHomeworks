@@ -38,9 +38,8 @@ public class GM : MonoBehaviour {
 	{
 		if (bricks < 1)
 		{
-			YouWon.SetActive(true);
-			Time.timeScale = .25f;
 			Invoke("Reset", resetDelay);
+			Application.LoadLevel(Application.loadedLevel+1);
 		}
 
 		if (lives < 1)

@@ -14,15 +14,21 @@ Platform assembly: D:\C# Programming\Breakout game\breakout_Data\Managed\Assembl
 Loading D:\C# Programming\Breakout game\breakout_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
 Platform assembly: D:\C# Programming\Breakout game\breakout_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading D:\C# Programming\Breakout game\breakout_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.114 seconds
+- Completed reload, in  0.134 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: D:\C# Programming\Breakout game\breakout_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\C# Programming\Breakout game\breakout_Data\Managed\System.dll (this message is harmless)
-UnloadTime: 0.365915 ms
+UnloadTime: 0.422362 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 562.
-Total: 0.579070 ms (FindLiveObjects: 0.034341 ms CreateObjectMapping: 0.011052 ms MarkObjects: 0.131050 ms  DeleteObjects: 0.049341 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 447.
+Total: 0.560518 ms (FindLiveObjects: 0.023289 ms CreateObjectMapping: 0.008684 ms MarkObjects: 0.127498 ms  DeleteObjects: 0.034341 ms)
+
+UnloadTime: 3.858893 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 575.
+Total: 0.532097 ms (FindLiveObjects: 0.019341 ms CreateObjectMapping: 0.011052 ms MarkObjects: 0.128682 ms  DeleteObjects: 0.003552 ms)
 
