@@ -1,0 +1,28 @@
+Initialize engine version: 4.6.0f3 (30840d631a27)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4000 (ID=0x166)
+    Vendor:   Intel
+    VRAM:     2094 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\C# Programming\Breakout game\breakout_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\C# Programming\Breakout game\breakout_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\C# Programming\Breakout game\breakout_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\C# Programming\Breakout game\breakout_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\C# Programming\Breakout game\breakout_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading D:\C# Programming\Breakout game\breakout_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: D:\C# Programming\Breakout game\breakout_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\C# Programming\Breakout game\breakout_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.114 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: D:\C# Programming\Breakout game\breakout_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\C# Programming\Breakout game\breakout_Data\Managed\System.dll (this message is harmless)
+UnloadTime: 0.365915 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 562.
+Total: 0.579070 ms (FindLiveObjects: 0.034341 ms CreateObjectMapping: 0.011052 ms MarkObjects: 0.131050 ms  DeleteObjects: 0.049341 ms)
+
