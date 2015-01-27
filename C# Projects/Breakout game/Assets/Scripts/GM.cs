@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Threading;
 using UnityEngine.UI;
 
 public class GM : MonoBehaviour {
@@ -38,8 +39,12 @@ public class GM : MonoBehaviour {
 	{
 		if (bricks < 1)
 		{
+			YouWon.SetActive(true);
 			Invoke("Reset", resetDelay);
-			Application.LoadLevel(Application.loadedLevel+1);
+			//This is for going to next level, but it needs to be setted in corect order
+			//THIS NEED DEBUGGING
+			//Thread.Sleep(3000);
+			//Application.LoadLevel(Application.loadedLevel+1);
 		}
 
 		if (lives < 1)
