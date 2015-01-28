@@ -14,21 +14,30 @@ Platform assembly: D:\C# Programming\Breakout game\breakout_Data\Managed\Assembl
 Loading D:\C# Programming\Breakout game\breakout_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
 Platform assembly: D:\C# Programming\Breakout game\breakout_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading D:\C# Programming\Breakout game\breakout_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.134 seconds
+- Completed reload, in  0.115 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: D:\C# Programming\Breakout game\breakout_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\C# Programming\Breakout game\breakout_Data\Managed\System.dll (this message is harmless)
-UnloadTime: 0.422362 ms
+UnloadTime: 0.406576 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 447.
-Total: 0.560518 ms (FindLiveObjects: 0.023289 ms CreateObjectMapping: 0.008684 ms MarkObjects: 0.127498 ms  DeleteObjects: 0.034341 ms)
+Total: 0.731442 ms (FindLiveObjects: 0.043026 ms CreateObjectMapping: 0.014999 ms MarkObjects: 0.184735 ms  DeleteObjects: 0.040262 ms)
 
-UnloadTime: 3.858893 ms
+UnloadTime: 3.381689 ms
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 575.
-Total: 0.532097 ms (FindLiveObjects: 0.019341 ms CreateObjectMapping: 0.011052 ms MarkObjects: 0.128682 ms  DeleteObjects: 0.003552 ms)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 449.
+Total: 0.500128 ms (FindLiveObjects: 0.013815 ms CreateObjectMapping: 0.009078 ms MarkObjects: 0.148814 ms  DeleteObjects: 0.003947 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.EventSystems.BaseInputModule.HandlePointerExitAndEnter (UnityEngine.EventSystems.PointerEventData currentPointerData, UnityEngine.GameObject newEnterTarget) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ResetSelection () [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.SendMoveEventToSelectedObject () [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.Process () [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.EventSystem.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 

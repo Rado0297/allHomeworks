@@ -43,7 +43,7 @@ public class GM : MonoBehaviour {
 			Invoke("Reset", resetDelay);
 			//This is for going to next level, but it needs to be setted in corect order
 			//THIS NEED DEBUGGING
-			//Thread.Sleep(3000);
+			//Thread.Sleep(1000);
 			//Application.LoadLevel(Application.loadedLevel+1);
 		}
 
