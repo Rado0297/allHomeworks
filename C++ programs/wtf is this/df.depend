@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1362245728 source:c:\documents and settings\administrator\desktop\code blocks projects\df\main.cpp
+	<iostream>
+	<math.h>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1348662444 source:c:\documents and settings\administrator\desktop\radotries\main.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+	<string>
+
