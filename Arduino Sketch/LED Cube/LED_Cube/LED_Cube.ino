@@ -19,9 +19,286 @@ void setup() {
   pinMode(Layer1Diod2, OUTPUT);
   pinMode(Layer1Diod1, OUTPUT);
   pinMode(Layer1Diod4, OUTPUT);
+  
+  // All LEDs are turned off
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(600);
+  
+  // Effect 1 - Start Up
+  digitalWrite(Layer2Diod1, HIGH);
+  delay(100);
+  
+  digitalWrite(Layer2Diod2, HIGH);
+  delay(100);
+  
+  digitalWrite(Layer2Diod3, HIGH);
+  delay(100);
+  
+  digitalWrite(Layer2Diod4, HIGH);
+  delay(100);
+  
+  digitalWrite(Layer1Diod1, HIGH);
+  delay(100);
+   
+  digitalWrite(Layer1Diod2, HIGH);
+  delay(100);
+  
+  digitalWrite(Layer1Diod3, HIGH);
+  delay(100);
+  
+  digitalWrite(Layer1Diod4, HIGH);
+  delay(100);
 }
 
 void loop() {
+  
+  
+  // Effect 2 - Two Running LEDs Left and Right (Horizontal)
   digitalWrite(Layer2Diod1, HIGH);
   digitalWrite(Layer1Diod1, HIGH);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, HIGH);
+  digitalWrite(Layer1Diod2, HIGH);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, HIGH);
+  digitalWrite(Layer1Diod3, HIGH);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, HIGH);
+  digitalWrite(Layer1Diod4, HIGH);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, HIGH);
+  digitalWrite(Layer1Diod1, HIGH);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, HIGH);
+  digitalWrite(Layer1Diod2, HIGH);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, HIGH);
+  digitalWrite(Layer1Diod3, HIGH);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, HIGH);
+  digitalWrite(Layer1Diod4, HIGH);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, HIGH);
+  digitalWrite(Layer1Diod1, HIGH);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, HIGH);
+  digitalWrite(Layer1Diod2, HIGH);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, HIGH);
+  digitalWrite(Layer1Diod3, HIGH);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, HIGH);
+  digitalWrite(Layer1Diod4, HIGH);
+  delay(100);
+  
+  // Effect 3 - Runnig LEDs Up and Down (Vertical)
+  digitalWrite(Layer2Diod1, HIGH);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, HIGH);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, HIGH);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, HIGH);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, HIGH);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, HIGH);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, HIGH);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, HIGH);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, HIGH);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, HIGH);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, HIGH);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, HIGH);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, HIGH);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, HIGH);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, HIGH);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, HIGH);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, HIGH);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, HIGH);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, HIGH);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, HIGH);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, LOW);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, HIGH);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, HIGH);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, LOW);
+  delay(100);
+  
+  digitalWrite(Layer2Diod1, LOW);
+  digitalWrite(Layer1Diod1, HIGH);
+  digitalWrite(Layer2Diod2, LOW);
+  digitalWrite(Layer1Diod2, LOW);
+  digitalWrite(Layer2Diod3, LOW);
+  digitalWrite(Layer1Diod3, LOW);
+  digitalWrite(Layer2Diod4, LOW);
+  digitalWrite(Layer1Diod4, HIGH);
+  delay(100);
 }
