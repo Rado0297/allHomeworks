@@ -1,5 +1,5 @@
 void test()
 {
-  int n = 2;
+  int n = 1;
   if (n = 1) puts("yes!");
 }
