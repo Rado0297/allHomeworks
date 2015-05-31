@@ -2,12 +2,12 @@ var isQuit=false;
 
 function OnMouseEnter(){
 	//change text color
-	renderer.material.color=Color.red;
+	GetComponent.<Renderer>().material.color=Color.red;
 }
 
 function OnMouseExit(){
 	//change text color
-	renderer.material.color=Color.white;
+	GetComponent.<Renderer>().material.color=Color.white;
 }
 
 function OnMouseUp(){
