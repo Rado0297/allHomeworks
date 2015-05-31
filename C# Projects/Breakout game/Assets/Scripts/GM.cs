@@ -40,7 +40,10 @@ public class GM : MonoBehaviour {
 		if (bricks < 1)
 		{
 			YouWon.SetActive(true);
-			Invoke("Reset", resetDelay);
+			Time.timeScale = .25f;
+			Invoke("NextLevel", 1f);
+
+			//Invoke("Reset", resetDelay);
 			//This is for going to next level, but it needs to be setted in corect order
 			//THIS NEED DEBUGGING
 			//Thread.Sleep(1000);
@@ -59,6 +62,11 @@ public class GM : MonoBehaviour {
 	{
 		Time.timeScale = 1f;
 		Application.LoadLevel(Application.loadedLevel);
+	}
+
+	void NextLevel() {
+		Time.timeScale = 1f;
+		Application.LoadLevel(Application.loadedLevel+1);
 	}
 
 	public void LoseLive()
