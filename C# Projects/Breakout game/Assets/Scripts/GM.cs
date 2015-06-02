@@ -35,6 +35,11 @@ public class GM : MonoBehaviour {
 		Instantiate(bricksPrefab, transform.position, Quaternion.identity);
 	}
 
+	void Update(){
+		if(Input.GetKey(KeyCode.Escape))
+			Application.Quit();
+	}
+
 	void CheckGameOver()
 	{
 		if (bricks < 1)
