@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Main Menu\Features.js" />
      <Compile Include="Assets\Main Menu\Scripts\Game Menu.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Developer Programs/Unity Five/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
