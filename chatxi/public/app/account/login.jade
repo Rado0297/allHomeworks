@@ -1,0 +1,26 @@
+.navbar-right(ng-controller="LoginCtrl")
+    form.navbar-form(ng-hide="identity.isAuthenticated()")
+        .form-group
+            input.form-control#username(type="text", placeholder="Username", ng-model="user.username")
+            input.form-control(type="password", placeholder="Password", ng-model="user.password")
+        button.btn.btn-primary#login(ng-click="login(user)") Вход
+        a.btn.btn-primary#signup(href="#/signup") Регистрация
+
+    ul.nav.navbar-nav.navbar-right(ng-show="identity.isAuthenticated()")
+        li.dropdown
+            a.dropdown-toggle(href="", data-toggle="dropdown")
+                | {{ identity.currentUser.firstName + ' ' + identity.currentUser.lastName }}&nbsp
+                b.caret &nbsp
+            ul.dropdown-menu#blackBg
+                li(ng-show="identity.currentUser")
+                    img.img-thumbnail#profileImg(src="{{ identity.currentUser.profileImg }}", width="50px" , height="50px", ng-show="identity.isAuthenticated()")
+                    span.userText &nbsp {{ identity.currentUser.username }}
+
+                li(ng-show="identity.currentUser.isAdmin()")
+                    a(href="#/admin/users", style="color: silver;", onmouseout="this.style.color='silver'", onmouseover="this.style.color='black'") Потребители
+
+                li(ng-show="identity.isAuthenticated()")
+                    a(href="#/profile", style="color: silver;", onmouseout="this.style.color='silver'", onmouseover="this.style.color='black'") Профил
+
+                li
+                    a(href="/", ng-click="logout()", style="color: silver;", onmouseout="this.style.color='silver'", onmouseover="this.style.color='black'") Изход

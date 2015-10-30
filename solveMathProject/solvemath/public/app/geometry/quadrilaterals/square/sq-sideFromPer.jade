@@ -1,0 +1,21 @@
+.container
+    .well.col-md-12
+        form.form-horizontal.col-md-6
+            fieldset
+                legend Намиране на страна на квадрат
+                legend Въведете:
+                .form-group
+                    label.col-md-3.control-label(for="first-side") Периметър P
+                    .col-md-9
+                        input.form-control#perimeter(type="number", placeholder="Въведете стойността на периметъра", required)
+
+                .form-group
+                    .pull-left
+                        button.btn.btn-primary.calc(onclick="sideFromPerSq()") Пресметни страната
+
+        form.form-horizontal.col-md-6.resolve
+            fieldset
+                legend Решение:
+                .form-group
+                    label.text-success
+                        p#sideFromPerSq

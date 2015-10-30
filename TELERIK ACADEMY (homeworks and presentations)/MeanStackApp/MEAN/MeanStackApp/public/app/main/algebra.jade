@@ -1,0 +1,8 @@
+div(ng-repeat="phone in phones | filter: { featured: false } | orderBy: '-published' | limitTo: 11")
+    .row.col-md-10
+        .col-md-3
+            | {{ phone.published | date: 'MMM d yyyy' }}
+        .col-md-9
+            a(href="#/phones/{{ phone._id }}") {{ phone.title }}
+    div.col-md-2
+        button.btn.btn-primary.buy Add to cart

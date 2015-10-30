@@ -1,0 +1,26 @@
+.container
+    .jumbotron
+        h1 Добре дошли в MathPro
+    .row
+        .col-md-6
+            .panel.panel-primary
+                .panel-heading.text-center.text-danger
+                    a.geoAndAlg(href="#/geometry") Геометрия
+                .panel-body
+                    #contentGeometryPanel
+                        p   Тук може да решите вашите задачи по математика от дял "Геометрия"
+                    img#geomStart(src="../../pictures/geometryStart.png")
+
+        .col-md-6
+            .panel.panel-primary
+                .panel-heading.text-center
+                    a.geoAndAlg(href="#/algebra") Алгебра
+                .panel-body
+                    #contentAlgebraPanel
+                        p ax + ay + az = a(x + y + z)
+                        p x² - y² = (x + y)(x - y)
+                        p x² + 2xy + y² = (x + y)²
+                        p x² - 2xy + y² = (x - y)²
+                        p x³ + y³ = (x + y)(x² - xy + y²)
+                        p x³ - y³ = (x - y)(x² + xy + y²)
+                    img#imgAlgebra(src="../../pictures/algebra.png")

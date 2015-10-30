@@ -1,0 +1,28 @@
+.container
+    .well.col-md-12
+        form.form-horizontal.col-md-4
+            fieldset
+                legend Пресмятане на комбинация
+                legend Въведете:
+                .form-group
+                    label#combination.col-md-2 C
+                    .col-md-10
+                        .row
+                            span.k-class k =
+                            input.inputs(type="number", placeholder="Въведете класът к", required)
+                        .row
+                            span.n-class n =
+                            input.inputs(type="number", placeholder="Въведете класът n", required)
+
+                p.text-danger Въведените стойности за "k" и "n" трябва да са положителни*
+
+                .form-group
+                    .pull-left
+                        button.btn.btn-primary.calc(onclick="areaRanTr()") Пресметни комбинация
+
+        form.form-horizontal.col-md-8.resolve
+            fieldset
+                legend Решение:
+                .form-group
+                    label.text-success
+                        p#combinationResult
