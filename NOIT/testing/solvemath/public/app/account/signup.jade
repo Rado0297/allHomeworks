@@ -1,0 +1,47 @@
+.container
+    .well
+        form.form-horizontal(name="signUpForm")
+            fieldset
+                legend Създай потребител
+                .form-group
+                    label.col-md-2.control-label(for="first-name") Име
+                    .col-md-10
+                        input.form-control(type="text", placeholder="First Name", ng-model="user.firstName", required)
+                .form-group
+                    label.col-md-2.control-label(for="last-name") Фамилия
+                    .col-md-10
+                        input.form-control(type="text", placeholder="Last Name", ng-model="user.lastName", required)
+                .form-group
+                    label.col-md-2.control-label(for="profilePic") Picture
+                    .col-md-10
+                        input.form-control(type="text", placeholder="Paste here URL of your profile picture", ng-model="user.profileImg")
+                        .col-md-10
+                            | Добавянето на профилна снимка е по избор.Ако вие не добавите URL на профилната си снимка ние ви слагаме дефолтна.
+                            a(href="http://meanstackapplication.herokuapp.com/pictures/profilePic.png") Виж дефолтната снимка тук.
+                .form-group
+                    label.col-md-2.control-label(for="username") Никнейм
+                    .col-md-10
+                        input.form-control(type="text", placeholder="Username", ng-model="user.username", required)
+                .form-group
+                    label.col-lg-2.control-label(for='inputEmail') Email
+                    .col-lg-10
+                        input#inputEmail.form-control(type='email', placeholder='Email', ng-model="user.email", required)
+                .form-group
+                    label.col-md-2.control-label(for="password") Парола
+                    .col-md-10
+                        input.form-control(type="password", id="pass1", placeholder="Password", required)
+                .form-group
+                    label.col-md-2.control-label(for="password") Повтори парола
+                    .col-md-10
+                        input.form-control(type="password", id="pass2", onkeyup="checkPass(); return false;", placeholder="Confirm Password", ng-model="user.password", required)
+                        span.confirmMessage#confirmMessage
+                        .checkbox
+                            input#terms(type="checkbox")
+
+                            span Съгласен/на съм с правилата за употреба.
+                            span
+                                a(href="#/terms") Прочети ги тук
+
+                .pull-right
+                    button.btn.btn-primary#submit(ng-click="signup(user)", ng-disabled="signUpForm.$invalid") Създай
+                    a.btn.btn-danger(href="#/") Отказ

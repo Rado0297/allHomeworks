@@ -1,0 +1,26 @@
+.container
+    .well.col-md-12
+        form.form-horizontal.col-md-6
+            fieldset
+                legend Намиране на страната на ромб
+                legend Въведете:
+                .form-group
+                    label.col-md-3.control-label(for="first-side") Диагонала d1
+                    .col-md-9
+                        input.form-control#diagonalD1(type="number", placeholder="Въведете дължината на диагонала", required)
+                .form-group
+                    label.col-md-3.control-label(for="first-side") Лицето S
+                    .col-md-9
+                        input.form-control#area(type="number", placeholder="Въведете стойността на лицето", required)
+                p.text-danger Въведените стойности трябва да са в еднакви мерни единици*
+
+                .form-group
+                    .pull-left
+                        button.btn.btn-primary.calc(onclick="diagonalFromAreaRh()") Пресметни страната
+
+        form.form-horizontal.col-md-6.resolve
+            fieldset
+                legend Решение:
+                .form-group
+                    label.text-success
+                        p#diagonalFromAreaRh

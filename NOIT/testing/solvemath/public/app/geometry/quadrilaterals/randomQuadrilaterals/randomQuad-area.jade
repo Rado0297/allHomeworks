@@ -1,0 +1,32 @@
+.container
+    .well.col-md-12
+        form.form-horizontal.col-md-6
+            fieldset
+                legend Намиране на лицето на произволен четириъгълник
+                legend Въведете:
+                .form-group
+                    label.col-md-3.control-label(for="first-side") Диагонала d1
+                    .col-md-9
+                        input.form-control#diagonal1(type="number", placeholder="Въведете дължината на диагонала", required)
+                .form-group
+                    label.col-md-3.control-label(for="second-side") Диагонала d2
+                    .col-md-9
+                        input.form-control#diagonal2(type="number", placeholder="Въведете стойността на диагонала", required)
+                .form-group
+                    label.col-md-3.control-label(for="second-side") Ъгъла между диагоналите φ
+                    .col-md-9
+                        input.form-control#degrees(type="number", placeholder="Въведете стойността на диагонала", required)
+
+                p.text-danger Въведените стойности трябва да са в еднакви мерни единици*
+                p.text-danger Ъгъла между диагоналите трябва да е в интервала от 0 до 180 градуса*
+
+                .form-group
+                    .pull-left
+                        button.btn.btn-primary.calc(onclick="areaRandomQuad()") Пресметни лицето
+
+        form.form-horizontal.col-md-6.resolve
+            fieldset
+                legend Решение:
+                .form-group
+                    label.text-success
+                        p#areaRandomQuad

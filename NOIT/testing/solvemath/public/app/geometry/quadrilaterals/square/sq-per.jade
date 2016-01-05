@@ -1,0 +1,21 @@
+.container
+    .well.col-md-12
+        form.form-horizontal.col-md-6
+            fieldset
+                legend Намиране на периметър на квадрат
+                legend Въведете:
+                .form-group
+                    label.col-md-3.control-label(for="first-side") Страната a
+                    .col-md-9
+                        input.form-control#str-a(type="number", placeholder="Въведете дължината на страната", required)
+
+                .form-group
+                    .pull-left
+                        button.btn.btn-primary.calc(onclick="perSquare()") Пресметни периметъра
+
+        form.form-horizontal.col-md-6.resolve
+            fieldset
+                legend Решение:
+                .form-group
+                    label.text-success
+                        p#perSquare

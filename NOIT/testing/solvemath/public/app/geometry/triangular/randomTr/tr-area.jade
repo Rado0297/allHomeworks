@@ -1,0 +1,27 @@
+.container
+    .well.col-md-12
+        form.form-horizontal.col-md-6
+            fieldset
+                legend Намиране на лице на произволен триъгълника
+                legend Въведете:
+                .form-group
+                    label.col-md-3.control-label(for="first-side") Страната
+                    .col-md-9
+                        input.form-control#side(type="number", placeholder="Въведете дължината на страната", required)
+                .form-group
+                    label.col-md-3.control-label(for="height") Височината
+                    .col-md-9
+                        input.form-control#height(type="number", placeholder="Въведете дължината на височина", required)
+
+                p.text-danger Въведените стойности трябва да са в еднакви мерни единици*
+
+                .form-group
+                    .pull-left
+                        button.btn.btn-primary.calc(onclick="areaRanTr()") Пресметни лицето
+
+        form.form-horizontal.col-md-6.resolve
+            fieldset
+                legend Решение:
+                .form-group
+                    label.text-success
+                        p#areaRanTr
