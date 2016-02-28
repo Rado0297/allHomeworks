@@ -1,0 +1,23 @@
+.container
+    .well.col-md-12
+        form.form-horizontal.col-md-5
+            fieldset
+                legend Пресмятане на пермутация P(n)
+                legend Въведете:
+                .form-group
+                    label.col-md-3.control-label n =
+                    .col-md-9
+                        input.form-control#side(type="number", placeholder="Въведете n", required)
+
+                p.text-danger Въведените стойности за n трябва да са неотрицателни*
+
+                .form-group
+                    .pull-left
+                        button.btn.btn-primary.calc(onclick="areaRanTr()") Пресметни пермутация
+
+        form.form-horizontal.col-md-7.resolve
+            fieldset
+                legend Решение:
+                .form-group
+                    label.text-success
+                        p#permutationResult

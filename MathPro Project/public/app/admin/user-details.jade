@@ -1,0 +1,20 @@
+.container
+    h1 Hello NEED ATTENTION AND HELP
+    h1 {{ user.username }}
+    p {{ user.firstName }}
+    h1 {{ users.user.username }}
+    h1 {{ user in users }}
+    h1(ng-repeat="username in user.username") {{ username }}
+
+.container.text-danger
+    table.table
+        tr(ng-repeat="user in users")
+            td {{ user.username }}
+
+
+
+.container
+    h2 {{ user.username }}
+    p {{ user.username }}
+    ul
+        li(ng-repeat="username in user.username") Username === {{ username }}
