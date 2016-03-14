@@ -11,7 +11,7 @@ module.exports = {
     //configure production connection to database
     production: {
         rootPath: rootPath,
-        db: 'CONNECTION STING FOR DATABASE',
+        db: 'mongodb://admin:radoDeveloper@ds037395.mongolab.com:37395/mathpro',
         port: process.env.PORT || 3030
     }
 }

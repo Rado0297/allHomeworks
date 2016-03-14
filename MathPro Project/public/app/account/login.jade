@@ -1,10 +1,10 @@
 .navbar-right(ng-controller="LoginCtrl")
-    form.navbar-form(ng-hide="identity.isAuthenticated()")
+    form.navbar-form.navbar-right(ng-hide="identity.isAuthenticated()")
         .form-group
             input.form-control#username(type="text", placeholder="Username", ng-model="user.username")
             input.form-control#password(type="password", placeholder="Password", ng-model="user.password")
-        button.btn.btn-primary#login(ng-click="login(user)") Вход
-        a.btn.btn-primary#signup(href="#/signup") Регистрация
+        button.btn.btn-info#login(ng-click="login(user)") Вход
+        a.btn.btn-info#signup(href="#/signup") Регистрация
 
     ul.nav.navbar-nav.navbar-right(ng-show="identity.isAuthenticated()")
         li.dropdown

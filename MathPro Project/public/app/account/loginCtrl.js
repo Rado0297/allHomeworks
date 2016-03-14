@@ -22,20 +22,4 @@ app.controller('LoginCtrl', function($scope, $location, notifier, identity, auth
             $location.path('/');
         });
     }
-
-    $scope.parse = function(user){
-        //log in user
-        Parse.User.logIn("admin", "admin", {
-          success: function(user) {
-            // Do stuff after successful login.
-            var loggedUser = true;
-
-            console.log(user + " is now logged in !");
-          },
-          error: function(user, error) {
-            // The login failed. Check error to see why.
-            console.log(error);
-          }
-        });
-    }
 });

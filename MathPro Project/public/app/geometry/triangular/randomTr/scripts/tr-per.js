@@ -15,12 +15,16 @@ function perimenter() {
         if (a <= 0 || b <= 0 || c <= 0) {
             perimeter.innerHTML = ("<strong class='text-danger'>Страните трябва да са положителни числа !</strong>");
         }
-        else {
+        else if (a + b > c && a + c > b && b + c > a) {
             p = (a + b + c);
             perimeter.innerHTML = (
                 "Заместваме въведените стойности във формулата </br>" + "за периметър на триъгълник P=a+b+c.</br>" +
                 "От тук следва,че периматъра на триъгълника е:</br>" +
                 " P=a+b+c= " + a + "+" + b + "+" + c + " = " + p);
+        }
+        else {
+            perimeter.innerHTML = (
+                "<strong class='text-danger'>Триъгълник с такива страни не съществува !</strong>");   
         }
     }
 }

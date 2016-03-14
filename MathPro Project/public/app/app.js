@@ -67,11 +67,12 @@ app.config(function($routeProvider, $locationProvider){
             controller: ''
         })
 //routes for geometry part
-        //for triangular
+    //for triangular
         .when('/geometry',{
             templateUrl: '/partials/geometry/geometry',
             controller: ''
         })
+        //Random trinagular
         .when('/geometry/randomTr/tr-per',{
             templateUrl: '/partials/geometry/triangular/randomTr/tr-per',
             controller: 'BlueprintsCtrl'
@@ -92,6 +93,7 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/geometry/triangular/randomTr/tr-heightFromArea',
             controller: ''
         })
+        //Equilateral triangle
         .when('/geometry/equSideTr/tr-per',{
             templateUrl: '/partials/geometry/triangular/equSideTr/tr-per',
             controller: ''
@@ -112,7 +114,17 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/geometry/triangular/equSideTr/tr-height',
             controller: ''
         })
-        //for quadrilaterals
+        //Right-angled triangle
+        .when('/geometry/right-angled-tr',{
+            templateUrl: '/partials/geometry/triangular/right-angled-tr/right-angled-tr',
+            controller: ''
+        })
+        .when('/geometry/right-angled-tr/metricalDep',{
+            templateUrl: '/partials/geometry/triangular/right-angled-tr/metricalDep',
+            controller: ''
+        })
+    //for quadrilaterals
+        //Random quadrilaterals
         .when('/geometry/randomQuadril/ranquadrila-per',{
             templateUrl: '/partials/geometry/quadrilaterals/randomQuadrilaterals/ranquadrila-per',
             controller: ''
@@ -121,6 +133,7 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/geometry/quadrilaterals/randomQuadrilaterals/randomQuad-area',
             controller: ''
         })
+        //Rectangle
         .when('/geometry/rectangle/rec-per',{
             templateUrl: '/partials/geometry/quadrilaterals/rectangle/rec-per',
             controller: ''
@@ -137,6 +150,7 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/geometry/quadrilaterals/rectangle/rec-sideFromArea',
             controller: ''
         })
+        //Square
         .when('/geometry/square/sq-per',{
             templateUrl: '/partials/geometry/quadrilaterals/square/sq-per',
             controller: ''
@@ -153,6 +167,7 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/geometry/quadrilaterals/square/sq-sideFromArea',
             controller: ''
         })
+        //Rhombus
         .when('/geometry/rhombus/rh-per',{
             templateUrl: '/partials/geometry/quadrilaterals/rhombus/rh-per',
             controller: ''
@@ -169,13 +184,18 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/geometry/quadrilaterals/rhombus/rh-sideFromArea',
             controller: ''
         })
-        //Trapezoid things
+        //Trapezoid
         .when('/geometry/trapezoid/trapezoid-kind',{
             templateUrl: '/partials/geometry/quadrilaterals/trapezoid/trapezoid-kind',
             controller: ''
         })
         .when('/geometry/trapezoid/equilateral-tr/equilateralTr',{
             templateUrl: '/partials/geometry/quadrilaterals/trapezoid/equilateralTr/equilateralTr',
+            controller: ''
+        })
+    //Trigonometry
+        .when('/geometry/trigonometry/sin',{
+            templateUrl: '/partials/geometry/trigonometry/sin',
             controller: ''
         })
 //Combinatorics pages

@@ -3,372 +3,263 @@
     h1 Триъгълници
     br
 
-
-
-
-
-
     .col-md-12
         .panel
             .panel-body
                 .col-md-12
-                    .col-md-4
-                        .panel.panel-success
-                            .panel-heading.text-center Произволен триъгълник
-                            .panel-body
-                                select.col-md-12(onchange="window.location.href=this.value;")
-                                    option Изберете опция
-                                    option.textColorOption(value='#/geometry/randomTr/tr-per') Намиране на периметър
-                                    option.textColorOption(value='#/geometry/randomTr/tr-area') Намиране на лице
-                                    option.textColorOption(value='#/geometry/randomTr/tr-side') Намиране на страна от периметъра и другите две страни
-                                    option.textColorOption(value='#/geometry/randomTr/tr-sideFromArea') Намиране на страна от лицето и височината
-                                    option.textColorOption(value='#/geometry/randomTr/tr-heightFromArea') Намиране на височина от лицето и страната
-
-
-                    .col-md-4
-                        .panel.panel-success
-                            .panel-heading.text-center Равностранен триъгълник
-                            .panel-body
-                                select.col-md-12(onchange="window.location.href=this.value;")
-                                    option Изберете опция
-                                    option.textColorOption(value='#/geometry/equSideTr/tr-per') Намиране на периметър
-                                    option.textColorOption(value='#/geometry/equSideTr/tr-area') Намиране на лице
-                                    option.textColorOption(value='#/geometry/equSideTr/tr-sideFromPer') Намиране на страна от периметъра
-                                    option.textColorOption(value='#/geometry/equSideTr/tr-sideFromArea') Намиране на страна от лицето
-                                    option.textColorOption(value='#/geometry/equSideTr/tr-height') Намиране на височина от страната
-
-                        
-                    .col-md-4                
-                        .panel.panel-success
-                            .panel-heading.text-center Равнобедрен триъгълник
-                            .panel-body
-                                select.col-md-12(onchange="window.location.href=this.value;")
-                                    option Изберете опция
-                                    option.textColorOption(value='#/') Намиране на периметър
-                                    option.textColorOption(value='#/') Намиране на лице
-                                    option.textColorOption(value='#/') Намиране на основа от периметъра
-                                    option.textColorOption(value='#/') Намиране на бедро от периметър
-                                    option.textColorOption(value='#/') Намиране на височина от лице и основа
-                                    option.textColorOption(value='#/') Намиране на височина от лице и бедро
-
-                    .col-md-4                
-                        .panel.panel-success
-                            .panel-heading.text-center Правоъгълен триъгълник
-                            .panel-body
-                                select.col-md-12(onchange="window.location.href=this.value;")
-                                    option Изберете опция
-                                    option.textColorOption(value='#/') Намиране на периметър
-                                    option.textColorOption(value='#/') Намиране на лице
-                                    option.textColorOption(value='#/') Намиране на хипотенузата от периметъра
-                                    option.textColorOption(value='#/') Намиране на катет от периметър
-                                    option.textColorOption(value='#/') Намиране на проекция на катет
-                                    option.textColorOption(value='#/') Намиране на катет чрез проекцията му
-                                    option.textColorOption(value='#/') Пресмятане на питагорова теорема
-
-                                    
-                                    li.dropdown
-                                        a.dropdown-toggle(href='', data-toggle="dropdown") Тъпоъгълен триъгълник
-                                            ul.dropdown-menu
-                                                li
-                                                    a(href="#/") Намиране на периметър
-                                                li
-                                                    a(href="#/") Намиране на лице
-                                                li
-                                                    a(href="#/") Намиране на страна от периметъра и другите две страни
-                                                li
-                                                    a(href="#/") Намиране на страна от лицето и височината
-                                                li
-                                                    a(href="#/") Намиране на височина от лицето и страната
-
-
-    h1 Триъгълници
-    br
-
-
-
-
-
-
-    .col-md-12
-        .panel.panel-success
-            .panel-heading.text-center Триъгълници
-            .panel-body
+                    .panel(style="background-color: #EE760D")
+                        .panel-heading.text-center
+                            ul.nav.nav-tabs(style='margin-bottom: 15px;')
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Произволен триъгълник
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/geometry/randomTr/tr-per") Намиране на периметър
+                                            li
+                                                a(href="#/geometry/randomTr/tr-area") Намиране на лице
+                                            li
+                                                a(href="#/geometry/randomTr/tr-side") Намиране на страна от периметъра и другите две страни
+                                            li
+                                                a(href="#/geometry/randomTr/tr-sideFromArea") Намиране на страна от лицето и височината
+                                            li
+                                                a(href="#/geometry/randomTr/tr-heightFromArea") Намиране на височина от лицето и страната
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Равностранен триъгълник
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/geometry/equSideTr/tr-per") Намиране на периметър
+                                            li
+                                                a(href="#/geometry/equSideTr/tr-area") Намиране на лице
+                                            li
+                                                a(href="#/geometry/equSideTr/tr-sideFromPer") Намиране на страна от периметъра
+                                            li
+                                                a(href="#/geometry/equSideTr/tr-sideFromArea") Намиране на страна от лицето
+                                            li
+                                                a(href="#/geometry/equSideTr/tr-height") Намиране на височина от страната
+                                li.dropdown
+                                    a.dropdown-toggle(href='#/geometry/right-angled-tr') Правоъгълен триъгълник
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Равнобедрен триъгълник
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/") Примерна функция 1
+                                            li
+                                                a(href="#/") Примерна функция 2
+                                            li
+                                                a(href="#/") Примерна функция 3
+                                            li
+                                                a(href="#/") Примерна функция 4
+                                            li
+                                                a(href="#/") Примерна функция 5
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Тъпоъгълен триъгълник
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/") Примерна функция 6
+                                            li
+                                                a(href="#/") Примерна функция 7
+                                            li
+                                                a(href="#/") Примерна функция 8
+                                            li
+                                                a(href="#/") Примерна функция 9
+                                            li
+                                                a(href="#/") Примерна функция 10
+                
                 .col-md-12
                     .col-md-4
-                        .panel.panel-success
-                            .panel-heading.text-center Произволен триъгълник
+                        .panel(style="background-color: #EE760D")
+                            .panel-heading.text-center
+                                ul.nav.nav-tabs(style='margin-bottom: 15px;')
+                                    li.dropdown
+                                        a.dropdown-toggle(href='', data-toggle="dropdown") Примерна функция 11
+                                            ul.dropdown-menu
+                                                li
+                                                    a(href="") Примерна опция 1
+                                                li
+                                                    a(href="") Примерна опция 2
+                                                li
+                                                    a(href="") Примерна опция 3
+                                                li
+                                                    a(href="") Примерна опция 4
+                                                li
+                                                    a(href="") Примерна опция 5
+                                    li.dropdown
+                                        a.dropdown-toggle(href='', data-toggle="dropdown") Примерна функция 12
+                                            ul.dropdown-menu
+                                                li
+                                                    a(href="") Примерна опция 6
+                                                li
+                                                    a(href="") Примерна опция 7
+                                                li
+                                                    a(href="") Примерна опция 8
+                                                li
+                                                    a(href="") Примерна опция 9
+                                                li
+                                                    a(href="") Примерна опция 10
+                                    li.dropdown
+                                        a.dropdown-toggle(href='', data-toggle="dropdown") Примерна функция 13
+                                            ul.dropdown-menu
+                                                li
+                                                    a(href="") Примерна опция 11
+                                                li
+                                                    a(href="") Примерна опция 12
+                                                li
+                                                    a(href="") Примерна опция 13
+                                                li
+                                                    a(href="") Примерна опция 14
+                                                li
+                                                    a(href="") Примерна опция 15
+                                    li.dropdown
+                                        a.dropdown-toggle(href='', data-toggle="dropdown") Примерна функция 14
+                                            ul.dropdown-menu
+                                                li
+                                                    a(href="") Примерна опция 16
+                                                li
+                                                    a(href="") Примерна опция 17
+                                                li
+                                                    a(href="") Примерна опция 18
+                                                li
+                                                    a(href="") Примерна опция 19
+                                                li
+                                                    a(href="") Примерна опция 20
+                                    
+
+                    .col-md-4
+                        .panel(style="background-color: #EE760D")
+                            .panel-heading.text-center Примерна функция 15
                             .panel-body
-                                select.col-md-12(onchange="window.location.href=this.value;")
+                                select.col-md-12
+                                    //(onchange="window.location.href=this.value;")
                                     option Изберете опция
-                                    option.textColorOption(value='#/geometry/randomTr/tr-per') Намиране на периметър
-                                    option.textColorOption(value='#/geometry/randomTr/tr-area') Намиране на лице
-                                    option.textColorOption(value='#/geometry/randomTr/tr-side') Намиране на страна от периметъра и другите две страни
-                                    option.textColorOption(value='#/geometry/randomTr/tr-sideFromArea') Намиране на страна от лицето и височината
-                                    option.textColorOption(value='#/geometry/randomTr/tr-heightFromArea') Намиране на височина от лицето и страната
+                                    option.textColorOption(value='') Примерна опция 21
+                                    option.textColorOption(value='') Примерна опция 22
+                                    option.textColorOption(value='') Примерна опция 23
+                                    option.textColorOption(value='') Примерна опция 24
+                                    option.textColorOption(value='') Примерна опция 25
 
 
                     .col-md-4
-                        .panel.panel-success
-                            .panel-heading.text-center Равностранен триъгълник
+                        .panel(style="background-color: #EE760D")
+                            .panel-heading.text-center Примерна функция 16
                             .panel-body
-                                select.col-md-12(onchange="window.location.href=this.value;")
+                                select.col-md-12
+                                    //(onchange="window.location.href=this.value;")
                                     option Изберете опция
-                                    option.textColorOption(value='#/geometry/equSideTr/tr-per') Намиране на периметър
-                                    option.textColorOption(value='#/geometry/equSideTr/tr-area') Намиране на лице
-                                    option.textColorOption(value='#/geometry/equSideTr/tr-sideFromPer') Намиране на страна от периметъра
-                                    option.textColorOption(value='#/geometry/equSideTr/tr-sideFromArea') Намиране на страна от лицето
-                                    option.textColorOption(value='#/geometry/equSideTr/tr-height') Намиране на височина от страната
+                                    option.textColorOption(value='') Примерна опция 26
+                                    option.textColorOption(value='') Примерна опция 27
+                                    option.textColorOption(value='') Примерна опция 28
+                                    option.textColorOption(value='') Примерна опция 29
+                                    option.textColorOption(value='') Примерна опция 30
 
                         
                     .col-md-4                
-                        .panel.panel-success
-                            .panel-heading.text-center Равнобедрен триъгълник
+                        .panel(style="background-color: #EE760D")
+                            .panel-heading.text-center Примерна функция 17
                             .panel-body
-                                select.col-md-12(onchange="window.location.href=this.value;")
+                                select.col-md-12
+                                    //(onchange="window.location.href=this.value;")
                                     option Изберете опция
-                                    option.textColorOption(value='#/') Намиране на периметър
-                                    option.textColorOption(value='#/') Намиране на лице
-                                    option.textColorOption(value='#/') Намиране на основа от периметъра
-                                    option.textColorOption(value='#/') Намиране на бедро от периметър
-                                    option.textColorOption(value='#/') Намиране на височина от лице и основа
-                                    option.textColorOption(value='#/') Намиране на височина от лице и бедро
+                                    option.textColorOption(value='') Примерна опция 31
+                                    option.textColorOption(value='') Примерна опция 32
+                                    option.textColorOption(value='') Примерна опция 33
+                                    option.textColorOption(value='') Примерна опция 34
+                                    option.textColorOption(value='') Примерна опция 35
+                                    option.textColorOption(value='') Примерна опция 36
 
                     .col-md-4                
-                        .panel.panel-success
-                            .panel-heading.text-center Правоъгълен триъгълник
+                        .panel(style="background-color: #EE760D")
+                            .panel-heading.text-center Примерна функция 18
                             .panel-body
-                                select.col-md-12(onchange="window.location.href=this.value;")
+                                select.col-md-12
+                                    //(onchange="window.location.href=this.value;")
                                     option Изберете опция
-                                    option.textColorOption(value='#/') Намиране на периметър
-                                    option.textColorOption(value='#/') Намиране на лице
-                                    option.textColorOption(value='#/') Намиране на хипотенузата от периметъра
-                                    option.textColorOption(value='#/') Намиране на катет от периметър
-                                    option.textColorOption(value='#/') Намиране на проекция на катет
-                                    option.textColorOption(value='#/') Намиране на катет чрез проекцията му
-                                    option.textColorOption(value='#/') Пресмятане на питагорова теорема
-
-                                    
-                                    li.dropdown
-                                        a.dropdown-toggle(href='', data-toggle="dropdown") Тъпоъгълен триъгълник
-                                            ul.dropdown-menu
-                                                li
-                                                    a(href="#/") Намиране на периметър
-                                                li
-                                                    a(href="#/") Намиране на лице
-                                                li
-                                                    a(href="#/") Намиране на страна от периметъра и другите две страни
-                                                li
-                                                    a(href="#/") Намиране на страна от лицето и височината
-                                                li
-                                                    a(href="#/") Намиране на височина от лицето и страната
-
-
-
-
-
-
-    h1 Триъгълници
-    br
-
-    .col-md-12
-        .col-md-4
-            .panel.panel-success
-                .panel-heading.text-center Произволен триъгълник
-                .panel-body
-                    select.col-md-12(onchange="window.location.href=this.value;")
-                        option Изберете опция
-                        option.textColorOption(value='#/geometry/randomTr/tr-per') Намиране на периметър
-                        option.textColorOption(value='#/geometry/randomTr/tr-area') Намиране на лице
-                        option.textColorOption(value='#/geometry/randomTr/tr-side') Намиране на страна от периметъра и другите две страни
-                        option.textColorOption(value='#/geometry/randomTr/tr-sideFromArea') Намиране на страна от лицето и височината
-                        option.textColorOption(value='#/geometry/randomTr/tr-heightFromArea') Намиране на височина от лицето и страната
-
-
-        .col-md-4
-            .panel.panel-success
-                .panel-heading.text-center Равностранен триъгълник
-                .panel-body
-                    select.col-md-12(onchange="window.location.href=this.value;")
-                        option Изберете опция
-                        option.textColorOption(value='#/geometry/equSideTr/tr-per') Намиране на периметър
-                        option.textColorOption(value='#/geometry/equSideTr/tr-area') Намиране на лице
-                        option.textColorOption(value='#/geometry/equSideTr/tr-sideFromPer') Намиране на страна от периметъра
-                        option.textColorOption(value='#/geometry/equSideTr/tr-sideFromArea') Намиране на страна от лицето
-                        option.textColorOption(value='#/geometry/equSideTr/tr-height') Намиране на височина от страната
-
-            
-        .col-md-4                
-            .panel.panel-success
-                .panel-heading.text-center Равнобедрен триъгълник
-                .panel-body
-                    select.col-md-12(onchange="window.location.href=this.value;")
-                        option Изберете опция
-                        option.textColorOption(value='#/') Намиране на периметър
-                        option.textColorOption(value='#/') Намиране на лице
-                        option.textColorOption(value='#/') Намиране на основа от периметъра
-                        option.textColorOption(value='#/') Намиране на бедро от периметър
-                        option.textColorOption(value='#/') Намиране на височина от лице и основа
-                        option.textColorOption(value='#/') Намиране на височина от лице и бедро
-
-        .col-md-4                
-            .panel.panel-success
-                .panel-heading.text-center Правоъгълен триъгълник
-                .panel-body
-                    select.col-md-12(onchange="window.location.href=this.value;")
-                        option Изберете опция
-                        option.textColorOption(value='#/') Намиране на периметър
-                        option.textColorOption(value='#/') Намиране на лице
-                        option.textColorOption(value='#/') Намиране на хипотенузата от периметъра
-                        option.textColorOption(value='#/') Намиране на катет от периметър
-                        option.textColorOption(value='#/') Намиране на проекция на катет
-                        option.textColorOption(value='#/') Намиране на катет чрез проекцията му
-                        option.textColorOption(value='#/') Пресмятане на питагорова теорема
-
-                        
-                        li.dropdown
-                            a.dropdown-toggle(href='', data-toggle="dropdown") Тъпоъгълен триъгълник
-                                ul.dropdown-menu
-                                    li
-                                        a(href="#/") Намиране на периметър
-                                    li
-                                        a(href="#/") Намиране на лице
-                                    li
-                                        a(href="#/") Намиране на страна от периметъра и другите две страни
-                                    li
-                                        a(href="#/") Намиране на страна от лицето и височината
-                                    li
-                                        a(href="#/") Намиране на височина от лицето и страната
-
-
-
-    h1 Триъгълници
-    br
-
-    .col-md-12
-        .panel.panel-primary
-            .panel-heading.text-center Триъгълници
-            .panel-body
-                ul.nav.nav-tabs(style='margin-bottom: 15px;')
-                    li.dropdown
-                        a.dropdown-toggle(href='', data-toggle="dropdown") Произволен триъгълник
-                            ul.dropdown-menu
-                                li
-                                    a(href="#/geometry/randomTr/tr-per") Намиране на периметър
-                                li
-                                    a(href="#/geometry/randomTr/tr-area") Намиране на лице
-                                li
-                                    a(href="#/geometry/randomTr/tr-side") Намиране на страна от периметъра и другите две страни
-                                li
-                                    a(href="#/geometry/randomTr/tr-sideFromArea") Намиране на страна от лицето и височината
-                                li
-                                    a(href="#/geometry/randomTr/tr-heightFromArea") Намиране на височина от лицето и страната
-                    li.dropdown
-                        a.dropdown-toggle(href='', data-toggle="dropdown") Равностранен триъгълник
-                            ul.dropdown-menu
-                                li
-                                    a(href="#/geometry/equSideTr/tr-per") Намиране на периметър
-                                li
-                                    a(href="#/geometry/equSideTr/tr-area") Намиране на лице
-                                li
-                                    a(href="#/geometry/equSideTr/tr-sideFromPer") Намиране на страна от периметъра
-                                li
-                                    a(href="#/geometry/equSideTr/tr-sideFromArea") Намиране на страна от лицето
-                                li
-                                    a(href="#/geometry/equSideTr/tr-height") Намиране на височина от страната
-                    li.dropdown
-                        a.dropdown-toggle(href='', data-toggle="dropdown") Равнобедрен триъгълник
-                            ul.dropdown-menu
-                                li
-                                    a(href="#/") Намиране на периметър
-                                li
-                                    a(href="#/") Намиране на лице
-                                li
-                                    a(href="#/") Намиране на страна от периметъра и другите две страни
-                                li
-                                    a(href="#/") Намиране на страна от лицето и височината
-                                li
-                                    a(href="#/") Намиране на височина от лицето и страната
-                    li.dropdown
-                        a.dropdown-toggle(href='', data-toggle="dropdown") Правоъгълен триъгълник
-                            ul.dropdown-menu
-                                li
-                                    a(href="#/") Намиране на периметър
-                                li
-                                    a(href="#/") Намиране на лице
-                                li
-                                    a(href="#/") Намиране на страна от периметъра и другите две страни
-                                li
-                                    a(href="#/") Намиране на страна от лицето и височината
-                                li
-                                    a(href="#/") Намиране на височина от лицето и страната
-                    li.dropdown
-                        a.dropdown-toggle(href='', data-toggle="dropdown") Тъпоъгълен триъгълник
-                            ul.dropdown-menu
-                                li
-                                    a(href="#/") Намиране на периметър
-                                li
-                                    a(href="#/") Намиране на лице
-                                li
-                                    a(href="#/") Намиране на страна от периметъра и другите две страни
-                                li
-                                    a(href="#/") Намиране на страна от лицето и височината
-                                li
-                                    a(href="#/") Намиране на височина от лицето и страната
-
-
-
+                                    option.textColorOption(value='') Примерна опция 37
+                                    option.textColorOption(value='') Примерна опция 38
+                                    option.textColorOption(value='') Примерна опция 39
+                                    option.textColorOption(value='') Примерна опция 40
+                                    option.textColorOption(value='') Примерна опция 41
+                                    option.textColorOption(value='') Примерна опция 42
+                                    option.textColorOption(value='') Примерна опция 43
 
     h1 Четириъгълници
     br
 
     .col-md-12
-        .panel.panel-primary
-            .panel-heading.text-center Четириъгълници
+        .panel
             .panel-body
-                ul.nav.nav-tabs(style='margin-bottom: 15px;')
-                    li.dropdown
-                        a.dropdown-toggle(href='', data-toggle="dropdown") Произволен четириъгълник
-                            ul.dropdown-menu
-                                li
-                                    a(href="#/geometry/randomQuadril/ranquadrila-per") Намиране на периметър
-                                li
-                                    a(href="#/geometry/randomQuadril/randomQuad-area") Намиране на лице
+                .col-md-12
+                    .panel(style="background-color: #EE760D")
+                        .panel-heading.text-center
+                            ul.nav.nav-tabs(style='margin-bottom: 15px;')
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Произволен четириъгълник
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/geometry/randomQuadril/ranquadrila-per") Намиране на периметър
+                                            li
+                                                a(href="#/geometry/randomQuadril/randomQuad-area") Намиране на лице
 
-                    li.dropdown
-                        a.dropdown-toggle(href='', data-toggle="dropdown") Правоъгълник
-                            ul.dropdown-menu
-                                li
-                                    a(href="#/geometry/rectangle/rec-per") Намиране на периметър
-                                li
-                                    a(href="#/geometry/rectangle/rec-area") Намиране на лице
-                                li
-                                    a(href="#/geometry/rectangle/rec-sideFromPer") Намиране на страна от периметъра
-                                li
-                                    a(href="#/geometry/rectangle/rec-sideFromArea") Намиране на страна от лицето и другата страна
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Правоъгълник
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/geometry/rectangle/rec-per") Намиране на периметър
+                                            li
+                                                a(href="#/geometry/rectangle/rec-area") Намиране на лице
+                                            li
+                                                a(href="#/geometry/rectangle/rec-sideFromPer") Намиране на страна от периметъра
+                                            li
+                                                a(href="#/geometry/rectangle/rec-sideFromArea") Намиране на страна от лицето и другата страна
 
-                    li.dropdown
-                        a.dropdown-toggle(href='', data-toggle="dropdown") Квадрат
-                            ul.dropdown-menu
-                                li
-                                    a(href="#/geometry/square/sq-per") Намиране на периметър
-                                li
-                                    a(href="#/geometry/square/sq-area") Намиране на лице
-                                li
-                                    a(href="#/geometry/square/sq-sideFromPer") Намиране на страна от периметъра
-                                li
-                                    a(href="#/geometry/square/sq-sideFromArea") Намиране на страна от лицето
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Квадрат
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/geometry/square/sq-per") Намиране на периметър
+                                            li
+                                                a(href="#/geometry/square/sq-area") Намиране на лице
+                                            li
+                                                a(href="#/geometry/square/sq-sideFromPer") Намиране на страна от периметъра
+                                            li
+                                                a(href="#/geometry/square/sq-sideFromArea") Намиране на страна от лицето
 
-                    li.dropdown
-                        a.dropdown-toggle(href='', data-toggle="dropdown") Ромб
-                            ul.dropdown-menu
-                                li
-                                    a(href="#/geometry/rhombus/rh-per") Намиране на периметър
-                                li
-                                    a(href="#/geometry/rhombus/rh-area") Намиране на лице
-                                li
-                                    a(href="#/geometry/rhombus/rh-sideFromPer") Намиране на страна от периметъра
-                                li
-                                    a(href="#/geometry/rhombus/rh-sideFromArea") Намиране на страна от лицето и единия диагонал
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Ромб
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/geometry/rhombus/rh-per") Намиране на периметър
+                                            li
+                                                a(href="#/geometry/rhombus/rh-area") Намиране на лице
+                                            li
+                                                a(href="#/geometry/rhombus/rh-sideFromPer") Намиране на страна от периметъра
+                                            li
+                                                a(href="#/geometry/rhombus/rh-sideFromArea") Намиране на страна от лицето и единия диагонал
 
-                    li.dropdown
-                        a.dropdown-toggle(href='#/geometry/trapezoid/trapezoid-kind') Трапец
+                                li.dropdown
+                                    a.dropdown-toggle(href='#/geometry/trapezoid/trapezoid-kind') Трапец
+
+    h1 Тригонометрия
+    br
+
+    .col-md-12
+        .panel
+            .panel-body
+                .col-md-12
+                    .col-md-6(style="color: #EE760D")
+                        h3 Определение
+                        p 
+                            | Раздел от математиката, изучаващ отношенията на ъглите и страните в триъгълника. 
+                            | За тази цел тригонометрията използва тригонометричните функции синус (sin), косинус (cos), 
+                            | тангенс (tg), котанген (cotg) и техните производни, които описват тези отношения и намират 
+                            | широко приложение в много други области на математиката, науката и техниката.
+                    .col-md-6
+                        .panel(style="background-color: #EE760D")
+                            ul.nav
+                                li
+                                    a(href='#/geometry/trigonometry/sin') Калкулатор за sin (синус)
+                                li
+                                    a(href='') Калкулатор за cos (косинус)
+                                li
+                                    a(href='') Калкулатор за tg (тангенс)
+                                li
+                                    a(href='') Калкулатор за cotg (котансгенс)
