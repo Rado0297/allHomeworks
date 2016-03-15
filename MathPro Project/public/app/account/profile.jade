@@ -2,14 +2,21 @@
     .well
         form.form-horizontal(name="profileForm")
             fieldset
-                legend Редактиране на профила
                 .col-md-12(ng-show="identity.currentUser")
                     h1 Здравей, {{ identity.currentUser.firstName }}
                     .col-md-5
-                        
+                        h3 Профил
+                        br
+
                         img.img-thumbnail(src="{{ identity.currentUser.profileImg }}", ng-show="identity.isAuthenticated()")
+                    
+                        h3 Име: {{ identity.currentUser.firstName }}
+                        h3 Фамилия: {{ identity.currentUser.lastName }}
+                        h3 Никнейм: {{ identity.currentUser.username }}
 
                     .col-md-7
+                        h3 Редактиране на профила
+                        br
                         .form-group
                             label.col-md-2.control-label(for="first-name") Име
                             .col-md-10
@@ -18,6 +25,10 @@
                             label.col-md-2.control-label(for="last-name") Фамилия
                             .col-md-10
                                 input.form-control(type="text", placeholder="Last Name", ng-model="user.lastName", required)
+                        .form-group
+                            label.col-md-2.control-label(for="last-name") Профилна снимка
+                            .col-md-10
+                                input.form-control(type="text", placeholder="Въведете линк, водещ към вашата профилна снимка", ng-model="user.profileImg")
                         .form-group
                             label.col-md-2.control-label(for="password") Парола
                             .col-md-10

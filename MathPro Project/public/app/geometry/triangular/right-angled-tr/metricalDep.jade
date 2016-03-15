@@ -1,12 +1,34 @@
 .container
 
-    h1 Тази част от приложението е в процес на разработка. Съдържанието ще бъде добавено много скоро
+    h1 Тази част от приложението е в процес на разработка. Съдържанието ще бъде добавено много скоро.
     br
 
-    .col-md-12
+    .col-md-12.well
         .panel
             .panel-body
                 .col-md-12
                     .col-md-6
                             h3 Метрични зависимости
-                            p 
+                            p Малко информация за тях...
+
+    .well.col-md-12
+        form.form-horizontal.col-md-6
+            fieldset
+                legend Метрични зависимости
+                .from-group
+                    label.col-md-3.control-label Примерна метрична зависимости
+                    .col-md-9
+                        input.form-control(type="number", step="0.001", placeholeder="Some content")
+
+                .form-group
+                    .pull-left
+                        button.btn.btn-primary.calc.calcBtn(onclick="metricalDepDraw()") Пресметни и покажи чертеж
+
+        form.form-horizontal.col-md-6.resolve
+            fieldset
+                legend Решение:
+                .form-group
+                    canvas#metricalDepCanvas
+                .form-group
+                    label.text-success
+                        p
