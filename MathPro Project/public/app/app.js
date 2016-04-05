@@ -123,6 +123,10 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/geometry/triangular/right-angled-tr/metricalDep',
             controller: ''
         })
+        .when('/geometry/right-angled-tr/small-radius',{
+            templateUrl: '/partials/geometry/triangular/right-angled-tr/small-radius',
+            controller: ''
+        })
     //for quadrilaterals
         //Random quadrilaterals
         .when('/geometry/randomQuadril/ranquadrila-per',{

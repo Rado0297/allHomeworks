@@ -3,7 +3,7 @@
     h1 Тази част от приложението е в процес на разработка. Съдържанието ще бъде добавено много скоро.
     br
 
-    .col-md-12.well
+    .well.col-md-12
         .panel
             .panel-body
                 .col-md-12
@@ -15,11 +15,19 @@
         form.form-horizontal.col-md-6
             fieldset
                 legend Метрични зависимости
-                .from-group
-                    label.col-md-3.control-label Примерна метрична зависимости
+                .form-group
+                    label.col-md-3.control-label Катет a
                     .col-md-9
-                        input.form-control(type="number", step="0.001", placeholeder="Some content")
-
+                        input.form-control#str-a(type="number", step="0.001", placeholder="Въведете дължината на катета", required)
+                .form-group
+                    label.col-md-3.control-label Катет b
+                    .col-md-9
+                        input.form-control#str-b(type="number", step="0.001", placeholder="Въведете дължината на катет", required)
+                .form-group
+                    label.col-md-3.control-label Хипотенуза c
+                    .col-md-9
+                        input.form-control#str-c(type="number", step="0.001", placeholder="Въведете дължината на хипотенуза", required)
+                p.text-danger Въведените стойности трябва да са в еднакви мерни единици*
                 .form-group
                     .pull-left
                         button.btn.btn-primary.calc.calcBtn(onclick="metricalDepDraw()") Пресметни и покажи чертеж
