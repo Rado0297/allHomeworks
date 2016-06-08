@@ -1,6 +1,8 @@
 //get mongoose module and user model
 var mongoose = require('mongoose'),
-    user = require('../models/User');
+    user = require('../models/User'),
+    faq = require('../models/FAQs'),
+    question = require('../models/ForumQuestions');
 
 //configure database connection
 module.exports = function(config){
@@ -22,4 +24,6 @@ module.exports = function(config){
     });
 
     user.seedInitialUsers();
+    faq.seedInitialFAQs();
+    question.seedInitialForumQuestions();
 };

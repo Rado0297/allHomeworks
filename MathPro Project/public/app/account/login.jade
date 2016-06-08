@@ -1,10 +1,10 @@
 .navbar-right(ng-controller="LoginCtrl")
     form.navbar-form.navbar-right(ng-hide="identity.isAuthenticated()")
         .form-group
-            input.form-control#username(type="text", placeholder="Username", ng-model="user.username")
-            input.form-control#password(type="password", placeholder="Password", ng-model="user.password")
-        button.btn.btn-info#login(ng-click="login(user)") Вход
-        a.btn.btn-info#signup(href="#/signup") Регистрация
+            input.form-control#username(type="text", placeholder="Потребителско име", ng-model="user.username")
+            input.form-control#password(type="password", placeholder="Парола", ng-model="user.password")
+        button.btn.btn-info#login(ng-click="login(user)", style="background: #006AAB") Вход
+        a.btn.btn-info#signup(href="#/signup", style="background: #006AAB") Регистрация
 
     ul.nav.navbar-nav.navbar-right(ng-show="identity.isAuthenticated()")
         li.dropdown
@@ -19,8 +19,16 @@
                 li(ng-show="identity.currentUser.isAdmin()")
                     a(href="#/admin/users", style="color: silver;", onmouseout="this.style.color='silver'", onmouseover="this.style.color='black'") Потребители
 
+                li(ng-show="identity.currentUser.isAdmin()")
+                    a(href="#/admin/addFAQs", style="color: silver;", onmouseout="this.style.color='silver'", onmouseover="this.style.color='black'") Добавяне на FAQs
+
                 li(ng-show="identity.isAuthenticated()")
                     a(href="#/profile", style="color: silver;", onmouseout="this.style.color='silver'", onmouseover="this.style.color='black'") Профил
+
+                li(ng-show="identity.isAuthenticated()")
+                    a(href="#/formulas", style="color: silver;", onmouseout="this.style.color='silver'", onmouseover="this.style.color='black'") Полезни формули
+
+                
 
                 li
                     a(href="/", ng-click="logout()", style="color: silver;", onmouseout="this.style.color='silver'", onmouseover="this.style.color='black'") Изход

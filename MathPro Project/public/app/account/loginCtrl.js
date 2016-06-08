@@ -4,17 +4,17 @@ app.controller('LoginCtrl', function($scope, $location, notifier, identity, auth
     $scope.login = function(user){
         auth.login(user).then(function(success){
             if(success){
-                notifier.success('Successful login!');
+                notifier.success('Влизането успешно!');
             }
             else{
-                notifier.error('Username/password is not valid');
+                notifier.error('Грешен никнейм или парола!');
             }
         });
     }
 
     $scope.logout = function(){
         auth.logout().then(function(){
-            notifier.success('Successful logout');
+            notifier.success('Излязохте успешно!');
             if($scope.user){
                 $scope.user.username = '';
                 $scope.user.password = '';

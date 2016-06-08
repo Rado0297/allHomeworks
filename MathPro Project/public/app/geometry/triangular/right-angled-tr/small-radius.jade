@@ -12,6 +12,7 @@
                     p Където "r" е радиусът на вписаната окръжност, "a" и "b" са катетите на правоъгълния триъгълник, а "c" е неговата хипотенуза.
         .col-md-6
             h3 Помощен чертеж:
+            canvas#smallRadiusRightAgngledTrDraw
 
     .well.col-md-12
         form.form-horizontal.col-md-6
@@ -32,11 +33,11 @@
                 p.text-danger Въведените стойности трябва да са в еднакви мерни единици*
                 .form-group
                     .pull-left
-                        button.btn.btn-primary.calc.calcBtn(onclick="Some_Function()") Пресметни радиус
+                        button.btn.crimson.calc.calcBtn(ng-click="smallRadiusInRightAngledTr()") Пресметни радиус
 
         form.form-horizontal.col-md-6.resolve
             fieldset
                 legend Решение:
                 .form-group
                     label.text-success
-                        p
+                        p#smallRadiusInRightAngledTr

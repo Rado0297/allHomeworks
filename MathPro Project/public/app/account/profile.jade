@@ -12,7 +12,7 @@
                     
                         h3 Име: {{ identity.currentUser.firstName }}
                         h3 Фамилия: {{ identity.currentUser.lastName }}
-                        h3 Никнейм: {{ identity.currentUser.username }}
+                        h3 Потребителско име: {{ identity.currentUser.username }}
 
                     .col-md-7
                         h3 Редактиране на профила
@@ -20,11 +20,11 @@
                         .form-group
                             label.col-md-2.control-label(for="first-name") Име
                             .col-md-10
-                                input.form-control(type="text", placeholder="First Name", ng-model="user.firstName", required)
+                                input.form-control(type="text", placeholder="Име", ng-model="user.firstName", required)
                         .form-group
                             label.col-md-2.control-label(for="last-name") Фамилия
                             .col-md-10
-                                input.form-control(type="text", placeholder="Last Name", ng-model="user.lastName", required)
+                                input.form-control(type="text", placeholder="Фамилия", ng-model="user.lastName", required)
                         .form-group
                             label.col-md-2.control-label(for="last-name") Профилна снимка
                             .col-md-10
@@ -32,7 +32,7 @@
                         .form-group
                             label.col-md-2.control-label(for="password") Парола
                             .col-md-10
-                                input.form-control(type="password", placeholder="Password", ng-model="user.password")
+                                input.form-control(type="password", placeholder="Парола", ng-model="user.password")
                         .pull-right
-                            button.btn.btn-success(ng-click="update(user)", ng-disabled="profileForm.$invalid") Запази промените
-                            a.btn.btn-danger(href="#/") Отказ
+                            button.btn(ng-click="update(user)", ng-disabled="profileForm.$invalid", style="background-color: #007700") Запази промените
+                            a.btn.crimson(href="#/") Отказ

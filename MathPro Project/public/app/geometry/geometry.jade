@@ -1,13 +1,13 @@
 .container
+    .well.col-md-12
+        form.form-horizontal
+            fieldset
 
-    h1 Триъгълници
-    br
+                h1 Триъгълници
+                br
 
-    .col-md-12
-        .panel
-            .panel-body
                 .col-md-12
-                    .panel(style="background-color: #EE760D")
+                    .panel.crimson
                         .panel-heading.text-center
                             ul.nav.nav-tabs(style='margin-bottom: 15px;')
                                 li.dropdown
@@ -38,8 +38,8 @@
                                                 a(href="#/geometry/equSideTr/tr-height") Намиране на височина от страната
                                 li.dropdown
                                     a.dropdown-toggle(href='#/geometry/right-angled-tr') Правоъгълен триъгълник
-                                li.dropdown
-                                    a.dropdown-toggle(href='', data-toggle="dropdown") Равнобедрен триъгълник
+                                li.dropdown.disabled
+                                    a.dropdown-toggle.disabled(href='', data-toggle="dropdown") Равнобедрен триъгълник
                                         ul.dropdown-menu
                                             li
                                                 a(href="#/") Примерна функция 1
@@ -51,8 +51,8 @@
                                                 a(href="#/") Примерна функция 4
                                             li
                                                 a(href="#/") Примерна функция 5
-                                li.dropdown
-                                    a.dropdown-toggle(href='', data-toggle="dropdown") Тъпоъгълен триъгълник
+                                li.dropdown.disabled
+                                    a.dropdown-toggle.disabled(href='', data-toggle="dropdown") Тъпоъгълен триъгълник
                                         ul.dropdown-menu
                                             li
                                                 a(href="#/") Примерна функция 6
@@ -64,131 +64,15 @@
                                                 a(href="#/") Примерна функция 9
                                             li
                                                 a(href="#/") Примерна функция 10
-                
+    
+    .well.col-md-12
+        form.form-horizontal
+            fieldset
+                h1 Четириъгълници
+                br
+
                 .col-md-12
-                    .col-md-4
-                        .panel(style="background-color: #EE760D")
-                            .panel-heading.text-center
-                                ul.nav.nav-tabs(style='margin-bottom: 15px;')
-                                    li.dropdown
-                                        a.dropdown-toggle(href='', data-toggle="dropdown") Примерна функция 11
-                                            ul.dropdown-menu
-                                                li
-                                                    a(href="") Примерна опция 1
-                                                li
-                                                    a(href="") Примерна опция 2
-                                                li
-                                                    a(href="") Примерна опция 3
-                                                li
-                                                    a(href="") Примерна опция 4
-                                                li
-                                                    a(href="") Примерна опция 5
-                                    li.dropdown
-                                        a.dropdown-toggle(href='', data-toggle="dropdown") Примерна функция 12
-                                            ul.dropdown-menu
-                                                li
-                                                    a(href="") Примерна опция 6
-                                                li
-                                                    a(href="") Примерна опция 7
-                                                li
-                                                    a(href="") Примерна опция 8
-                                                li
-                                                    a(href="") Примерна опция 9
-                                                li
-                                                    a(href="") Примерна опция 10
-                                    li.dropdown
-                                        a.dropdown-toggle(href='', data-toggle="dropdown") Примерна функция 13
-                                            ul.dropdown-menu
-                                                li
-                                                    a(href="") Примерна опция 11
-                                                li
-                                                    a(href="") Примерна опция 12
-                                                li
-                                                    a(href="") Примерна опция 13
-                                                li
-                                                    a(href="") Примерна опция 14
-                                                li
-                                                    a(href="") Примерна опция 15
-                                    li.dropdown
-                                        a.dropdown-toggle(href='', data-toggle="dropdown") Примерна функция 14
-                                            ul.dropdown-menu
-                                                li
-                                                    a(href="") Примерна опция 16
-                                                li
-                                                    a(href="") Примерна опция 17
-                                                li
-                                                    a(href="") Примерна опция 18
-                                                li
-                                                    a(href="") Примерна опция 19
-                                                li
-                                                    a(href="") Примерна опция 20
-                                    
-
-                    .col-md-4
-                        .panel(style="background-color: #EE760D")
-                            .panel-heading.text-center Примерна функция 15
-                            .panel-body
-                                select.col-md-12
-                                    //(onchange="window.location.href=this.value;")
-                                    option Изберете опция
-                                    option.textColorOption(value='') Примерна опция 21
-                                    option.textColorOption(value='') Примерна опция 22
-                                    option.textColorOption(value='') Примерна опция 23
-                                    option.textColorOption(value='') Примерна опция 24
-                                    option.textColorOption(value='') Примерна опция 25
-
-
-                    .col-md-4
-                        .panel(style="background-color: #EE760D")
-                            .panel-heading.text-center Примерна функция 16
-                            .panel-body
-                                select.col-md-12
-                                    //(onchange="window.location.href=this.value;")
-                                    option Изберете опция
-                                    option.textColorOption(value='') Примерна опция 26
-                                    option.textColorOption(value='') Примерна опция 27
-                                    option.textColorOption(value='') Примерна опция 28
-                                    option.textColorOption(value='') Примерна опция 29
-                                    option.textColorOption(value='') Примерна опция 30
-
-                        
-                    .col-md-4                
-                        .panel(style="background-color: #EE760D")
-                            .panel-heading.text-center Примерна функция 17
-                            .panel-body
-                                select.col-md-12
-                                    //(onchange="window.location.href=this.value;")
-                                    option Изберете опция
-                                    option.textColorOption(value='') Примерна опция 31
-                                    option.textColorOption(value='') Примерна опция 32
-                                    option.textColorOption(value='') Примерна опция 33
-                                    option.textColorOption(value='') Примерна опция 34
-                                    option.textColorOption(value='') Примерна опция 35
-                                    option.textColorOption(value='') Примерна опция 36
-
-                    .col-md-4                
-                        .panel(style="background-color: #EE760D")
-                            .panel-heading.text-center Примерна функция 18
-                            .panel-body
-                                select.col-md-12
-                                    //(onchange="window.location.href=this.value;")
-                                    option Изберете опция
-                                    option.textColorOption(value='') Примерна опция 37
-                                    option.textColorOption(value='') Примерна опция 38
-                                    option.textColorOption(value='') Примерна опция 39
-                                    option.textColorOption(value='') Примерна опция 40
-                                    option.textColorOption(value='') Примерна опция 41
-                                    option.textColorOption(value='') Примерна опция 42
-                                    option.textColorOption(value='') Примерна опция 43
-
-    h1 Четириъгълници
-    br
-
-    .col-md-12
-        .panel
-            .panel-body
-                .col-md-12
-                    .panel(style="background-color: #EE760D")
+                    .panel.crimson
                         .panel-heading.text-center
                             ul.nav.nav-tabs(style='margin-bottom: 15px;')
                                 li.dropdown
@@ -235,31 +119,70 @@
                                             li
                                                 a(href="#/geometry/rhombus/rh-sideFromArea") Намиране на страна от лицето и единия диагонал
 
-                                li.dropdown
-                                    a.dropdown-toggle(href='#/geometry/trapezoid/trapezoid-kind') Трапец
-
-    h1 Тригонометрия
-    br
-
-    .col-md-12
-        .panel
-            .panel-body
+                                li.dropdown.disabled
+                                    a.dropdown-toggle.disabled(href='', data-toggle="dropdown") Трапец
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/") for href for Trapez #/geometry/trapezoid/trapezoid-kind
+                                            li
+                                                a(href="#/") Примерна функция 7
+                                            li
+                                                a(href="#/") Примерна функция 8
+                                            li
+                                                a(href="#/") Примерна функция 9
+                                            li
+                                                a(href="#/") Примерна функция 10
+    
+    .well.col-md-12
+        form.form-horizontal
+            fieldset
                 .col-md-12
-                    .col-md-6(style="color: #EE760D")
+                    .col-md-6
+                        h1 Кръг и окръжност
+                    .col-md-6
+                        .panel.crimson
+                            ul.nav
+                                    li.col-md-6.text-center
+                                        a(href='#/round') Кръг
+                                    li.col-md-6.text-center
+                                        a(href='#/circle') Окръжност
+
+                .col-md-12
+                    .col-md-6
+                        h3 Окръжност
+                        p Окръжност е геометрична крива, образувана от множеството от точките в дадена равнина, намиращи се на определено разстояние (радиус, r) от определена точка (център).
+                            br
+                            p(style="text-align: right") Източник: Wikipedia
+                    
+                    .col-md-6
+                        h3 Кръг
+                        p Фигурата, съставена от точките във вътрешността на окръжността (т.е. точките на разстояние от центъра, по-малко или равно от радиуса), се нарича кръг.
+                            br
+                            p(style="text-align: right") Източник: Wikipedia
+
+    .well.col-md-12
+        form.form-horizontal
+            fieldset
+                h1 Тригонометрия
+                br
+
+                .col-md-12
+                    .col-md-6
                         h3 Определение
                         p 
                             | Раздел от математиката, изучаващ отношенията на ъглите и страните в триъгълника. 
                             | За тази цел тригонометрията използва тригонометричните функции синус (sin), косинус (cos), 
                             | тангенс (tg), котанген (cotg) и техните производни, които описват тези отношения и намират 
                             | широко приложение в много други области на математиката, науката и техниката.
+                        br
                     .col-md-6
-                        .panel(style="background-color: #EE760D")
+                        .panel.crimson
                             ul.nav
                                 li
                                     a(href='#/geometry/trigonometry/sin') Калкулатор за sin (синус)
-                                li
+                                li.disabled
                                     a(href='') Калкулатор за cos (косинус)
-                                li
+                                li.disabled
                                     a(href='') Калкулатор за tg (тангенс)
-                                li
+                                li.disabled
                                     a(href='') Калкулатор за cotg (котансгенс)

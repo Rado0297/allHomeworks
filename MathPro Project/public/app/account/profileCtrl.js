@@ -1,4 +1,4 @@
-app.controller('ProfileCtrl', function($scope, $location, identity, auth){
+app.controller('ProfileCtrl', function($scope, $location, identity, auth, notifier){
     $scope.identity = identity;
     
     $scope.user = {
@@ -11,6 +11,7 @@ app.controller('ProfileCtrl', function($scope, $location, identity, auth){
             $scope.firstName = user.firstName;
             $scope.lastName = user.lastName;
             $location.path('/');
+            notifier.success('Промените са успешно направени!');
         });
     }
 });

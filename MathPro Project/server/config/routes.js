@@ -4,6 +4,8 @@ var auth = require('./auth'),
 //module that exports all post,get and etc. methods
 module.exports = function(app){
     app.get('/api/users', auth.isInRole('admin'), controllers.users.getAllUsers);
+    app.get('/api/faqs', controllers.faqs.getAllFAQs);
+    app.get('/api/questions', controllers.questions.getAllForumQuestions);
     app.post('/api/users', controllers.users.createUser);
     app.put('/api/users', auth.isAuthenticated, controllers.users.updateUser);
 

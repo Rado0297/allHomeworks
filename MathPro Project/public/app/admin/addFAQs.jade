@@ -1,0 +1,37 @@
+.container
+    .well.col-md-12
+        form.form-horizontal.col-md-6
+            fieldset
+                legend Добавяне на често задавани въпроси
+                legend Въведете:
+                .form-group
+                    label.col-md-3.control-label Въпрос:
+                    .col-md-9
+                        input.form-control(type="text", placeholder="Въведете въпроса", required)
+                .form-group
+                    label.col-md-3.control-label Отговор:
+                    .col-md-9
+                        input.form-control(type="text", placeholder="Въведете отговора", required)
+
+                .form-group
+                    .pull-left
+                        button.btn.btn-success.calc.calcBtn(ng-click="addFAQs()") Добави въпрос
+
+    .col-md-12
+        h1 Често задаваните въпроси (FAQs)
+    .well.col-md-6#searchBoxFAQs
+        form.form-horizontal
+            fieldset
+                .form-group
+                    label.col-md-3.control-label(for="first-side") Търси въпрос
+                    .col-md-9
+                        input.form-control(type="text", placeholder="Въведи въпрос или ключова дума от него", ng-model="search")
+
+    .col-md-12
+        .panel(ng-repeat="faq in faqs | filter: search")
+            .panel-heading(style="background: #006AAB")
+                h1.panel-title {{ faq.question }}
+            .panel-body
+                | {{ faq.answer }}
+                .pull-right
+                        button.btn.btn-danger.calc.calcBtn(ng-click="deleteFAQ()") Изтрий въпрос

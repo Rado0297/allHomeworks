@@ -1,0 +1,34 @@
+.well.col-md-12
+        form.form-horizontal.col-md-12
+            fieldset
+                legend
+                    h1 Питагорова теорема: c² = a² + b²
+        form.form-horizontal.col-md-6
+            fieldset
+                legend Намиране на хипотенуза:
+                
+                .form-group
+                    label.col-md-3.control-label Катет a
+                    .col-md-9
+                        input.form-control#katet-a(type="number", step="0.001", placeholder="Въведете дължината на катета", required)
+                .form-group
+                    label.col-md-3.control-label Катет b
+                    .col-md-9
+                        input.form-control#katet-b(type="number", step="0.001", placeholder="Въведете дължината на катет", required)
+                
+                p.text-danger Въведените стойности трябва да са в еднакви мерни единици*
+                
+                .form-group
+                    .pull-left
+                        button.btn.calc.calcBtn.crimson(onclick="hypotenuse()") Пресметни хипотенуза
+
+        form.form-horizontal.col-md-6.resolve
+            fieldset
+                legend Решение:
+                .form-group
+                    canvas#metricalDepCanvas-hypotenuse
+                .form-group
+                    label.text-success
+                        p#hypotenuse
+
+script(type="text/javascript" src='app/geometry/triangular/right-angled-tr/metricalDep-includes/scripts/pitagorean-theorema.js')

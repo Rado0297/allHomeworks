@@ -1,0 +1,19 @@
+.container
+    .well.col-md-12
+        form.form-horizontal.col-md-6
+            fieldset
+                legend Пресмятане дължина на кръг
+                .form-group
+                    label.col-md-5.control-label Радиус на кръга 
+                    .col-md-7
+                        input.form-control#radiusOfCircle(type="number", step="0.001", placeholder="Въведете радиуса", required)
+                .form-group
+                    .pull-left
+                        button.btn.crimson.calc.calcBtn(ng-click="roundArea()") Пресметни лицето
+
+        form.form-horizontal.col-md-6.resolve
+            fieldset
+                legend Решение:
+                .form-group
+                    label.text-success
+                        p#roundArea

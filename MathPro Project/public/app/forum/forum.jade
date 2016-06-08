@@ -1,0 +1,19 @@
+.container
+    h1 Forum - comming soon
+
+    .col-md-12
+        h1 Форум
+    .well.col-md-6#searchBoxFAQs
+        form.form-horizontal
+            fieldset
+                .form-group
+                    label.col-md-3.control-label(for="search-box") Търси въпрос
+                    .col-md-9
+                        input.form-control(name="search-box", type="text", placeholder="Въведи въпрос или ключова дума от него", ng-model="search")
+
+    .col-md-12
+        .panel(ng-repeat="question in questions | filter: search")
+            .panel-heading(style="background: #006AAB")
+                h1.panel-title {{ question.question }}
+            .panel-body
+                | {{ question.answer }}

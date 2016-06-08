@@ -39,6 +39,11 @@ app.config(function($routeProvider, $locationProvider){
             controller: 'ProfileCtrl',
             resolve: routeUserChecks.authenticated
         })
+        .when('/admin/addFAQs', {
+            templateUrl: '/partials/admin/addFAQs',
+            controller: 'AddFAQsCtrl',
+            resolve: routeUserChecks.adminRole
+        })
         .when('/admin/users', {
             templateUrl: '/partials/admin/users-list',
             controller: 'UserListCtrl',
@@ -52,6 +57,18 @@ app.config(function($routeProvider, $locationProvider){
         .when('/terms',{
             templateUrl: '/partials/account/terms',
             controller: ''
+        })
+//Useful formulas
+        .when('/formulas',{
+            templateUrl: '/partials/usefulFormulas/usefulFormulas',
+            controller: '',
+            resolve: routeUserChecks.authenticated
+        })
+//Froum part
+        .when('/forum',{
+            templateUrl: '/partials/forum/forum',
+            controller: 'QuestionsListCtrl'
+        //    resolve: routeUserChecks.authenticated
         })
 //routes gor algebra part
         .when('/algebra',{
@@ -125,7 +142,7 @@ app.config(function($routeProvider, $locationProvider){
         })
         .when('/geometry/right-angled-tr/small-radius',{
             templateUrl: '/partials/geometry/triangular/right-angled-tr/small-radius',
-            controller: ''
+            controller: 'smallRadiusInRightAngledTrCtrl'
         })
     //for quadrilaterals
         //Random quadrilaterals
@@ -197,6 +214,15 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/geometry/quadrilaterals/trapezoid/equilateralTr/equilateralTr',
             controller: ''
         })
+    //Circle and round
+        .when('/circle',{
+            templateUrl: '/partials/geometry/roundAndCircle/circle',
+            controller: 'circleCtrl'
+        })
+        .when('/round',{
+            templateUrl: '/partials/geometry/roundAndCircle/round',
+            controller: 'roundCtrl'
+        })
     //Trigonometry
         .when('/geometry/trigonometry/sin',{
             templateUrl: '/partials/geometry/trigonometry/sin',
@@ -209,7 +235,7 @@ app.config(function($routeProvider, $locationProvider){
         })
         .when('/combinatorics/permutation',{
             templateUrl: '/partials/combinatorics/permutation/permutation',
-            controller: ''
+            controller: 'PermutationCtrl'
         })
         .when('/combinatorics/combination',{
             templateUrl: '/partials/combinatorics/combinations/combinations',
@@ -226,7 +252,7 @@ app.config(function($routeProvider, $locationProvider){
         })
         .when('/about/faq',{
             templateUrl: '/partials/about/faq',
-            controller: ''
+            controller: 'FAQsListCtrl'
         })
         .when('/about/support',{
             templateUrl: '/partials/about/support',

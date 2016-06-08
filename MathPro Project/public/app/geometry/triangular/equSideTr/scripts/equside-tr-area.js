@@ -22,4 +22,5 @@ function areaEquSideTr() {
             area.innerHTML = ("<strong class='text-danger'>Височината и страната трябва да са положителни числа !</strong>");
         }
     }
+    //write function which find area of equ-side trinagular with formula S=(a^2*sqrt(3))/2
 }

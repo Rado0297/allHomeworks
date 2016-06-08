@@ -1,5 +1,6 @@
 body {
   padding-top: 80px;
+  color: #fff;
 }
 .navbar-right .navbar-form input {
   margin-right: 10px;
@@ -21,6 +22,21 @@ button.btn.calc.buy {
 }
 #fullScreenSize {
   font-size: 31px;
+}
+.usefulFormulasStyles {
+  font-size: 15px;
+}
+.algebra-tab-color {
+  background-color: #4c4cff;
+}
+.crimson {
+  background-color: #900;
+}
+.combin-color {
+  background-color: #090;
+}
+.support {
+  background-color: #34f;
 }
 .toast-top-right {
   top: 70px;
@@ -80,6 +96,10 @@ span.userText {
 hr {
   background-color: #a9a9a9;
   height: 1px;
+}
+#searchBoxFAQs {
+  background: none;
+  border: none;
 }
 footer {
   padding-left: 5%;
