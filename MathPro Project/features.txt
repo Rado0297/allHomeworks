@@ -1,0 +1,461 @@
+Features:
+    1) Add to geometry:
+        - Rotation
+        - Translation
+        - Stereometry
+        - Trigonometry
+        - Functionality to everything
+        -
+
+    2) Add to algebra:
+        -
+        -
+        -
+        -
+        -
+        -
+    3) Add to about:
+        -Manuals for exploitation(How to use)
+
+
+
+
+    10) Optimization of all scripts
+
+
+    12) Add to favorite(only if you are logged in)
+
+
+    14) Allow admin to delete users from app and mongoDb
+
+
+    16) Add rules for using a web site
+
+    17) Add option for changing e-mail
+
+    18) Add alert for confirming of terms of the application
+
+    19) Anti copy feature(for example disable right mouse button in solutions :D)
+
+
+    21)Option menu for choosing type of triangular and his element you want to find (same for another figures ...)
+
+            select
+                
+
+        For example:       
+            .container
+                select
+                    option(value='perimeter') Perimeter
+                    option(value='area') Area
+                    option(value='sideByPerimeter') SideByPerimeter
+                    option(value='sideByArea') SideByArea
+
+
+
+                //var b = document.getElementById('volvo');
+
+                //console.log(b);
+
+                //console.log(b.value);
+
+                //if (b.value = 'volvo') { var perimeter = 3*b;}
+
+    22) Reapir Facebook like and share buttons
+
+    23) Add tweet and g+ or +1 buttons
+
+    24) Добавяне на ограничен брой решени задачи или ако имаш акаунт да виждаш цялото решение, а ако нямаш само отговора
+
+    25) Forum
+
+
+В бъдеще ще бъдат добавени функционалности като:
+ 1. Повече резолюции за адаптивен дизайн (responsive design) на приложението
+ 2. Допълване на функционалностите на дяловете:
+ 3. Добавяне на функционалности към дял „Геометрия“:
+    - Метрични зависимости в правоъгълен триъгълник - need to be extended
+    - Метрични зависимости в окръжност
+    - Решаване на произволен триъгълник
+    - Добавяне на чертежи към решенията на задачите
+    - Калкулатор за пресмятане на sin, cos, tg или cotg на ъгъл, зададен от потребителя
+    - "Страница" за решаване на задачи от тригонометричен вид
+    - Изчертаване на графиките на тригонометричните функции
+ 4. Добавяне на функционалности към дял „Алгебра“:
+    - Решаване на неравенства
+    - Добавяне на графики към решенията на задачите
+- Разширяване на диапазона от предлагани решения
+ 5. „Страница” с формули, полезни за учениците
+ 7.  Форум, който ще се ползва само от потребителите
+ 8.  Добавяне на опция за пресмятане на вариации, комбинации.
+ 9. Добавяне на „страница“ за дял „Комбинаторика“.
+
+ 
+
+differt formulas for searching of elements of figures (for example: area(3-4 formuli), sin.t., cos.t. and so on)
+
+Слагане на графиката - синусуида !!!*
+
+източници на информация и формули - учебниците по математика от 9 до 12 клас на издателство...
+
+При проверката дали триъгълника е правоъгълен вървят само питагорови тройки, но не и произволни цисла с квадратен корен!!!
+
+Означаване кой ъгъл е равен на 90* в правоъгълните триъгълници
+
+
+add faqs page for admin - make better design!
+
+Add option to admin users to add FAQs questions from ui in application
+
+Търсете форуми за сингъл Пейдж, нещо по простичко, но да има
+естествено
+няа са хвърлим на нещо супер сложно
+шот си е**ва майката
+
+Nadezhda
+Една таблица с въпросите и една с отговорите, свързвате с ид на постовете, едно към много
+em da
+aaa mai setih
+kak sh stane
+kakto sq pravq FAQ-tata
+
+Nadezhda
+И дата и час, за да се пази последователността на коментарите. Автора на въпрос и коментар да се прихващат автом
+
+Nadezhda
+i shte sloja na adminite da mogat da gi addvat
+i po sushtiq na4in shte stane i za drugite potrebiteli
+
+При презентиране да се наблегне на технологиите !!!
+
+
+fourm:
+- private only for registered users or public for everyone !?!
+- set author and date, eventually and time...
+
+cvqt za kombinatorikata !!!
+
+write function which find area of equ-side trinagular with formula S=(a^2*sqrt(3))/2
+
+Problem with value of trigonometrical functions (sin30 = 0.499999... instead of sin30=0.5)
+
+
+Add draw for circle and round
+
+za zarejdane na stranicana s foruma - login.jade
+li(ng-show="identity.isAuthenticated()")
+                    a(href="#/forum", style="color: silver;", onmouseout="this.style.color='silver'", onmouseover="this.style.color='black'") Форум
+
+
+za formulite
+Модулно уравнение:
+
+        p |f(x)|=g(x)  <=>  
+        P |f(x)=g(x)    &nbsp  |-f(x)=g(x)
+        p |g(x)>=0   U  |g(x)>=0
+        p ИЛИ
+
+        p |f(x)|=g(x)  <=>  |f(x)=g(x)      |-f(x)=g(x)
+        p                   |f(x)>=0      U |f(x)<0
+
+        Модулно неравенство:
+
+        p |f(x)|<g(x)   <=> |g(x)>0
+        p                   |-g(x)<f(x)<g(x)
+
+
+        p |f(x)>g(x)|>g(x) <=> (f(x)>g(x)>=0) U (f(x)<-g(x)<=0) U A, А-множество от тези x,за които f(x),за които g(x)<0
+
+
+// geometry "page" source
+.container
+    .well.col-md-12
+        form.form-horizontal
+            fieldset
+
+                h1 Триъгълници
+                br
+
+                .col-md-12
+                    .panel.crimson
+                        .panel-heading.text-center
+                            ul.nav.nav-tabs(style='margin-bottom: 15px;')
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Произволен триъгълник
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/geometry/randomTr/tr-per") Намиране на периметър
+                                            li
+                                                a(href="#/geometry/randomTr/tr-area") Намиране на лице
+                                            li
+                                                a(href="#/geometry/randomTr/tr-side") Намиране на страна от периметъра и другите две страни
+                                            li
+                                                a(href="#/geometry/randomTr/tr-sideFromArea") Намиране на страна от лицето и височината
+                                            li
+                                                a(href="#/geometry/randomTr/tr-heightFromArea") Намиране на височина от лицето и страната
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Равностранен триъгълник
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/geometry/equSideTr/tr-per") Намиране на периметър
+                                            li
+                                                a(href="#/geometry/equSideTr/tr-area") Намиране на лице
+                                            li
+                                                a(href="#/geometry/equSideTr/tr-sideFromPer") Намиране на страна от периметъра
+                                            li
+                                                a(href="#/geometry/equSideTr/tr-sideFromArea") Намиране на страна от лицето
+                                            li
+                                                a(href="#/geometry/equSideTr/tr-height") Намиране на височина от страната
+                                li.dropdown
+                                    a.dropdown-toggle(href='#/geometry/right-angled-tr') Правоъгълен триъгълник
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Равнобедрен триъгълник
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/") Примерна функция 1
+                                            li
+                                                a(href="#/") Примерна функция 2
+                                            li
+                                                a(href="#/") Примерна функция 3
+                                            li
+                                                a(href="#/") Примерна функция 4
+                                            li
+                                                a(href="#/") Примерна функция 5
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Тъпоъгълен триъгълник
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/") Примерна функция 6
+                                            li
+                                                a(href="#/") Примерна функция 7
+                                            li
+                                                a(href="#/") Примерна функция 8
+                                            li
+                                                a(href="#/") Примерна функция 9
+                                            li
+                                                a(href="#/") Примерна функция 10
+                
+                .col-md-12
+                    .col-md-4
+                        .panel.crimson
+                            .panel-heading.text-center
+                                ul.nav.nav-tabs(style='margin-bottom: 15px;')
+                                    li.dropdown
+                                        a.dropdown-toggle(href='', data-toggle="dropdown") Примерна функция 11
+                                            ul.dropdown-menu
+                                                li
+                                                    a(href="") Примерна опция 1
+                                                li
+                                                    a(href="") Примерна опция 2
+                                                li
+                                                    a(href="") Примерна опция 3
+                                                li
+                                                    a(href="") Примерна опция 4
+                                                li
+                                                    a(href="") Примерна опция 5
+                                    li.dropdown
+                                        a.dropdown-toggle(href='', data-toggle="dropdown") Примерна функция 12
+                                            ul.dropdown-menu
+                                                li
+                                                    a(href="") Примерна опция 6
+                                                li
+                                                    a(href="") Примерна опция 7
+                                                li
+                                                    a(href="") Примерна опция 8
+                                                li
+                                                    a(href="") Примерна опция 9
+                                                li
+                                                    a(href="") Примерна опция 10
+                                    li.dropdown
+                                        a.dropdown-toggle(href='', data-toggle="dropdown") Примерна функция 13
+                                            ul.dropdown-menu
+                                                li
+                                                    a(href="") Примерна опция 11
+                                                li
+                                                    a(href="") Примерна опция 12
+                                                li
+                                                    a(href="") Примерна опция 13
+                                                li
+                                                    a(href="") Примерна опция 14
+                                                li
+                                                    a(href="") Примерна опция 15
+                                    li.dropdown
+                                        a.dropdown-toggle(href='', data-toggle="dropdown") Примерна функция 14
+                                            ul.dropdown-menu
+                                                li
+                                                    a(href="") Примерна опция 16
+                                                li
+                                                    a(href="") Примерна опция 17
+                                                li
+                                                    a(href="") Примерна опция 18
+                                                li
+                                                    a(href="") Примерна опция 19
+                                                li
+                                                    a(href="") Примерна опция 20
+                                    
+
+                    .col-md-4
+                        .panel.crimson
+                            .panel-heading.text-center Примерна функция 15
+                            .panel-body
+                                select.col-md-12
+                                    //(onchange="window.location.href=this.value;")
+                                    option Изберете опция
+                                    option.textColorOption(value='') Примерна опция 21
+                                    option.textColorOption(value='') Примерна опция 22
+                                    option.textColorOption(value='') Примерна опция 23
+                                    option.textColorOption(value='') Примерна опция 24
+                                    option.textColorOption(value='') Примерна опция 25
+
+
+                    .col-md-4
+                        .panel.crimson
+                            .panel-heading.text-center Примерна функция 16
+                            .panel-body
+                                select.col-md-12
+                                    //(onchange="window.location.href=this.value;")
+                                    option Изберете опция
+                                    option.textColorOption(value='') Примерна опция 26
+                                    option.textColorOption(value='') Примерна опция 27
+                                    option.textColorOption(value='') Примерна опция 28
+                                    option.textColorOption(value='') Примерна опция 29
+                                    option.textColorOption(value='') Примерна опция 30
+
+                        
+                    .col-md-4                
+                        .panel.crimson
+                            .panel-heading.text-center Примерна функция 17
+                            .panel-body
+                                select.col-md-12
+                                    //(onchange="window.location.href=this.value;")
+                                    option Изберете опция
+                                    option.textColorOption(value='') Примерна опция 31
+                                    option.textColorOption(value='') Примерна опция 32
+                                    option.textColorOption(value='') Примерна опция 33
+                                    option.textColorOption(value='') Примерна опция 34
+                                    option.textColorOption(value='') Примерна опция 35
+                                    option.textColorOption(value='') Примерна опция 36
+
+                    .col-md-4                
+                        .panel.crimson
+                            .panel-heading.text-center Примерна функция 18
+                            .panel-body
+                                select.col-md-12
+                                    //(onchange="window.location.href=this.value;")
+                                    option Изберете опция
+                                    option.textColorOption(value='') Примерна опция 37
+                                    option.textColorOption(value='') Примерна опция 38
+                                    option.textColorOption(value='') Примерна опция 39
+                                    option.textColorOption(value='') Примерна опция 40
+                                    option.textColorOption(value='') Примерна опция 41
+                                    option.textColorOption(value='') Примерна опция 42
+                                    option.textColorOption(value='') Примерна опция 43
+    
+    .well.col-md-12
+        form.form-horizontal
+            fieldset
+                h1 Четириъгълници
+                br
+
+                .col-md-12
+                    .panel.crimson
+                        .panel-heading.text-center
+                            ul.nav.nav-tabs(style='margin-bottom: 15px;')
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Произволен четириъгълник
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/geometry/randomQuadril/ranquadrila-per") Намиране на периметър
+                                            li
+                                                a(href="#/geometry/randomQuadril/randomQuad-area") Намиране на лице
+
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Правоъгълник
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/geometry/rectangle/rec-per") Намиране на периметър
+                                            li
+                                                a(href="#/geometry/rectangle/rec-area") Намиране на лице
+                                            li
+                                                a(href="#/geometry/rectangle/rec-sideFromPer") Намиране на страна от периметъра
+                                            li
+                                                a(href="#/geometry/rectangle/rec-sideFromArea") Намиране на страна от лицето и другата страна
+
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Квадрат
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/geometry/square/sq-per") Намиране на периметър
+                                            li
+                                                a(href="#/geometry/square/sq-area") Намиране на лице
+                                            li
+                                                a(href="#/geometry/square/sq-sideFromPer") Намиране на страна от периметъра
+                                            li
+                                                a(href="#/geometry/square/sq-sideFromArea") Намиране на страна от лицето
+
+                                li.dropdown
+                                    a.dropdown-toggle(href='', data-toggle="dropdown") Ромб
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="#/geometry/rhombus/rh-per") Намиране на периметър
+                                            li
+                                                a(href="#/geometry/rhombus/rh-area") Намиране на лице
+                                            li
+                                                a(href="#/geometry/rhombus/rh-sideFromPer") Намиране на страна от периметъра
+                                            li
+                                                a(href="#/geometry/rhombus/rh-sideFromArea") Намиране на страна от лицето и единия диагонал
+
+                                li.dropdown
+                                    a.dropdown-toggle(href='#/geometry/trapezoid/trapezoid-kind') Трапец
+    
+    .well.col-md-12
+        form.form-horizontal
+            fieldset
+                h1 Кръг и окръжност
+                br
+
+                .col-md-12
+                    .col-md-6
+                        h3 Определение
+                        p 
+                            | .......................................................................................... 
+                            | .......................................................................................... 
+                            | .......................................................................................... 
+                            | ..........................................................................................
+                    .col-md-6
+                        .panel.crimson
+                            ul.nav
+                                li
+                                    a(href='#/geometry/trigonometry/sin') Some function
+                                li
+                                    a(href='') Some function
+                                li
+                                    a(href='') Some function
+                                li
+                                    a(href='') Some function
+
+    .well.col-md-12
+        form.form-horizontal
+            fieldset
+                h1 Тригонометрия
+                br
+
+                .col-md-12
+                    .col-md-6
+                        h3 Определение
+                        p 
+                            | Раздел от математиката, изучаващ отношенията на ъглите и страните в триъгълника. 
+                            | За тази цел тригонометрията използва тригонометричните функции синус (sin), косинус (cos), 
+                            | тангенс (tg), котанген (cotg) и техните производни, които описват тези отношения и намират 
+                            | широко приложение в много други области на математиката, науката и техниката.
+                    .col-md-6
+                        .panel.crimson
+                            ul.nav
+                                li
+                                    a(href='#/geometry/trigonometry/sin') Калкулатор за sin (синус)
+                                li
+                                    a(href='') Калкулатор за cos (косинус)
+                                li
+                                    a(href='') Калкулатор за tg (тангенс)
+                                li
+                                    a(href='') Калкулатор за cotg (котансгенс)
