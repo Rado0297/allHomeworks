@@ -1,0 +1,27 @@
+{
+  "name": "codeCompiler",
+  "version": "0.0.1",
+  "authors": [
+    "krassko97 <krasi.getov@abv.bg>"
+  ],
+  "description": "Developer tool",
+  "main": "server.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "toastr": "~2.0.1",
+    "angular": "~1.2.16",
+    "angular-resource": "~1.2.16",
+    "angular-route": "~1.2.16",
+    "bootstrap": "~3.1.1",
+    "socket.io": "~1.1.0"
+  }
+}
