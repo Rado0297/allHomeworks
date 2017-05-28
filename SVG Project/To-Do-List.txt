@@ -1,0 +1,5 @@
+Output txt and svg file
+    for exmaple:
+        txt -> line 100 100 300 300 yellow 21
+        svg -> <line x1="100" y1="100" x2="300" y2="300"
+                stroke="yellow" stroke-width="21">

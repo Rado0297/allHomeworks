@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg>
+
+<svg>
+    <rect x="5" y="5" width="10" height="10" stroke="green"/>
+<!--
+    <circle cx="5" cy="5" r="10" fill="blue"/>
+
+    <rect x="100" y="60" width="10" height="10" fill="red"/>
+-->
+
+<line x1="100" y1="300" x2="300" y2="100" stroke="green" stroke-width="15.9"/>
+<line x1="150" y1="250" x2="300" y2="100" stroke="black" stroke-width="15.1"/>
+<line x1="5" y1="50" x2="300" y2="50" stroke="#9acd32" stroke-width="15.1"/>
+
+</svg>
