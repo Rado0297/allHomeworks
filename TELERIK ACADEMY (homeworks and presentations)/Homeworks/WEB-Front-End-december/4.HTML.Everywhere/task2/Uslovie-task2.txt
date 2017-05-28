@@ -1,2 +1,0 @@
-Make a web page that detects the current geolocation
-The web page should work fine in all desktop browsers, including IE7

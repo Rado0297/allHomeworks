@@ -1,1 +1,0 @@
-﻿["Pesho", "Kosta","Mitaka", "Ileto"]

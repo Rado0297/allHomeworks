@@ -1,1 +1,0 @@
-Implement the schools repository using Prototypal OOP
